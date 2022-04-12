@@ -1,5 +1,6 @@
 //*** Practice on 4/3/22 *** 
 // /d/Documents/Google\ Drive/100Devs/Code\ Wars\ Practice
+//The above is for your git location
 
 //Write a function called repeatStr which repeats the given string string exactly n times.
 // My Answer:
