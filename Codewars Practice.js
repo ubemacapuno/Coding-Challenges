@@ -1,4 +1,5 @@
 //*** Practice on 4/3/22 *** 
+// /d/Documents/Google\ Drive/100Devs/Code\ Wars\ Practice
 
 //Write a function called repeatStr which repeats the given string string exactly n times.
 // My Answer:
@@ -95,31 +96,26 @@
 // Arrow SyntaxError
 // const solution = str => str.split("").reverse().join("");
 
-var isAnagram = function(test, original) {
-    let test1 = test.split("").sort();
-    let original1 = original.split("").sort();
-    if (test1.toLowerCase.toString() === original1.toLowerCase.toString()){
-        console.log("true");
-        return true;
-    }else{
-        console.log("false");
-        console.log(test1, original1);
-        console.log(test, original);
-        return false;
-    }
-};
-    
-//     if (JSON.stringify(test1).toLowerCase === JSON.stringify(original1).toLowerCase){
-//         console.log("true");
-//         console.log(JSON.stringify(test1));
-//         console.log(JSON.stringify(original1));
-//         return true;
-//     }else{
-//         console.log("false");
-//         console.log(test1, original1);
-//         console.log(test, original);
-//         return false;
-//     }
-// };
 
-isAnagram("dumble", "bumble");
+//Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+// function isAnagram (test, original) {
+//     return test.toLowerCase().split("").sort().join("") === original.toLowerCase().split("").sort().join("");
+//   }
+
+//04/11/2022
+// Write a function that will check if two given characters are the same case.
+// If any of characters is not a letter, return -1
+// If both characters are the same case, return 1
+// If both characters are letters and not the same case, return 0
+
+// function sameCase(a, b){
+//     if (!(a.match(/[a-z]/i) && b.match(/[a-z]/i))){
+//       return -1
+//     }
+//     else if(a == a.toUpperCase() && b == b.toUpperCase() || a == a.toLowerCase() && b == b.toLowerCase()){
+//       return 1
+//     }
+//     else {
+//       return 0
+//     }
+//   }
