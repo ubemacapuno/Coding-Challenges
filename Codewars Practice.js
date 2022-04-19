@@ -136,3 +136,182 @@
 //         return 'F'
 //     }
 //   }
+//Uploading past codewars problems that didn't make it into the repo:
+
+// We need a function that can transform a string into a number. What ways of achieving this do you know?
+
+// var stringToNumber = function(str){
+//     return str * 1;
+//   }
+//OTHER Solutions:
+// const ways = [
+//     s => +s,
+//     s => s++, // why does it work?
+//     s => s--,
+//     s => ++s - 1,
+//     s => --s + 1,
+  
+//     s => s * 1,
+//     s => s - 0,
+//     s => s / 1,
+//     s => s - '',
+//     s => s ** 1,
+//     s => s % Infinity,
+  
+//     s => ~~s,
+//     s => s & -1,
+//     s => s | 0,
+//     s => s ^ 0,
+//     s => s << 0,
+//     s => s >> 0,
+//     s => s | s,
+//     s => s & s,
+  
+//     s => ~s ^ -1,
+//     s => ~s ^ ~0, // ~0 = -1
+//     s => ~(s ^ -1),
+//     s => s * !!s,
+  
+//     s => -1 * (~s + 1) || 0, // -1 * 0 = -0
+//     s => -(~(s >>> 0) + 1) || 0,
+  
+//     Number,
+//     parseInt,
+//     parseFloat,
+    
+//     s => Number(s),
+//     s => parseInt(s),
+//     s => parseFloat(s),
+  
+//     s => Math.floor(s),
+//     s => Math.round(s),
+//     s => Math.ceil(s),
+//     s => Math.min(s),
+//     s => Math.max(s),
+    
+//     Math.floor,
+//     Math.round,
+//     Math.ceil,
+//     Math.min,
+//     Math.max,
+  
+//     s => eval(`+ ${s}`), // a space is needed
+//     s => eval('+ ' + s), // for cases like eval(+ +12345)
+  
+//     s => [...s]
+//       .slice(+(s[0] == '-' || s[0] == '+')) // remove the sign, if present
+//       .reduce((acc,x) => +x + acc * 10)
+//       * (s[0] == '-' ? -1 : 1),
+//     s => [...s]
+//       .slice(+(s[0] == '+')) //remove +, if present
+//       .reverse()
+//       .reduce((acc,x,i) => x == '-' ? -acc : acc += x * 10 ** i, 0),
+//     s => ways[~~(Math.random() * ways.length)](s)
+//   ];
+  
+//   // And now we will use all the methods in a row
+  
+//   const checkThemAll /* © Mylene Farmer */ = (acc, x) => acc === x ? x : NaN;
+//   const stringToNumber = str => ways.map(fn => fn(str)).reduce(checkThemAll);
+
+// You were camping with your friends far away from home, but when it's time to go back, you realize that your fuel is running out and the nearest pump is 50 miles away! You know that on average, your car runs on about 25 miles per gallon. There are 2 gallons left. Considering these factors, write a function that tells you if it is possible to get to the pump or not. Function should return true (1 in Prolog, NASM and COBOL) if it is possible and false (0 in Prolog, NASM and COBOL) if not. The input values are always positive.
+
+// const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+//     if(distanceToPump > mpg * fuelLeft){
+//       return false;
+//     }else{
+//       return true;
+//     }
+// }
+
+// There was a test in your class and you passed it. Congratulations!
+// But you're an ambitious person. You want to know if you're better than the average student in your class.
+
+// You receive an array with your peers' test scores. Now calculate the average and compare your score!
+
+// Return True if you're better, else False!
+
+// function betterThanAverage(classPoints, yourPoints) {
+//     let classPointsSum = classPoints.reduce((acc, c) => acc + c , 0);
+//     let classPointsAveraged = classPointsSum / classPoints.length;
+//     if (yourPoints > classPointsAveraged){
+//         return true
+//     }else{
+//         return false
+//     }  
+//   }
+
+
+//Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+//function boolToWord( bool ){
+    // if (bool == true){
+    //     return "Yes"
+    //   }else{
+    //     return "No"
+    //   }
+    // }
+
+//Complete the square sum function so that it squares each number passed into it and then sums the results together.
+// For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+
+// function squareSum(numbers){
+//     let squareNumbers = numbers.map(element => element ** 2);
+//     let sumOfSquareNumbers =squareNumbers.reduce((acc,c)=> acc + c, 0);
+//     return sumOfSquareNumbers
+//     }
+
+//Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+
+// function even_or_odd(number) {
+//     if (number % 2 === 0){
+//       return "Even"
+//     }else{
+//       return "Odd"
+//     }
+    
+//   }
+
+
+
+// Write a method, that will get an integer array as parameter and will process every number from this array.
+
+// Return a new array with processing every number of the input-array like this:
+
+// If the number has an integer square root, take this, otherwise square the number.
+
+// Example
+// [4,3,9,7,2,1] -> [2,9,3,49,4,1]
+// function squareOrSquareRoot(array) {
+//     return array.map(x => {
+//         const r = Math.sqrt(x);
+//         return (r % 1 == 0) ? r : (x*x);
+//       });  
+//     }
+
+// Your task is to implement the authenticate() method of the sleigh, which takes the name of the person, who wants to board the sleigh and a secret password. If, and only if, the name equals "Santa Claus" and the password is "Ho Ho Ho!" (yes, even Santa has a secret password with uppercase and lowercase letters and special characters :D), the return value must be true. Otherwise it should return false.
+
+// function Sleigh() {}
+
+// Sleigh.prototype.authenticate = function(name, password) {
+//   if(name === "Santa Claus" && password === "Ho Ho Ho!"){
+//     return true;
+//   }else{
+//     return false;
+//   }
+// };
+
+//Your task is to make two functions (max and min, or maximum and minimum, etc., depending on the language) that receive a list of integers as input and return, respectively, the largest and lowest number in that list.
+//
+// let min = function(list){
+//     list.sort((a,b) => a-b);
+//     return list[0];
+//   }
+  
+// let max = function(list){
+//     list.sort((a,b) => a-b);
+//     return list[list.length - 1];
+// }
+//Test values:
+// max([4,6,2,1,9,63,-134,566]);
+// min([4,6,2,1,9,63,-134,566]);
