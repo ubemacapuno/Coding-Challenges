@@ -315,3 +315,9 @@
 //Test values:
 // max([4,6,2,1,9,63,-134,566]);
 // min([4,6,2,1,9,63,-134,566]);
+
+//Instructions: Given an array of integers, return a new array with each value doubled.
+// function maps(x){
+//     return  x.map((element) => element * 2);
+
+// }
