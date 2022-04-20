@@ -321,3 +321,17 @@
 //     return  x.map((element) => element * 2);
 
 // }
+
+//Instructions: We need a function that can transform a number into a string. What ways of achieving this do you know?
+// function numberToString(num) {
+//     return num.toString();
+//   }
+
+// Other Solutions:
+//const numberToString = num => num.toString();
+
+//numberToString = String;
+
+//function numberToString(num) {
+//   return String(num);
+// }
