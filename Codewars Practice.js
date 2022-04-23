@@ -414,3 +414,22 @@
 // }
 
 // countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15])
+
+
+function fizzBuzzSum(num){
+    let sum = 0;
+    for(let i = 1; i < num; i++){
+    if(i % 3 === 0 && i % 5 === 0){
+        sum += i
+    }else if(i % 3 === 0){
+        sum += i
+    }else if(i % 5 === 0){
+        sum += i
+    }else{
+        sum += 0
+    } 
+}
+console.log(sum)
+}
+fizzBuzzSum(10)
+
