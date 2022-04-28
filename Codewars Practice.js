@@ -534,3 +534,57 @@
 //     if (y == 2) return [2, 24, 24]
 //     return [y, (y-2) * 4 + 24, (y-2) * 5 + 24]
 //   }
+
+//Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+// Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+// * With `name` = "john"  => return "Hello, John!"
+// * With `name` = "aliCE" => return "Hello, Alice!"
+// * With `name` not given 
+//   or `name` = ""        => return "Hello, World!"
+
+//***come back to this to refactor */
+// function hello(name) {
+//     if (name === ''){
+//         console.log("Hello, World!")
+//         return "Hello, World!"
+//     }else{
+//         name = name.toLowerCase().split('')
+//         // console.log(name)
+//         name = name[0].toUpperCase() + name.slice(1)
+//         // console.log(name)
+//         name = name.replace(/,/g, '')
+//         // console.log(name)
+//         console.log(`Hello, ${name}!`)
+//         return `Hello, ${name}!` 
+//     }
+//   }
+
+//   hello('aLiCE')
+//   hello("john")
+//   hello('')
+//   hello("PhOeniX")
+
+// Kids drink toddy.
+// Teens drink coke.
+// Young adults drink beer.
+// Adults drink whisky.
+// Make a function that receive age, and return what they drink.
+
+// Rules:
+
+// Children under 14 old.
+// Teens under 18 old.
+// Young under 21 old.
+// Adults have 21 or more.
+
+// function peopleWithAgeDrink(old) {
+//     if (old < 14){
+//       return "drink toddy"
+//     }else if(old < 18){
+//       return "drink coke"
+//     }else if(old < 21){
+//       return "drink beer"
+//     }else{
+//       return "drink whisky"
+//     }
+//   };
