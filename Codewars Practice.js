@@ -588,3 +588,8 @@
 //       return "drink whisky"
 //     }
 //   };
+//
+//Description:
+// Make a simple function called greet that returns the most-famous "hello world!".
+//Arrow fxn:
+// let greet = () => "hello world!"
