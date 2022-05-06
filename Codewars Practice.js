@@ -750,3 +750,19 @@
 //Test cases:
 //  smash(["this", "is", "a", "really", "long", "sentence"])
 //  smash(["hello", "amazing", "world"])
+
+// Arrow Function
+// const grow = (x) => x.reduce((acc,c)=> acc*c,1)
+// This code should store "codewa.rs" as a variable called name but it's not working. Can you figure out why?
+// var a == "code";
+// var b == "wa.rs";
+// var name == a + b;
+
+//My solution:
+// var a = "code";
+// var b = "wa.rs";
+// var name = a + b;
+
+// Build a function that returns an array of integers from n to 1 where n>0.
+// Example : n=5 --> [5,4,3,2,1]
+
