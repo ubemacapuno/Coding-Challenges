@@ -817,7 +817,13 @@
 //     }
 //   }
 
+//Refactored as arrow function and ternary operator (fuck yeah first try)
+//   let check = (a,x) => a.includes(x)? true : false
+//   check([66, 101], 66)
 
-  let check = (a,x) => a.includes(x)? true : false
-
-  check([66, 101], 66)
+// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+// Examples:
+// solution('abc', 'bc') // returns true
+// solution('abc', 'd') // returns false
+//Arrow function solution
+// const solution = (str, ending) => str.endsWith(ending)? true : false
