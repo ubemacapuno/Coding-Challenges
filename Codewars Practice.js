@@ -1,8 +1,8 @@
-//*** Practice on 4/3/22 *** 
+// *** Practice on 4/3/22 *** 
 // /d/Documents/Google\ Drive/100Devs/Code\ Wars\ Practice
-//The above is for your git location
+// The above is for your git location
 
-//Write a function called repeatStr which repeats the given string string exactly n times.
+// Write a function called repeatStr which repeats the given string string exactly n times.
 // My Answer:
 // function repeatStr (n, s) {
 //   return String(s.repeat(n)); //syntax is repeat(value)
@@ -34,17 +34,17 @@
 //       return Math.min(...args)
 //     }
 //   }
-//
-//
-//Take a string as its argument, and return a string with every word replaced by the explanation to everything ("sex"), according to Freud. 
-//Note that an empty string, or no arguments, should result in the ouput being ""(empty string).
-//
-//function toFreud(string){
+
+
+// Take a string as its argument, and return a string with every word replaced by the explanation to everything ("sex"), according to Freud. 
+// Note that an empty string, or no arguments, should result in the ouput being ""(empty string).
+
+// function toFreud(string){
 //  return String.replace(/[^\s]+/g, "sex");
-//}
-//
-//
-//Create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
+// }
+
+
+// Create a function that removes the first and last characters of a string. You're given one parameter, the original string. You don't have to worry with strings with less than two characters.
 
 // function removeChar(str){
 //     if (str.length < 2){
@@ -60,14 +60,14 @@
 // for (i=1; i < movies.length; i++){
 //     console.log(movies[i]);
 // }
-//Now think up of a way to iterate (create and show) the following given array using forEach():
-//movies.forEach(element => {
+// Now think up of a way to iterate (create and show) the following given array using forEach():
+// movies.forEach(element => {
 //     console.log(element);
 // });
 
 
 
-//Create a function that takes in an array of numbers. Multiply each number together and alert the product. 
+// Create a function that takes in an array of numbers. Multiply each number together and alert the product. 
 // function multiplyAndAlertProduct(arr){
 //     let product = 1;
 //     arr.forEach(element => product *= element);
@@ -89,7 +89,7 @@
 //     }
 
 
-//Complete the solution so that it reverses the string passed into it.
+// Complete the solution so that it reverses the string passed into it.
 // function solution(str){
 //     return str.split("").reverse().join("");
 //   }
@@ -98,12 +98,12 @@
 // const solution = str => str.split("").reverse().join("");
 
 
-//Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
+// Complete the function to return true if the two arguments given are anagrams of each other; return false otherwise.
 // function isAnagram (test, original) {
 //     return test.toLowerCase().split("").sort().join("") === original.toLowerCase().split("").sort().join("");
 //   }
 
-//04/11/2022
+// 04/11/2022
 // Write a function that will check if two given characters are the same case.
 // If any of characters is not a letter, return -1
 // If both characters are the same case, return 1
@@ -121,7 +121,7 @@
 //     }
 //   }
 
-//Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.(FIRST TRY!! 4.18.22)
+// Complete the function so that it finds the average of the three scores passed to it and returns the letter value associated with that grade.(FIRST TRY!! 4.18.22)
 // function getGrade (s1, s2, s3) {
 //     let score = ((s1 + s2 + s3)/ 3)
 //     if(score >= 90 && score <= 100){
@@ -136,14 +136,14 @@
 //         return 'F'
 //     }
 //   }
-//Uploading past codewars problems that didn't make it into the repo:
+// Uploading past codewars problems that didn't make it into the repo:
 
 // We need a function that can transform a string into a number. What ways of achieving this do you know?
 
 // var stringToNumber = function(str){
 //     return str * 1;
 //   }
-//OTHER Solutions:
+// OTHER Solutions:
 // const ways = [
 //     s => +s,
 //     s => s++, // why does it work?
@@ -242,17 +242,17 @@
 //   }
 
 
-//Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+// Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
 
-//function boolToWord( bool ){
-    // if (bool == true){
-    //     return "Yes"
-    //   }else{
-    //     return "No"
-    //   }
-    // }
+// function boolToWord( bool ){
+//     if (bool == true){
+//         return "Yes"
+//       }else{
+//         return "No"
+//       }
+//     }
 
-//Complete the square sum function so that it squares each number passed into it and then sums the results together.
+// Complete the square sum function so that it squares each number passed into it and then sums the results together.
 // For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
 
 // function squareSum(numbers){
@@ -261,7 +261,7 @@
 //     return sumOfSquareNumbers
 //     }
 
-//Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+// Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
 
 // function even_or_odd(number) {
 //     if (number % 2 === 0){
@@ -301,8 +301,8 @@
 //   }
 // };
 
-//Your task is to make two functions (max and min, or maximum and minimum, etc., depending on the language) that receive a list of integers as input and return, respectively, the largest and lowest number in that list.
-//
+// Your task is to make two functions (max and min, or maximum and minimum, etc., depending on the language) that receive a list of integers as input and return, respectively, the largest and lowest number in that list.
+
 // let min = function(list){
 //     list.sort((a,b) => a-b);
 //     return list[0];
@@ -312,31 +312,31 @@
 //     list.sort((a,b) => a-b);
 //     return list[list.length - 1];
 // }
-//Test values:
+// Test values:
 // max([4,6,2,1,9,63,-134,566]);
 // min([4,6,2,1,9,63,-134,566]);
 
-//Instructions: Given an array of integers, return a new array with each value doubled.
+// Instructions: Given an array of integers, return a new array with each value doubled.
 // function maps(x){
 //     return  x.map((element) => element * 2);
 
 // }
 
-//Instructions: We need a function that can transform a number into a string. What ways of achieving this do you know?
+// Instructions: We need a function that can transform a number into a string. What ways of achieving this do you know?
 // function numberToString(num) {
 //     return num.toString();
 //   }
 
 // Other Solutions:
-//const numberToString = num => num.toString();
+// const numberToString = num => num.toString();
 
-//numberToString = String;
+// numberToString = String;
 
-//function numberToString(num) {
+// function numberToString(num) {
 //   return String(num);
 // }
 
-//Instructions: Write a function that returns both the minimum and maximum number of the given list/array.
+// Instructions: Write a function that returns both the minimum and maximum number of the given list/array.
 // minMax([1,2,3,4,5])   == [1,5]
 // minMax([2334454,5])   == [5, 2334454]
 // minMax([1])           == [1, 1]
@@ -350,19 +350,19 @@
 //     console.log([minElement,maxElement]);
 //   }
 
-//Other solutions . . .
+// Other solutions . . .
 // function minMax(arr){
 //     return [Math.min(...arr), Math.max(...arr)];
 //   }
 
 // const minMax = arr => [ Math.min(...arr), Math.max(...arr) ];
 
-//The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
-//function cockroachSpeed(s) {
+// The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
+// function cockroachSpeed(s) {
 //     let cmPerSecond = Math.floor((s * (100000/3600)))
 //     return cmPerSecond
 //   }
-//Other solution:
+// Other solution:
 // const cockroachSpeed = s => Math.floor(s / 0.036);
 
 // Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
@@ -387,7 +387,7 @@
 //     return employed && !vacation;
 //   }
 
-//Instructions: Given an array of integers.
+// Instructions: Given an array of integers.
 
 // Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
 
@@ -415,30 +415,30 @@
 
 // countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15])
 
-//6 kyu
+// 6 kyu
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 // Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in. Additionally, if the number is negative, return 0 (for languages that do have them).
 // Note: If the number is a multiple of both 3 and 5, only count it once.
-//(Solved FIRST TRY!! 4/23/22)
+// (Solved FIRST TRY!! 4/23/22)
 
 // function solution(number){
-        //     let sum1 = 0;
-        //     let sum2 = 0;
-        //     if (number < 0){
-        //         return 0
-        //     }else{
-        //     for(let i = 1; i < number; i++){
-        //     if(i % 3 === 0 && i % 5 === 0){
-        //         sum2 += i
-        //     }else if(i % 3 === 0){
-        //         sum1 += i
-        //     }else if(i % 5 === 0){
-        //         sum1 += i
-        //     }else{
-        //         sum1 += 0
-        //         sum2 += 0
-        //     } 
-        // }
+//             let sum1 = 0;
+//             let sum2 = 0;
+//             if (number < 0){
+//                 return 0
+//             }else{
+//             for(let i = 1; i < number; i++){
+//             if(i % 3 === 0 && i % 5 === 0){
+//                 sum2 += i
+//             }else if(i % 3 === 0){
+//                 sum1 += i
+//             }else if(i % 5 === 0){
+//                 sum1 += i
+//             }else{
+//                 sum1 += 0
+//                 sum2 += 0
+//             } 
+//         }
 // }
 // console.log(sum1 + sum2)
 // }
@@ -456,20 +456,20 @@
   
 //   }
 
-//Kyu 7
+// Kyu 7
 // In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 
 // Example
 // filter_list([1,2,'a','b']) == [1,2]
 // filter_list([1,'a','b',0,15]) == [1,0,15]
 // filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
-//solution:
-//function filter_list(l) {
+// solution:
+// function filter_list(l) {
 //     const filteredArray = l.filter(element => typeof element === 'number')
 //     return filteredArray
 //   }
-//
-//Kyu 7
+
+// Kyu 7
 // In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
 // My Solution:
 // function highAndLow(numbers){
@@ -485,19 +485,19 @@
 //     return numbersArr.toString().replace(/,/g,' ')
 //     }  
 //   }
-//
+
 //   Test Cases:
 //   highAndLow("42"); //return 42 42
 //   highAndLow("1 9 3 4 -5"); //return 9 -5
 //   highAndLow("1 2 3"); //return 3 1
-//
-//BETTER Solution:
+
+// BETTER Solution:
 // function highAndLow(numbers){
 //     numbers = numbers.split(' ');
 //     return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
 //   }
 
-//I have a cat and a dog.
+// I have a cat and a dog.
 // I got them at the same time as kitten/puppy. That was humanYears years ago.
 // Return their respective ages now as [humanYears,catYears,dogYears]
 // NOTES:
@@ -528,21 +528,21 @@
 //       return [humanYears,catYears,dogYears];
 //     }
 //   }
-//Better Solution:
+// Better Solution:
 // var humanYearsCatYearsDogYears = function(y) {
 //     if (y == 1) return [1, 15, 15]
 //     if (y == 2) return [2, 24, 24]
 //     return [y, (y-2) * 4 + 24, (y-2) * 5 + 24]
 //   }
 
-//Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
+// Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
 // Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
 // * With `name` = "john"  => return "Hello, John!"
 // * With `name` = "aliCE" => return "Hello, Alice!"
 // * With `name` not given 
 //   or `name` = ""        => return "Hello, World!"
 
-//***come back to this to refactor */
+// ***come back to this to refactor */
 // function hello(name) {
 //     if (name === ''){
 //         console.log("Hello, World!")
@@ -588,10 +588,10 @@
 //       return "drink whisky"
 //     }
 //   };
-//
-//Description:
+
+// Description:
 // Make a simple function called greet that returns the most-famous "hello world!".
-//Arrow fxn:
+// Arrow fxn:
 // let greet = () => "hello world!"
 
 // We need a simple function that determines if a plural is needed or not. It should take a number, and return true if a plural should be used with that number or false if not. This would be useful when printing out a string such as 5 minutes, 14 apples, or 1 sun.
@@ -599,9 +599,9 @@
 // All values will be positive integers or floats, or zero.
 
 // My solutions (2)
-//Arrow function:
+// Arrow function:
 // const plural = (n) => n < 1 || n > 1? true : false;
-//function declaration:
+// function declaration:
 
 // function plural(n) {
 //   if(n < 1 || n > 1){
@@ -634,46 +634,46 @@
 //             facing = 315
 //     }else{
 //         console.log("error facing")
-    // }
+//     }
 
-    //positive turn
-    // if (turn % 8 === 0){
-    //         turn = 0
-    // }else if (turn > 0 && turn % 8 === 5){
-    //         turn = 45
-    // }else if (turn > 0 && turn % 8 === 2){
-    //         turn = 90
-    // }else if (turn > 0 && turn % 8 === 7){
-    //         turn = 135
-    // }else if (turn > 0 && turn % 8 === 4){
-    //         turn = 180
-    // }else if (turn > 0 && turn % 8 === 1){
-    //         turn = 225
-    // }else if (turn > 0 && turn % 8 === 6){
-    //         turn = 270
-    // }else if (turn > 0 && turn % 8 === 3){
-    //         turn = 315
-    //negative turns!!
-    // }else if (turn < 0 && turn % 8 === -5){
-    //         turn = 315
-    // }else if (turn < 0 && turn % 8 === -2){
-    //         turn = 270
-    // }else if (turn < 0 && turn % 8 === -7){
-    //         turn = 225
-    // }else if (turn < 0 && turn % 8 === -4){
-    //         turn = 180
-    // }else if (turn < 0 && turn % 8 === -1){
-    //         turn = 135
-    // }else if (turn < 0 && turn % 8 === -6){
-    //         turn = 90
-    // }else if (turn < 0 && turn % 8 === -3){
-    //         turn = 45
-    // }else{
+//     positive turn
+//     if (turn % 8 === 0){
+//             turn = 0
+//     }else if (turn > 0 && turn % 8 === 5){
+//             turn = 45
+//     }else if (turn > 0 && turn % 8 === 2){
+//             turn = 90
+//     }else if (turn > 0 && turn % 8 === 7){
+//             turn = 135
+//     }else if (turn > 0 && turn % 8 === 4){
+//             turn = 180
+//     }else if (turn > 0 && turn % 8 === 1){
+//             turn = 225
+//     }else if (turn > 0 && turn % 8 === 6){
+//             turn = 270
+//     }else if (turn > 0 && turn % 8 === 3){
+//             turn = 315
+//     negative turns!!
+//     }else if (turn < 0 && turn % 8 === -5){
+//             turn = 315
+//     }else if (turn < 0 && turn % 8 === -2){
+//             turn = 270
+//     }else if (turn < 0 && turn % 8 === -7){
+//             turn = 225
+//     }else if (turn < 0 && turn % 8 === -4){
+//             turn = 180
+//     }else if (turn < 0 && turn % 8 === -1){
+//             turn = 135
+//     }else if (turn < 0 && turn % 8 === -6){
+//             turn = 90
+//     }else if (turn < 0 && turn % 8 === -3){
+//             turn = 45
+//     }else{
 //         console.log('Error Turn')
-    // }
+//     }
 //     console.log(facing,turn)
 
-    // let sumOfFacingAndTurn = facing + turn
+//     let sumOfFacingAndTurn = facing + turn
 //     console.log(`The sum of facing and turn is ${sumOfFacingAndTurn}`)
 
 //     if(sumOfFacingAndTurn % 8 === 0){
@@ -728,26 +728,26 @@
 // Write a function that returns a string in which firstname is swapped with last name.
 
 // nameShuffler('john McClane'); => "McClane john"
-//My Solution:
+// My Solution:
 // function nameShuffler(str){
 //     return str.split(' ').reverse().toString().replace(/,/g, ' ')
 //   }
 
 //   nameShuffler("Corey Damocles")
-//Top Solution:
+// Top Solution:
 // function nameShuffler(str){
 //     return str.split(' ').reverse().toString().replace(/,/g, ' ')
 //   }
-//Sentence Smash
+// Sentence Smash
 // Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
-//Function Declaration
+// Function Declaration
 // function smash (words) {
 //     return words.join(' ')
 //  };
 
- //Arrow Function
+//  Arrow Function
 //  const smash = (words) => words.join(' ')
-//Test cases:
+// Test cases:
 //  smash(["this", "is", "a", "really", "long", "sentence"])
 //  smash(["hello", "amazing", "world"])
 
@@ -758,7 +758,7 @@
 // var b == "wa.rs";
 // var name == a + b;
 
-//My solution:
+// My solution:
 // var a = "code";
 // var b = "wa.rs";
 // var name = a + b;
@@ -773,15 +773,15 @@
 //    }
 //    return arr
 // }
-//
-//Other similar solution:
+
+// Other similar solution:
 // const reverseSeq = n => {
 //     let arr = [];
 //       for (let i=n; i>0; i--) {
 //         arr.push(i);
 //         } return arr;
 //     };
-//test case:
+// test case:
 // reverseSeq(7)
 
 // You are given two sorted arrays that both only contain integers. Your task is to find a way to merge them into a single one, sorted in asc order. Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
@@ -817,7 +817,7 @@
 //     }
 //   }
 
-//Refactored as arrow function and ternary operator (fuck yeah first try)
+// Refactored as arrow function and ternary operator (fuck yeah first try)
 //   let check = (a,x) => a.includes(x)? true : false
 //   check([66, 101], 66)
 
@@ -825,7 +825,7 @@
 // Examples:
 // solution('abc', 'bc') // returns true
 // solution('abc', 'd') // returns false
-//Arrow function solution
+// Arrow function solution
 // const solution = (str, ending) => str.endsWith(ending)? true : false
 
 // Nathan loves cycling.
@@ -835,11 +835,11 @@
 // time = 3 ----> litres = 1
 // time = 6.7---> litres = 3
 // time = 11.8--> litres = 5
-//Function Declaration:
+// Function Declaration:
 // function litres(time) {
 //     return Math.floor(time * 0.5);
 //   }
-//Arrow Function:
+// Arrow Function:
 // const litres = time => Math.floor(time * 0.5)
 
 // Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
@@ -855,9 +855,17 @@
 //   console.log(`${firstName.toUpperCase().charAt(0)}.${secondName.toUpperCase().charAt(0)}`)
 // }
 
-//Test Cases:
+// Test Cases:
 // abbrevName('Sam Harris')
 // abbrevName('patrick feeney')
 
-//Codewars Arrow Function solution:
+// Codewars Arrow Function solution:
 // const abbrevName = (name) => name.split(' ').map(i => i.charAt(0).toUpperCase()).join('.');
+
+// Write a function to split a string and convert it into an array of words.
+// Examples (Input -> Output):
+// * "Robin Singh" ==> ["Robin", "Singh"]
+// * "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
+
+// My solution (arrow function)
+// const stringToArray = string => string.split(' ')
