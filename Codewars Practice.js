@@ -884,7 +884,7 @@
 // const greet = name => name === "Johnny"? "Hello, my love!" : `Hello, ${name}!`
 
 
-//6Kyu first Tryyyyy 05/10/2022
+// 6Kyu first Tryyyyy 05/10/2022
 // You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 // Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
 // []                                -->  "no one likes this"
@@ -892,8 +892,8 @@
 // ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
 // ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
-//My solution (FIRST TRY!!)
-//
+// My solution (FIRST TRY!!)
+
 // function likes(names) {
 //     if(names.length === 0){
 //         return "no one likes this"
@@ -907,7 +907,7 @@
 //         return `${names[0]}, ${names[1]} and ${names.length -2} others like this`
 //     }
 // }
-//
+
 // test cases:
 // console.log(likes([]))
 // console.log(likes(["Peter"]))
@@ -915,3 +915,9 @@
 // console.log(likes(["Max", "John", "Mark"] ))
 // console.log(likes(["Alex", "Jacob", "Mark", "Max"] ))
 
+// Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him
+// Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message :)
+// If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
+// If he doesn't get 10 hoops, return the string "Keep at it until you get it".
+// My arrow function solution:
+// let hoopCount = n => n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"
