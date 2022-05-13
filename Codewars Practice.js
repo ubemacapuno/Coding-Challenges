@@ -921,3 +921,22 @@
 // If he doesn't get 10 hoops, return the string "Keep at it until you get it".
 // My arrow function solution:
 // let hoopCount = n => n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"
+
+// 05-12-22 *** Gonna start dating these problems. Sorry I didn't before!! ***
+// Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
+// invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
+// invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
+// invert([]) == []
+// You can assume that all values are integers. Do not mutate the input array/list.
+// My solution (arrow function):
+// let invert = array => array.map((e) => (-e))
+
+// Complete the solution so that it reverses all of the words within the string passed in.
+// Example: "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
+
+function reverseWords(str){
+    return str.split(" ").reverse().join(' ')
+  }
+
+  console.log(reverseWords("The greatest victory is that which requires no battle"))
+
