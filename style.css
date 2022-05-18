@@ -38,13 +38,30 @@ header {
 /******************************************
 /* LAYOUT
 /*******************************************/
-header {
-
+h1,svg,p {
+     display: block;
 }
 
-footer {
 
+svg{
+     margin-top: 50px;
+     border: 3px solid #A23229;
+     border-radius: 10px;
+     box-shadow: 5px 10px 5px black;
+     animation-name: ckw;
+     animation-duration: 15.5s;
 }
+@keyframes ckw {
+     0% {
+         transform: rotate(0deg);
+     }
+     50% {
+         transform: rotate(360deg);
+     }
+     100% {
+          transform: rotate(-360deg);
+      }
+ }
 
 /******************************************
 /* ADDITIONAL STYLES
