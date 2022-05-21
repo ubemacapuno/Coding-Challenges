@@ -1273,9 +1273,9 @@
 
 // Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
-
-function toJadenCase(string) {
-    return string.split(' ').map(e=>e.charAt(0).toUpperCase()+e.slice(1))
-  }
-
-console.log(toJadenCase("How can mirrors be real if our eyes aren't real"))
+//My solution:
+// String.prototype.toJadenCase = function () {
+//     return this.split(' ').map(e=>e.charAt(0).toUpperCase()+e.slice(1)).join(" ")
+//   };
+//Test Case:
+// console.log(toJadenCase("How can mirrors be real if our eyes aren't real"))

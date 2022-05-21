@@ -1,25 +1,6 @@
-/* Box Model Hack */
 * {
      box-sizing: border-box;
 }
-
-/* Clear fix hack */
-.clearfix:after {
-     content: ".";
-     display: block;
-     clear: both;
-     visibility: hidden;
-     line-height: 0;
-     height: 0;
-}
-
-.clear {
-	clear: both;
-}
-
-/******************************************
-/* BASE STYLES
-/*******************************************/
 
 body {
      background-color: #303133;
@@ -34,10 +15,6 @@ header {
      flex-direction: column;
 }
 
-
-/******************************************
-/* LAYOUT
-/*******************************************/
 h1,svg,p {
      display: block;
 }
@@ -45,24 +22,17 @@ h1,svg,p {
 
 svg{
      margin-top: 50px;
-     border: 3px solid #A23229;
-     border-radius: 10px;
-     box-shadow: 5px 10px 5px black;
-     animation-name: ckw;
-     animation-duration: 15.5s;
 }
-@keyframes ckw {
-     0% {
-         transform: rotate(0deg);
-     }
-     50% {
-         transform: rotate(360deg);
-     }
-     100% {
-          transform: rotate(-360deg);
-      }
- }
 
-/******************************************
-/* ADDITIONAL STYLES
-/*******************************************/
+.rotate{
+     animation: rotation 30s infinite linear;
+}
+
+@keyframes rotation {
+     from {
+       transform: rotate(0deg);
+     }
+     to {
+       transform: rotate(360deg);
+     }
+   }
