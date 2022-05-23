@@ -1335,31 +1335,10 @@
 // console.log(reverseWords("This is an example!"))
 // console.log(reverseWords("double  spaces"))
 
-//7 kyu Complementary DNA 05.22.2022
-// Deoxyribonucleic acid (DNA) is a chemical found in the nucleus of cells and carries the "instructions" for the development and functioning of living organisms.
-// If you want to know more: http://en.wikipedia.org/wiki/DNA
-// In DNA strings, symbols "A" and "T" are complements of each other, as "C" and "G". You function receives one side of the DNA (string, except for Haskell); you need to return the other complementary side. DNA strand is never empty or there is no DNA at all (again, except for Haskell).
-// More similar exercise are found here: http://rosalind.info/problems/list-view/ (source)
-// Example: (input --> output)
-// "ATTGC" --> "TAACG"
-// "GTAT" --> "CATA"
-// dnaStrand []        `shouldBe` []
-// dnaStrand [A,T,G,C] `shouldBe` [T,A,C,G]
-// dnaStrand [G,T,A,T] `shouldBe` [C,A,T,A]
-// dnaStrand [A,A,A,A] `shouldBe` [T,T,T,T]
-//My solution! Run "If-Else" within an array.map!! FIRST TRY
-// function DNAStrand(dna){
-//     let dnaArray = dna.split('').map(e=>
-//     {if(e==="A"){
-//         return "T"
-//     }else if (e==="T"){
-//         return "A"
-//     }else if (e==="G"){
-//         return "C"
-//     }else{
-//         return "G"
-//     }})
-//     return dnaArray.join('')
-//   }
-// Test Case:
-// console.log(DNAStrand("ATTGC"))
+//8 kyu Beginner Series #1 School Paperwork 5/23/2022
+// Your classmates asked you to copy some paperwork for them. You know that there are 'n' classmates and the paperwork has 'm' pages.
+// Your task is to calculate how many blank pages do you need. If n < 0 or m < 0 return 0.
+// Example:
+// n= 5, m=5: 25
+// n=-5, m=5:  0
+
