@@ -1384,3 +1384,8 @@
 // type the console.log() in the next line(don't forget to put the str in the brackets).
 // When you have finished the work, click "Run Tests" to see if your code is working properly.
 // In the end, click "Submit" to submit your code pass this kata.
+//My solution:
+// function helloWorld(){
+//     let str = "Hello World!"
+//     console.log(str)
+//   }
