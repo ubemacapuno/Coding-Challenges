@@ -25,7 +25,7 @@ svg{
 }
 
 .rotate{
-     animation: rotation 30s infinite linear;
+     animation: rotation 12s infinite linear;
 }
 
 @keyframes rotation {
@@ -33,6 +33,6 @@ svg{
        transform: rotate(0deg);
      }
      to {
-       transform: rotate(360deg);
+       transform: rotate(-360deg);
      }
    }
