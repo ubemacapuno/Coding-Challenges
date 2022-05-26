@@ -1,11 +1,11 @@
 * {
      box-sizing: border-box;
+     font-family: 'Spline Sans Mono', monospace;
 }
 
 body {
      background-color: #303133;
      color: white;
-
 }
 
 header {
@@ -13,12 +13,12 @@ header {
      justify-content: center;
      align-items: center;
      flex-direction: column;
+     flex-wrap: wrap;
 }
 
-h1,svg,p {
-     display: block;
+h1{
+     font-size: 3rem;
 }
-
 
 svg{
      padding: 10px;
