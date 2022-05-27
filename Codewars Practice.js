@@ -1422,7 +1422,7 @@
 //Test Case:
 // console.log(positiveSum([1,-4,7,12]))
 
-// 7 kyu Descending Order 05/26/2022
+// 7 kyu Descending Order 05/26/2022 (array problem)
 // Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
 // Examples:
 // Input: 42145 Output: 54421
@@ -1447,3 +1447,21 @@
 // function descendingOrder(n) {
 //     return +n.toString().split('').sort().reverse().join('');
 //   }
+
+//7 kyu Sort array by string length 05/27/2022 (array problem)
+// Write a function that takes an array of strings as an argument and returns a sorted array containing the same strings, ordered from shortest to longest.
+// For example, if this array were passed as an argument:
+// ["Telescopes", "Glasses", "Eyes", "Monocles"]
+// Your function would return the following array:
+// ["Eyes", "Glasses", "Monocles", "Telescopes"]
+// All of the strings in the array passed to your function will be different lengths, so you will not have to decide how to order multiple strings of the same length.
+//My Solution:
+// function sortByLength (array) {
+//     // Return an array containing the same strings, ordered from shortest to longest
+//     return array.sort((a, b) => a.length - b.length)
+//   };
+//My solution refactored in array syntax:
+// const sortByLength = array => array.sort((a, b) => a.length - b.length)
+//Test case:
+// console.log(sortByLength(["Beg", "Life", "I", "To"]))
+
