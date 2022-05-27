@@ -1,3 +1,32 @@
+function getFetch(){
+    const username = 'aexcode'
+    const url = `https://www.codewars.com/api/v1/users/${username}`
+    let isLoading = true
+  
+    fetch(url)
+        .then(res => res.json()) // parse response as JSON
+        .then(data => {//takes the json from the api
+          console.log(data.username)
+          console.log(data.honor)
+          console.log(data.clan)
+          console.log(data.ranks.overall.name)
+          console.log(data.highestTrained)
+          // Now let's try displaying on the HTML:
+        //   document.querySelector('.Name').innerText = data.name;
+        //   document.querySelector('.Number').innerText = data.id;
+          // document.querySelector('.Type').innerText = data.types[0].type.name;
+          // document.querySelector('.Type2').innerText = data.types[1].type.name 
+        })
+        .catch(err => {
+            console.log(`error ${err}`)
+        }).finally(() => {
+          isLoading = false
+        });
+  }
+
+//Call the API function
+getFetch()
+
 // *** Practice on 4/3/22 *** 
 // /d/Documents/Google\ Drive/100Devs/Code\ Wars\ Practice
 // The above is for your git location
