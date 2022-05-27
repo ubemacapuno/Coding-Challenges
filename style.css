@@ -16,7 +16,7 @@ header {
      flex-wrap: wrap;
 }
 
-h1{
+h1,p{
      font-size: 3rem;
      -webkit-text-stroke: 0.3px black;
      text-shadow: 
@@ -24,6 +24,10 @@ h1{
       0 0 50px #A23229,
       0 0 122px #A23229;
      color: #A23229;
+}
+
+p{
+     font-size: 1.6rem;
 }
 
 svg{
@@ -43,7 +47,7 @@ svg{
          transform: rotate(360deg);
      }
      90% {
-          transform: rotate(-330deg);
+          transform: rotate(-355deg);
       }
      100% {
           transform: rotate(-360deg);
