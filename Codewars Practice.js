@@ -1551,3 +1551,18 @@ getFetch()
 // const evenNumbers = (array, number) => array.filter(e=> e % 2 === 0).slice(-number)
 //Test
 // console.log(evenNumbers([-22, 5, 3, 11, 26, -6, -7, -8, -9, -8, 26], 2))
+
+//8 kyu Grasshopper - Messi goals function
+// Messi goals function
+// Messi is a soccer player with goals in three leagues:
+// LaLiga
+// Copa del Rey
+// Champions
+// Complete the function to return his total number of goals in all three leagues.
+// Note: the input will always be valid.
+// For example:
+// 5, 10, 2  -->  17
+//My solution:
+// const goals = (laLigaGoals, copaDelReyGoals, championsLeagueGoals) => laLigaGoals + copaDelReyGoals + championsLeagueGoals
+//Clever solution using reduce and (...a):
+//const goals = (...a) => a.reduce((s, v) => s + v, 0);
