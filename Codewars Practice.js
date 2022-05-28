@@ -6,12 +6,6 @@ function getFetch(){
     fetch(url)
         .then(res => res.json()) // parse response as JSON
         .then(data => {//takes the json from the api
-          console.log(data.username)
-          console.log(data.honor)
-          console.log(data.clan)
-          console.log(data.ranks.overall.name)
-          console.log(data.ranks.languages)
-          console.log(data.codeChallenges.totalCompleted)
 
           // Display on the HTML:
           document.querySelector('.username').innerText = data.username;
