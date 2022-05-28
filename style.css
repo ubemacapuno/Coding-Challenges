@@ -49,19 +49,26 @@ svg{
 div {
      display: flex;
      flex-direction: column;
-     align-items: flex-start;
      justify-content: center;
      border: 2px solid #A23229;
      padding: 10px;
      background-color: #303133;
 }
 
-.name::before, .honor::before, .clan::before, .kyu::before, .completed::before  {
+.username::before, .name::before, .honor::before, .clan::before, .kyu::before, .completed::before  {
      text-shadow: 
      0 0 7px black,
      0 0 50px #A23229,
      0 0 122px #A23229;
     color: #A23229;
+}
+
+.username::before {
+     content: '<'
+}
+
+.username::after{
+     content: '/>'
 }
 
 .name::before {
@@ -81,7 +88,11 @@ div {
 }
 
 .completed::before {
-     content: 'Kata Completed: '
+     content: 'Codewars Completed: '
+}
+
+.codewars-banner {
+  padding: 5px;  
 }
 
 @keyframes rotation {
