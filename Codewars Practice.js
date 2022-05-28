@@ -1,7 +1,7 @@
+const username = 'ubemacapuno'
 function getFetch(){
-    const username = 'aexcode'
     const url = `https://www.codewars.com/api/v1/users/${username}`
-    let isLoading = true
+    let isLoading = true 
   
     fetch(url)
         .then(res => res.json()) // parse response as JSON
@@ -10,12 +10,16 @@ function getFetch(){
           console.log(data.honor)
           console.log(data.clan)
           console.log(data.ranks.overall.name)
-          console.log(data.highestTrained)
-          // Now let's try displaying on the HTML:
-        //   document.querySelector('.Name').innerText = data.name;
-        //   document.querySelector('.Number').innerText = data.id;
-          // document.querySelector('.Type').innerText = data.types[0].type.name;
-          // document.querySelector('.Type2').innerText = data.types[1].type.name 
+          console.log(data.ranks.languages)
+          console.log(data.codeChallenges.totalCompleted)
+
+          // Display on the HTML:
+          document.querySelector('.username').innerText = data.username;
+          document.querySelector('.name').innerText = data.name;
+          document.querySelector('.honor').innerText = data.honor;
+          document.querySelector('.clan').innerText = data.clan;
+          document.querySelector('.kyu').innerText = data.ranks.overall.name;
+          document.querySelector('.completed').innerText = data.codeChallenges.totalCompleted;
         })
         .catch(err => {
             console.log(`error ${err}`)

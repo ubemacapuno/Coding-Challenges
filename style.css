@@ -16,8 +16,7 @@ header {
      flex-wrap: wrap;
 }
 
-h1,p{
-     font-size: 3rem;
+h1, h2 {
      -webkit-text-stroke: 0.3px black;
      text-shadow: 
       0 0 7px black,
@@ -26,8 +25,16 @@ h1,p{
      color: #A23229;
 }
 
-p{
-     font-size: 1.6rem;
+h1 {
+     font-size: 2.4rem;
+}
+
+h2 {
+     font-size: 1.8rem;
+}
+
+h3 {
+     font-size: 1rem;
 }
 
 svg{
@@ -37,6 +44,44 @@ svg{
 
 .rotate{
      animation: rotation 6s infinite linear;
+}
+
+div {
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     justify-content: center;
+     border: 2px solid #A23229;
+     padding: 10px;
+     background-color: #1f1f1f;
+}
+
+.name::before, .honor::before, .clan::before, .kyu::before, .completed::before  {
+     text-shadow: 
+     0 0 7px black,
+     0 0 50px #A23229,
+     0 0 122px #A23229;
+    color: #A23229;
+}
+
+.name::before {
+     content: 'Name: ';
+}
+
+.honor::before {
+     content: 'Honor: ';
+}
+
+.clan::before {
+     content: 'Clan: ';
+}
+
+.kyu::before {
+     content: 'Rank: ';
+}
+
+.completed::before {
+     content: 'Codewars Completed: '
 }
 
 @keyframes rotation {
