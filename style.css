@@ -81,7 +81,7 @@ div {
 }
 
 .completed::before {
-     content: 'Codewars Completed: '
+     content: 'Kata Completed: '
 }
 
 @keyframes rotation {
