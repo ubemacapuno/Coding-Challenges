@@ -4,7 +4,7 @@
 }
 
 body {
-     background-color: #303133;
+     background-color: #1c1c1c;
      color: white;
 }
 
@@ -17,7 +17,7 @@ header {
 }
 
 h1, h2 {
-     -webkit-text-stroke: 0.3px black;
+     -webkit-text-stroke: 0.3px rgb(26, 26, 26);
      text-shadow: 
       0 0 7px black,
       0 0 50px #A23229,
@@ -53,7 +53,7 @@ div {
      justify-content: center;
      border: 2px solid #A23229;
      padding: 10px;
-     background-color: #1f1f1f;
+     background-color: #303133;
 }
 
 .name::before, .honor::before, .clan::before, .kyu::before, .completed::before  {
