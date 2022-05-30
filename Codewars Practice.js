@@ -363,11 +363,12 @@ getFetch()
 //   return String(num);
 // }
 
+//8 kyuFind Maximum and Minimum Values of a List
 // Instructions: Write a function that returns both the minimum and maximum number of the given list/array.
 // minMax([1,2,3,4,5])   == [1,5]
 // minMax([2334454,5])   == [5, 2334454]
 // minMax([1])           == [1, 1]
-
+//My solution:
 // function minMax(arr){
 //     arr.sort((a,b) => a-b);
 //     let maxElement = arr[arr.length-1];
@@ -376,14 +377,13 @@ getFetch()
 //     console.log(maxElement);
 //     console.log([minElement,maxElement]);
 //   }
-
 // Other solutions . . .
 // function minMax(arr){
 //     return [Math.min(...arr), Math.max(...arr)];
 //   }
-
 // const minMax = arr => [ Math.min(...arr), Math.max(...arr) ];
 
+// 8 kyu Beginner Series #4 Cockroach
 // The cockroach is one of the fastest insects. Write a function which takes its speed in km per hour and returns it in cm per second, rounded down to the integer (= floored).
 // function cockroachSpeed(s) {
 //     let cmPerSecond = Math.floor((s * (100000/3600)))
@@ -392,14 +392,13 @@ getFetch()
 // Other solution:
 // const cockroachSpeed = s => Math.floor(s / 0.036);
 
+//8 kyu L1: Set Alarm
 // Write a function named setAlarm which receives two parameters. The first parameter, employed, is true whenever you are employed and the second parameter, vacation is true whenever you are on vacation.
 // Examples:
-
 // setAlarm(true, true) -> false
 // setAlarm(false, true) -> false
 // setAlarm(false, false) -> false
 // setAlarm(true, false) -> true
-
 // my code:
 // function setAlarm(employed, vacation){
 //     if ((employed === true && vacation === true)||(employed === false && vacation === false)||(employed === false && vacation === true)){
@@ -408,20 +407,17 @@ getFetch()
 //       return true
 //     }
 //   }
-
 // Other solution:
 // function setAlarm(employed, vacation){
 //     return employed && !vacation;
 //   }
 
+//8 kyu Count of positives / sum of negatives
 // Instructions: Given an array of integers.
-
 // Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers. 0 is neither positive nor negative.
-
 // If the input is an empty array or is null, return an empty array.
 // Example
 // For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
-
 // function countPositivesSumNegatives(input) {
 //     if (!input || input.length < 1){
 //         return []
@@ -439,15 +435,14 @@ getFetch()
 //     return output;
 //     }
 // }
-
+//Test Case:
 // countPositivesSumNegatives([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15])
 
-// 6 kyu
+// Multiples of 3 or 5 6 kyu
 // If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 // Finish the solution so that it returns the sum of all the multiples of 3 or 5 below the number passed in. Additionally, if the number is negative, return 0 (for languages that do have them).
 // Note: If the number is a multiple of both 3 and 5, only count it once.
 // (Solved FIRST TRY!! 4/23/22)
-
 // function solution(number){
 //             let sum1 = 0;
 //             let sum2 = 0;
@@ -469,23 +464,22 @@ getFetch()
 // }
 // console.log(sum1 + sum2)
 // }
-
+//Test case:
 // solution(10)
 
-
+// 8 kyu Grasshopper - Summation
 // Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+//My solution:
 // var summation = function (num) {
 //     let sum = 0;
 //     for (i=1;i<=num;i++){
 //       sum += i
 //     }
 //     return sum
-  
 //   }
 
-// Kyu 7
+// List Filtering 7
 // In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
-
 // Example
 // filter_list([1,2,'a','b']) == [1,2]
 // filter_list([1,'a','b',0,15]) == [1,0,15]
@@ -496,7 +490,7 @@ getFetch()
 //     return filteredArray
 //   }
 
-// Kyu 7
+// 7 Kyu Highest and Lowest
 // In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
 // My Solution:
 // function highAndLow(numbers){
@@ -512,18 +506,17 @@ getFetch()
 //     return numbersArr.toString().replace(/,/g,' ')
 //     }  
 //   }
-
 //   Test Cases:
 //   highAndLow("42"); //return 42 42
 //   highAndLow("1 9 3 4 -5"); //return 9 -5
 //   highAndLow("1 2 3"); //return 3 1
-
 // BETTER Solution:
 // function highAndLow(numbers){
 //     numbers = numbers.split(' ');
 //     return `${Math.max(...numbers)} ${Math.min(...numbers)}`;
 //   }
 
+// 8 kyu Cat years, Dog years
 // I have a cat and a dog.
 // I got them at the same time as kitten/puppy. That was humanYears years ago.
 // Return their respective ages now as [humanYears,catYears,dogYears]
@@ -538,7 +531,6 @@ getFetch()
 // 15 dog years for first year
 // +9 dog years for second year
 // +5 dog years for each year after that
-
 // My Solution: 
 // var humanYearsCatYearsDogYears = function(humanYears) {
 //     if(humanYears >= 3){
@@ -562,48 +554,18 @@ getFetch()
 //     return [y, (y-2) * 4 + 24, (y-2) * 5 + 24]
 //   }
 
-// Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
-// Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
-// * With `name` = "john"  => return "Hello, John!"
-// * With `name` = "aliCE" => return "Hello, Alice!"
-// * With `name` not given 
-//   or `name` = ""        => return "Hello, World!"
-
-// ***come back to this to refactor */
-// function hello(name) {
-//     if (name === ''){
-//         console.log("Hello, World!")
-//         return "Hello, World!"
-//     }else{
-//         name = name.toLowerCase().split('')
-//         // console.log(name)
-//         name = name[0].toUpperCase() + name.slice(1)
-//         // console.log(name)
-//         name = name.replace(/,/g, '')
-//         // console.log(name)
-//         console.log(`Hello, ${name}!`)
-//         return `Hello, ${name}!` 
-//     }
-//   }
-
-//   hello('aLiCE')
-//   hello("john")
-//   hello('')
-//   hello("PhOeniX")
-
+// 8 kyu Drink about
 // Kids drink toddy.
 // Teens drink coke.
 // Young adults drink beer.
 // Adults drink whisky.
 // Make a function that receive age, and return what they drink.
-
 // Rules:
-
 // Children under 14 old.
 // Teens under 18 old.
 // Young under 21 old.
 // Adults have 21 or more.
-
+//My solution:
 // function peopleWithAgeDrink(old) {
 //     if (old < 14){
 //       return "drink toddy"
@@ -616,20 +578,20 @@ getFetch()
 //     }
 //   };
 
+// 8 kyu Function 1 - hello world
 // Description:
 // Make a simple function called greet that returns the most-famous "hello world!".
 // Arrow fxn:
 // let greet = () => "hello world!"
 
+// 8 kyu Plural
 // We need a simple function that determines if a plural is needed or not. It should take a number, and return true if a plural should be used with that number or false if not. This would be useful when printing out a string such as 5 minutes, 14 apples, or 1 sun.
 // You only need to worry about english grammar rules for this kata, where anything that isn't singular (one of something), it is plural (not one of something).
 // All values will be positive integers or floats, or zero.
-
 // My solutions (2)
 // Arrow function:
 // const plural = (n) => n < 1 || n > 1? true : false;
 // function declaration:
-
 // function plural(n) {
 //   if(n < 1 || n > 1){
 //     return true;
@@ -638,10 +600,10 @@ getFetch()
 //   }
 //   }
 
+// 7 kyu Turn with a Compass
 // You receive the direction you are facing (one of the 8 directions: N, NE, E, SE, S, SW, W, NW) and a certain degree to turn (a multiple of 45, between -1080 and 1080); positive means clockwise, and negative means counter-clockwise.
-
 // Return the direction you will face after the turn.
-
+//My solution:
 // function direction(facing, turn){
 //     if (facing === "N"){
 //             facing = 0
