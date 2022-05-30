@@ -732,6 +732,7 @@ getFetch()
 // Arrow Function
 // const grow = (x) => x.reduce((acc,c)=> acc*c,1)
 
+// 8 kyu Holiday VI - Shark Pontoon
 // Your friend invites you out to a cool floating pontoon around 1km off the beach. Among other things, the pontoon has a huge slide that drops you out right into the ocean, a small way from a set of stairs used to climb out.
 // As you plunge out of the slide into the water, you see a shark hovering in the darkness under the pontoon... Crap!
 // You need to work out if the shark will get to you before you can get to the pontoon. To make it easier... as you do the mental calculations in the water you either freeze when you realise you are dead, or swim when you realise you can make it!
@@ -743,7 +744,6 @@ getFetch()
 // dolphin = a boolean, if true, you can half the swimming speed of the shark as the dolphin will attack it.
 // The pontoon, you, and the shark are all aligned in one dimension.
 // If you make it, return "Alive!", if not, return "Shark Bait!".
-
 // function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
 //     if((dolphin === true && pontoonDistance/youSpeed < (sharkDistance/sharkSpeed) * 2 )||(dolphin === false && pontoonDistance/youSpeed < (sharkDistance/sharkSpeed))){
 //         return "Alive!"
@@ -752,44 +752,48 @@ getFetch()
 //     }
 // }
 
+// 8 kyu Name Shuffler
 // Write a function that returns a string in which firstname is swapped with last name.
-
 // nameShuffler('john McClane'); => "McClane john"
 // My Solution:
 // function nameShuffler(str){
 //     return str.split(' ').reverse().toString().replace(/,/g, ' ')
 //   }
-
 //   nameShuffler("Corey Damocles")
 // Top Solution:
 // function nameShuffler(str){
 //     return str.split(' ').reverse().toString().replace(/,/g, ' ')
 //   }
-// Sentence Smash
+
+// 8 kyu Sentence Smash
 // Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
 // Function Declaration
 // function smash (words) {
 //     return words.join(' ')
 //  };
-
 //  Arrow Function
 //  const smash = (words) => words.join(' ')
 // Test cases:
 //  smash(["this", "is", "a", "really", "long", "sentence"])
 //  smash(["hello", "amazing", "world"])
 
-// Arrow Function
+// 8 kyu Beginner - Reduce but Grow
+// Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+// [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+// My Arrow Function solution:
 // const grow = (x) => x.reduce((acc,c)=> acc*c,1)
+
+// 8 kyu Basic variable assignment
 // This code should store "codewa.rs" as a variable called name but it's not working. Can you figure out why?
 // var a == "code";
 // var b == "wa.rs";
 // var name == a + b;
-
 // My solution:
 // var a = "code";
 // var b = "wa.rs";
 // var name = a + b;
 
+// 8 kyu Reversed sequence
 // Build a function that returns an array of integers from n to 1 where n>0.
 // Example : n=5 --> [5,4,3,2,1]
 // My solution:
@@ -800,7 +804,6 @@ getFetch()
 //    }
 //    return arr
 // }
-
 // Other similar solution:
 // const reverseSeq = n => {
 //     let arr = [];
@@ -811,6 +814,7 @@ getFetch()
 // test case:
 // reverseSeq(7)
 
+// 8 kyu Merge two sorted arrays into one
 // You are given two sorted arrays that both only contain integers. Your task is to find a way to merge them into a single one, sorted in asc order. Complete the function mergeArrays(arr1, arr2), where arr1 and arr2 are the original sorted arrays.
 // You don't need to worry about validation, since arr1 and arr2 must be arrays with 0 or more Integers. If both arr1 and arr2 are empty, then just return an empty array.
 // Note: arr1 and arr2 may be sorted in different orders. Also arr1 and arr2 may have same integers. Remove duplicated in the returned result.
@@ -818,7 +822,6 @@ getFetch()
 // * [1, 2, 3, 4, 5], [6, 7, 8, 9, 10] -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // * [1, 3, 5, 7, 9], [10, 8, 6, 4, 2] -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 // * [1, 3, 5, 7, 9, 11, 12], [1, 2, 3, 4, 5, 10, 12] -> [1, 2, 3, 4, 5, 7, 9, 10, 11, 12]
-
 // function mergeArrays(arr1, arr2) {
 //    let mergeArrays = arr1.concat(arr2).sort((a, b) => a - b);
 //    let uniqueChars = [];
@@ -830,10 +833,10 @@ getFetch()
 // return uniqueChars
 // }
 
+// 8 kyu You only need one - Beginner
 // You will be given an array a and a value x. All you need to do is check whether the provided array contains the value.
 // Array can contain numbers or strings. X can be either.
 // Return true if the array contains the value, false if not.
-
 // function check(a, x) {
 //     if (a.includes(x)){
 //         console.log('true')
@@ -843,11 +846,9 @@ getFetch()
 //     return false
 //     }
 //   }
-
 // Refactored as arrow function and ternary operator (fuck yeah first try)
 //   let check = (a,x) => a.includes(x)? true : false
 //   check([66, 101], 66)
-
 // Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 // Examples:
 // solution('abc', 'bc') // returns true
@@ -855,6 +856,7 @@ getFetch()
 // Arrow function solution
 // const solution = (str, ending) => str.endsWith(ending)? true : false
 
+// 8 kyu Keep Hydrated!
 // Nathan loves cycling.
 // Because Nathan knows it is important to stay hydrated, he drinks 0.5 litres of water per hour of cycling.
 // You get given the time in hours and you need to return the number of litres Nathan will drink, rounded to the smallest value.
@@ -868,35 +870,30 @@ getFetch()
 //   }
 // Arrow Function:
 // const litres = time => Math.floor(time * 0.5)
-
 // Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
 // The output should be two capital letters with a dot separating them.
 // It should look like this:
 // Sam Harris => S.H
 // patrick feeney => P.F
-
 // My Solution:
 // function abbrevName(name){
 //   let firstName = name.split(" ").shift()
 //   let secondName = name.split(" ").pop()
 //   console.log(`${firstName.toUpperCase().charAt(0)}.${secondName.toUpperCase().charAt(0)}`)
 // }
-
 // Test Cases:
 // abbrevName('Sam Harris')
 // abbrevName('patrick feeney')
-
 // Codewars Arrow Function solution:
 // const abbrevName = (name) => name.split(' ').map(i => i.charAt(0).toUpperCase()).join('.');
 
+// 8 kyu Convert a string to an array
 // Write a function to split a string and convert it into an array of words.
 // Examples (Input -> Output):
 // * "Robin Singh" ==> ["Robin", "Singh"]
 // * "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
-
 // My solution (arrow function)
 // const stringToArray = string => string.split(' ')
-
 // Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
 // Can you help her?
 //My Solution:
@@ -910,8 +907,7 @@ getFetch()
 //Ternary Operator + arrow function solution:
 // const greet = name => name === "Johnny"? "Hello, my love!" : `Hello, ${name}!`
 
-
-// 6Kyu first Tryyyyy 05/10/2022
+// 6 kyu Who likes it? 05/10/2022
 // You probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 // Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
 // []                                -->  "no one likes this"
@@ -919,8 +915,7 @@ getFetch()
 // ["Jacob", "Alex"]                 -->  "Jacob and Alex like this"
 // ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
-// My solution (FIRST TRY!!)
-
+// My solution (FIRST TRY!!):
 // function likes(names) {
 //     if(names.length === 0){
 //         return "no one likes this"
@@ -934,14 +929,12 @@ getFetch()
 //         return `${names[0]}, ${names[1]} and ${names.length -2} others like this`
 //     }
 // }
-
 // test cases:
 // console.log(likes([]))
 // console.log(likes(["Peter"]))
 // console.log(likes(["Jacob", "Alex"]  ))
 // console.log(likes(["Max", "John", "Mark"] ))
 // console.log(likes(["Alex", "Jacob", "Mark", "Max"] ))
-
 // Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him
 // Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message :)
 // If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
@@ -949,7 +942,7 @@ getFetch()
 // My arrow function solution:
 // let hoopCount = n => n >= 10 ? "Great, now move on to tricks" : "Keep at it until you get it"
 
-// 05-12-22 *** Gonna start dating these problems. Sorry I didn't before!! ***
+// 05-12-22 8 kyu Invert values
 // Given a set of numbers, return the additive inverse of each. Each positive becomes negatives, and the negatives become positives.
 // invert([1,2,3,4,5]) == [-1,-2,-3,-4,-5]
 // invert([1,-2,3,-4,5]) == [-1,2,-3,4,-5]
@@ -958,6 +951,7 @@ getFetch()
 // My solution (arrow function):
 // let invert = array => array.map((e) => (-e))
 
+//8 kyu Reversed Words
 // Complete the solution so that it reverses all of the words within the string passed in.
 // Example: "The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
 //My solutions:
@@ -969,8 +963,8 @@ getFetch()
 // const reverseWords = s => s.split(" ").reverse().join(' ')
 // Test case:
 // console.log(reverseWords("The greatest victory is that which requires no battle"))
-//7Kyu
-// A square of squares
+
+//7Kyu A square of squares
 // You like building blocks. You especially like building blocks that are squares. And what you even like more, is to arrange them into a square of square building blocks!
 // However, sometimes, you can't arrange them into a square. Instead, you end up with an ordinary rectangle! Those blasted things! If you just had a way to know, whether you're currently working in vain… Wait! That's it! You just have to check if your number of building blocks is a perfect square.
 // Task
@@ -1015,13 +1009,11 @@ getFetch()
 //         name = 'Neptune'
 //         break;
 //     }
-    
 //     return name;
 //   }
-
 //   console.log(getPlanetName(3))
 
-//05.13.2022
+//05.13.2022 8Kyu Get the mean of an array
 // It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
 // Return the average of the given array rounded down to its nearest integer.
 // The array will never be empty.
@@ -1032,12 +1024,11 @@ getFetch()
 // function getAverage(marks){
 //     return marks.reduce((a,c)=>a+c,0)/marks.length
 //   }
-
 // console.log(getAverage([100,110]))
 //Arrow function solution:
 // const getAverage = (marks) => Math.floor(marks.reduce((a,c)=>a+c,0)/marks.length)
 
-//05.14.2022 7KYU FIRST TRY!!
+//05.14.2022 7KYU Get the Middle Character
 // You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
 // #Examples:
 // Kata.getMiddle("test") should return "es"
@@ -1065,6 +1056,7 @@ getFetch()
 // console.log(getMiddle("CJ"))
 // console.log(getMiddle("J"))
 
+//8 Kyu Thinkful - Logic Drills: Traffic light
 // You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.
 // Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.
 // For example, update_light('green') should return 'yellow'.
@@ -1079,7 +1071,7 @@ getFetch()
 //     }
 //   }
 
-//Hardest lvl 8 kyu so far . . . passed first try tho:
+//8 kyu A wolf in sheep's clothing
 // Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to be sheep. Fortunately, you are good at spotting them.
 // Warn the sheep in front of the wolf that it is about to be eaten. Remember that you are standing at the front of the queue which is at the end of the array:
 // [sheep, sheep, sheep, sheep, sheep, wolf, sheep, sheep]      (YOU ARE HERE AT THE FRONT OF THE QUEUE)
@@ -1098,7 +1090,6 @@ getFetch()
 //         }
 //     }   
 // }
-
 //Test Cases:
 // console.log(warnTheSheep(["sheep","wolf","sheep", "sheep", "sheep"]))
 // console.log(warnTheSheep(["sheep", "sheep", "wolf"]))
@@ -1136,6 +1127,7 @@ getFetch()
 //My Arrow function solution:
 // const isDivisible = (n,x,y) => n % x === 0 && n % y === 0? true : false
 
+// 8 kyu Sort and Star
 // You will be given a vector of strings. You must sort it alphabetically (case-sensitive, and based on the ASCII values of the chars) and then return the first value.
 // The returned value must be a string, and have "***" between each of its letters.
 // You should not remove or add elements from/to the array.
@@ -1148,9 +1140,9 @@ getFetch()
 //Test Cases:
 // console.log(twoSort(["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"])
 
-//A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
+//8 Kyu Detect Pangram
+// A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).
 // Given a string, detect whether or not it is a pangram. Return True if it is, False if not. Ignore numbers and punctuation.
-
 // function isPangram(string){
 //     let arr = string.toLowerCase();
 //     let abc = 'abcdefghijklmnopqrstuvwxyz'
@@ -1162,7 +1154,6 @@ getFetch()
 //     }
 //     return true;
 //   }
-
 //   console.log(isPangram("abcdefghijklmnopqrsuvwxyz"))
 
 // 8Kyu
@@ -1182,15 +1173,13 @@ getFetch()
 //test case:
 // console.log(gooseFilter(["African", "Roman Tufted", "test 2","Toulouse", "Pilgrim", "Steinbacher","test"]))
 
-//8Kyu 05-18-2022
+//8Kyu Sum Numbers 05-18-2022
 // Write a function that takes an array of numbers and returns the sum of the numbers. The numbers can be negative or non-integer. If the array does not contain any numbers then you should return 0.
 // Examples
 // Input: [1, 5.2, 4, 0, -1]
 // Output: 9.2
-
 // Input: []
 // Output: 0
-
 // Input: [-2.398]
 // Output: -2.398
 // Assumptions
@@ -1200,8 +1189,6 @@ getFetch()
 // What We're Testing
 // We're testing basic loops and math operations. This is for beginners who are just learning loops and math operations.
 // Advanced users may find this extremely easy and can easily write this in one line.
-
-// Sum Numbers
 //My solution:
 // function sum (numbers) {
 //     "use strict";
@@ -1218,7 +1205,7 @@ getFetch()
 //My arrow function solution
 // const sum = (numbers) => numbers == []? 0:numbers.reduce((a,c)=>a+c,0)
 
-// 7Kyu
+// 7Kyu Mumbling 
 // This time no story, no theory. The examples below show you how to write function accum:
 // Examples:
 // accum("abcd") -> "A-Bb-Ccc-Dddd"
@@ -1279,10 +1266,8 @@ getFetch()
 // 8 kyu Century From Year
 // Introduction
 // The first century spans from the year 1 up to and including the year 100, the second century - from the year 101 up to and including the year 200, etc.
-
 // Task
 // Given a year, return the century it is in.
-
 // Examples
 // 1705 --> 18
 // 1900 --> 19
@@ -1293,11 +1278,8 @@ getFetch()
 
 //7 kyu Jaden Casing Strings 05.21.2022
 // Jaden Smith, the son of Will Smith, is the star of films such as The Karate Kid (2010) and After Earth (2013). Jaden is also known for some of his philosophy that he delivers via Twitter. When writing on Twitter, he is known for almost always capitalizing every word. For simplicity, you'll have to capitalize each word, check out how contractions are expected to be in the example below.
-
 // Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
-
 // Example:
-
 // Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
 // Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
 //My solution:
@@ -1309,10 +1291,8 @@ getFetch()
 
 //8 kyu Basic Mathematical Operations
 // Your task is to create a function that does four basic mathematical operations.
-
 // The function should take three arguments - operation(string/char), value1(number), value2(number).
 // The function should return result of numbers after applying the chosen operation.
-
 // Examples(Operator, value1, value2) --> output
 // ('+', 4, 7) --> 11
 // ('-', 15, 18) --> -3
@@ -1344,9 +1324,9 @@ getFetch()
 //   }
 // }
 //
+
 // 7 kyu Reverse words
 // Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
-
 // Examples
 // "This is an example!" ==> "sihT si na !elpmaxe"
 // "double  spaces"      ==> "elbuod  secaps"
@@ -1595,8 +1575,8 @@ getFetch()
 //     : descArray.toString() == array.toString() ? "yes, descending" 
 //     : "no"
 // }
-
 // console.log(isSortedAndHow([20,19,18,-18]))
+
 // 8 kyu Switch it Up! 05/29/2022
 // When provided with a number between 0-9, return it in words.
 // Input :: 1
@@ -1626,6 +1606,7 @@ getFetch()
 //         return "Nine"
 //     }
 // }
+
 //7 kyu Narcissistic Numbers 05/30/2022
 // A Narcissistic Number is a number of length l in which the sum of its digits to the power of l is equal to the original number. If this seems confusing, refer to the example below.
 // Ex: 153, where l = 3 ( the number of digits in 153 )
@@ -1666,6 +1647,7 @@ getFetch()
 //My solution: 
 // const booleanToString = b => b === true ? "true" : "false"
 
+// 8 kyu Hello, Name or World!
 // Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String).
 // Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
 // Examples:
@@ -1673,10 +1655,24 @@ getFetch()
 // * With `name` = "aliCE" => return "Hello, Alice!"
 // * With `name` not given 
 //   or `name` = ""        => return "Hello, World!"
-
 // function hello(name) {
 //     return name ? `Hello, ${name.toLowerCase().split("").shift().toString().toUpperCase() + name.toLowerCase().split("").splice(1).join("").toString()}!` : "Hello, World!" 
 //  }
 //Test Cases:
 // console.log(hello("aliCE"))
 // console.log(hello())
+
+// 8 kyu Powers of 2
+// Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
+// Examples
+// n = 0  ==> [1]        # [2^0]
+// n = 1  ==> [1, 2]     # [2^0, 2^1]
+// n = 2  ==> [1, 2, 4]  # [2^0, 2^1, 2^2]
+// function powersOfTwo(n){
+//     let nArr = []
+//     for(let i=0; i<=n; i++){
+//         nArr.push(2**i)
+//     }
+//     return nArr
+//   }
+// console.log(powersOfTwo(0))
