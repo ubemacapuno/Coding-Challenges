@@ -1566,3 +1566,29 @@ getFetch()
 // const goals = (laLigaGoals, copaDelReyGoals, championsLeagueGoals) => laLigaGoals + copaDelReyGoals + championsLeagueGoals
 //Clever solution using reduce and (...a):
 //const goals = (...a) => a.reduce((s, v) => s + v, 0);
+
+// function isSortedAndHow(array) {
+//     let ascArray = array.map(e=>e).sort((a,b)=> a-b)
+//     let descArray = array.map(e=>e).sort((a,b)=> a-b).reverse()
+//     if (ascArray.toString() == array.toString() ){
+//         return "yes, ascending"
+//     }else if (descArray.toString() == array.toString()){
+//         return "yes, descending"
+//     }else{
+//         console.log(array)
+//         console.log(ascArray)
+//         console.log(descArray)
+//         return "no"
+//     }
+// }
+// function isSortedAndHow(array) {
+//     let ascArray = array.map(e=>e).sort((a,b)=> a-b)
+//     let descArray = array.map(e=>e).sort((a,b)=> a-b).reverse()
+//     return ascArray.toString() == array.toString() ? "yes, ascending"
+//     : descArray.toString() == array.toString() ? "yes, descending" 
+//     : "no"
+// }
+
+
+// console.log(isSortedAndHow([20,19,18,-18]))
+//JAVASCRIPT WHAT THE FUCK

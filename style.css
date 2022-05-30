@@ -50,7 +50,7 @@ div {
      display: flex;
      flex-direction: column;
      justify-content: center;
-     border: 2px solid #A23229;
+     border: 2px solid #e2ad14;
      padding: 10px;
      background-color: #303133;
 }
@@ -64,11 +64,13 @@ div {
 }
 
 .username::before {
-     content: '<'
+     content: '<';
+     color: #e2ad14;
 }
 
 .username::after{
-     content: '/>'
+     content: '/>';
+     color: #e2ad14;
 }
 
 .name::before {
