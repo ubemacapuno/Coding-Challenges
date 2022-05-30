@@ -1567,6 +1567,13 @@ getFetch()
 //Clever solution using reduce and (...a):
 //const goals = (...a) => a.reduce((s, v) => s + v, 0);
 
+// 7 kyu Sorted? yes? no? how?
+// Complete the method which accepts an array of integers, and returns one of the following:
+// "yes, ascending" - if the numbers in the array are sorted in an ascending order
+// "yes, descending" - if the numbers in the array are sorted in a descending order
+// "no" - otherwise
+// You can assume the array will always be valid, and there will always be one correct answer.
+//My solution:
 // function isSortedAndHow(array) {
 //     let ascArray = array.map(e=>e).sort((a,b)=> a-b)
 //     let descArray = array.map(e=>e).sort((a,b)=> a-b).reverse()
@@ -1588,7 +1595,6 @@ getFetch()
 //     : descArray.toString() == array.toString() ? "yes, descending" 
 //     : "no"
 // }
-
 
 // console.log(isSortedAndHow([20,19,18,-18]))
 // 8 kyu Switch it Up! 05/29/2022
