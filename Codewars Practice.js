@@ -319,7 +319,6 @@ getFetch()
 //Solution:
 // function maps(x){
 //     return  x.map((element) => element * 2);
-
 // }
 
 // 8 kyu Convert a Number to a String!
@@ -450,7 +449,7 @@ getFetch()
 //     return sum
 //   }
 
-// List Filtering 7
+// List Filtering 7 Kyu
 // In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
 // Example
 // filter_list([1,2,'a','b']) == [1,2]
@@ -461,6 +460,8 @@ getFetch()
 //     const filteredArray = l.filter(element => typeof element === 'number')
 //     return filteredArray
 //   }
+//Arrow Syntax:
+// const filter_list = l => l.filter(element => typeof element === 'number')
 
 // 7 Kyu Highest and Lowest
 // In this little assignment you are given a string of space separated numbers, and have to return the highest and lowest number.
@@ -657,6 +658,8 @@ getFetch()
 //         return "error sum of facing turn"
 //     }
 // }
+
+//8 kyu Beginner - Reduce but Grow
 // Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
 // [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
 // Function Expression:
@@ -710,12 +713,6 @@ getFetch()
 // Test cases:
 //  smash(["this", "is", "a", "really", "long", "sentence"])
 //  smash(["hello", "amazing", "world"])
-
-// 8 kyu Beginner - Reduce but Grow
-// Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
-// [1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
-// My Arrow Function solution:
-// const grow = (x) => x.reduce((acc,c)=> acc*c,1)
 
 // 8 kyu Basic variable assignment
 // This code should store "codewa.rs" as a variable called name but it's not working. Can you figure out why?
@@ -783,6 +780,8 @@ getFetch()
 // Refactored as arrow function and ternary operator (fuck yeah first try)
 //   let check = (a,x) => a.includes(x)? true : false
 //   check([66, 101], 66)
+
+//7 kyu String ends with?
 // Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 // Examples:
 // solution('abc', 'bc') // returns true
@@ -804,6 +803,8 @@ getFetch()
 //   }
 // Arrow Function:
 // const litres = time => Math.floor(time * 0.5)
+
+//8Kyu Abbreviate a Two Word Name
 // Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
 // The output should be two capital letters with a dot separating them.
 // It should look like this:
@@ -828,6 +829,8 @@ getFetch()
 // * "I love arrays they are my favorite" ==> ["I", "love", "arrays", "they", "are", "my", "favorite"]
 // My solution (arrow function)
 // const stringToArray = string => string.split(' ')
+
+//8Kyu Jenny's Secret Message
 // Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
 // Can you help her?
 //My Solution:
@@ -869,6 +872,8 @@ getFetch()
 // console.log(likes(["Jacob", "Alex"]  ))
 // console.log(likes(["Max", "John", "Mark"] ))
 // console.log(likes(["Alex", "Jacob", "Mark", "Max"] ))
+
+//8 kyu Keep up the hoop
 // Alex just got a new hula hoop, he loves it but feels discouraged because his little brother is better than him
 // Write a program where Alex can input (n) how many times the hoop goes round and it will return him an encouraging message :)
 // If Alex gets 10 or more hoops, return the string "Great, now move on to tricks".
@@ -914,7 +919,12 @@ getFetch()
 //My arrow function solution, FIRST TRYYY!!!
 // let isSquare = n => Math.sqrt(n) % 1 == 0 ? true : false
 // console.log(isSquare(144))
-// Had to add "Break" lines; original code did not have it.
+
+// 8 kyu Get Planet Name By ID
+// The function is not returning the correct values. Can you figure out why?
+// Example (Input --> Output ):
+// 3 --> "Earth"
+// My solution:
 // function getPlanetName(id){
 //     var name;
 //     switch(id){
@@ -945,6 +955,7 @@ getFetch()
 //     }
 //     return name;
 //   }
+// Test case:
 //   console.log(getPlanetName(3))
 
 //05.13.2022 8Kyu Get the mean of an array
@@ -1028,7 +1039,7 @@ getFetch()
 // console.log(warnTheSheep(["sheep","wolf","sheep", "sheep", "sheep"]))
 // console.log(warnTheSheep(["sheep", "sheep", "wolf"]))
 
-//7Kyu 05/15/2022
+//7Kyu Vowel Count 05/15/2022
 // Return the number (count) of vowels in the given string.
 // We will consider a, e, i, o, u as vowels for this Kata (but not y).
 // The input string will only consist of lower case letters and/or spaces.
@@ -1044,6 +1055,7 @@ getFetch()
 //     return vowelsCount;
 //   }
 
+// 8Kyu Is n divisible by x and y?
 // Create a function that checks if a number n is divisible by two numbers x AND y. All inputs are positive, non-zero digits.
 // Examples:
 // 1) n =   3, x = 1, y = 3 =>  true because   3 is divisible by 1 and 3
@@ -1090,7 +1102,7 @@ getFetch()
 //   }
 //   console.log(isPangram("abcdefghijklmnopqrsuvwxyz"))
 
-// 8Kyu
+// 8Kyu Filter out the geese
 // Write a function that takes a list of strings as an argument and returns a filtered list containing the same elements but with the 'geese' removed.
 // The geese are any strings in the following array, which is pre-populated in your solution:
 //   ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"]
@@ -1169,9 +1181,8 @@ getFetch()
 // 0 <= h <= 23
 // 0 <= m <= 59
 // 0 <= s <= 59
-//My Solutiion:
+//My Solution:
 // function past(h, m, s){
-//     //#Happy Coding! ^_^
 //     let hours = (0 + h) * 3.6e+6;
 //     let minutes = (0 + m) * 60000;
 //     let seconds = (0 + s) * 1000;
@@ -1257,7 +1268,6 @@ getFetch()
 //     return value1 / value2
 //   }
 // }
-//
 
 // 7 kyu Reverse words
 // Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
@@ -1346,6 +1356,7 @@ getFetch()
 // console.log(friend(["Ryan", "Kieran", "Mark"]))
 //My arrow syntax solution:
 // const friend = (friends) => friends.filter(e=>e.length==4)
+
 // 8 kyu Sum of positive
 // You get an array of numbers, return the sum of all of the positives ones.
 // Example [1,-4,7,12] => 1 + 7 + 12 = 20
@@ -1502,6 +1513,7 @@ getFetch()
 //         return "no"
 //     }
 // }
+//Refactored:
 // function isSortedAndHow(array) {
 //     let ascArray = array.map(e=>e).sort((a,b)=> a-b)
 //     let descArray = array.map(e=>e).sort((a,b)=> a-b).reverse()
