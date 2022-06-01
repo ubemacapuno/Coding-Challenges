@@ -8,10 +8,8 @@ This repository is to track my solutions to Codewars problems. I strive to push 
 
  <tr>
     <td width="33.3%"  style="align:center;" valign="top">
-<a target="_blank" href="https://github.com/CharlesCreativeContent/lucid">Travelara.org</a>
-        <br />
-      <a target="_blank" href="https://github.com/CharlesCreativeContent/lucid">
-            <img src="https://github.com/CharlesCreativeContent/CharlesCreativeContent/raw/main/images/gif1.gif" width="100%"  alt="Travelara.org"/>
+      <a target="_blank" href="https://coreydamocles-codewars.netlify.app">
+            <img src="https://github.com/CharlesCreativeContent/CharlesCreativeContent/raw/main/images/gif1.gif" width="50%"  alt="codewars repo gif."/>
         </a>
     </td>
   </tr>
