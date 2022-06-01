@@ -5,17 +5,13 @@ There is also a function using the Codewars API to fetch data using my Codewars 
 https://codepen.io/corey-damocles/pen/OJQmbWb
 
 
-# CodeWars Kata Challenges: <a target="_blank" href="https://www.codewars.com/users/ubemacapuno" >Visit Here</a> 
+# CodeWars Kata Challenges: <a target="_blank" href="https://www.codewars.com/users/ubemacapuno">Visit Here</a> 
 
-This repository is to track my solutions to Codewars problems.
+This repository is to track my solutions to Codewars problems. I strive to push at minimum 5 coding challenges a week to this repo. 
 
 ## How It's Made:
 
-**Tech used:** <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"/>
-
-https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg
-
-I strive to push at minimum 5 coding challenges a week to this repo.
+**Tech used:** Vanilla JavaScript! In addition to the problems I solve, within this repo is a function that pulls data from the Codewars API and displays my stats in the browser. A demo can be found <a target="_blank" href="https://coreydamocles-codewars.netlify.app"> Here.</a>
 
 ## Optimizations
 
