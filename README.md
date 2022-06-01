@@ -9,7 +9,7 @@ This repository is to track my solutions to Codewars problems. I strive to push 
  <tr>
     <td width="33.3%"  style="align:center;" valign="top">
       <a target="_blank" href="https://coreydamocles-codewars.netlify.app">
-            <img src="https://github.com/CharlesCreativeContent/CharlesCreativeContent/raw/main/images/gif1.gif" width="50%"  alt="codewars repo gif."/>
+            <img src="https://github.com/ubemacapuno/codewars/blob/Main/src/codewars.gif?raw=true" width="100%"  alt="codewars repo gif."/>
         </a>
     </td>
   </tr>
