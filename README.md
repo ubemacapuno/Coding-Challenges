@@ -4,7 +4,7 @@ This repository is to track my solutions to Codewars problems. I strive to push 
 
 ## How It's Made:
 
-**Tech used:** Vanilla JavaScript! In addition to the problems I solve, within this repo is a function that pulls data from the Codewars API and displays my stats in the browser. A demo can be found <a target="_blank" href="https://coreydamocles-codewars.netlify.app"> Here.</a>
+**Tech used:** Vanilla JavaScript! In addition to the problems I solve, within this repo is a function that pulls data from the Codewars API and displays my current Codewars stats in the browser! A demo can be found <a target="_blank" href="https://coreydamocles-codewars.netlify.app"> Here.</a>
 
 ## Optimizations
 
