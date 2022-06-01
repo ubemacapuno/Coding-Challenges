@@ -1,6 +1,3 @@
-# codewars <br />
-This repository is to track my solutions to Codewars Kata problems.  <br />
-
 ## CodeWars Kata Challenges: <a target="_blank" href="https://www.codewars.com/users/ubemacapuno">Visit Here</a> 
 
 This repository is to track my solutions to Codewars problems. I strive to push at minimum 5 coding challenges a week to this repo. 
