@@ -4,13 +4,11 @@ This repository is to track my solutions to Codewars problems. I strive to push 
 
 ## How It's Made:
 
-**Tech used:** Vanilla JavaScript! In addition to the problems I solve, within this repo is a function that pulls data from the Codewars API and displays my current Codewars stats in the browser! A demo can be found <a target="_blank" href="https://coreydamocles-codewars.netlify.app"> Here.</a>
+**Tech used:** Vanilla JavaScript! In addition to the problems I solve, within this repo is a function that pulls data from the Codewars API and displays my current Codewars stats in the browser! A demo can be found <a target="_blank" href="https://coreydamocles-codewars.netlify.app"> HERE.</a>
 
  <tr>
     <td width="33.3%"  style="align:center;" valign="top">
-      <a target="_blank" href="https://coreydamocles-codewars.netlify.app">
             <img src="https://github.com/ubemacapuno/images-for-github-readme/blob/main/codewars/codewars.gif?raw=true" width="100%"  alt="codewars repo gif."/>
-        </a>
     </td>
   </tr>
 
