@@ -1772,26 +1772,26 @@ getFetch()
 // Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
 // Note: input will never be an empty string
 //My solution:
-function fakeBin(x){
-    let xArray = x.split('').map(Number)
-    let xStringAnswer = ''
-    xArray.forEach(e=>{
-        if(e < 5){
-            xStringAnswer += '0'
-        }else{
-            xStringAnswer += '1'
-        }
-    })
-    return xStringAnswer
-}
+// function fakeBin(x){
+//     let xArray = x.split('').map(Number)
+//     let xStringAnswer = ''
+//     xArray.forEach(e=>{
+//         if(e < 5){
+//             xStringAnswer += '0'
+//         }else{
+//             xStringAnswer += '1'
+//         }
+//     })
+//     return xStringAnswer
+// }
 //Refactored:
     //get rid of xArray
     //incorporate ternary operation
 
-function fakeBin(x){
-    let xStringAnswer = ''
-    x.split('').map(Number).forEach(e=>{
-       return e < 5 ? xStringAnswer += '0' : xStringAnswer += '1'
-    })
-    return xStringAnswer
-}
+// function fakeBin(x){
+//     let xStringAnswer = ''
+//     x.split('').map(Number).forEach(e=>{
+//        return e < 5 ? xStringAnswer += '0' : xStringAnswer += '1'
+//     })
+//     return xStringAnswer
+// }
