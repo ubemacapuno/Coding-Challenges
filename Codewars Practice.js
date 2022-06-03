@@ -1741,20 +1741,20 @@ getFetch()
             //return false if duplicates are found
     //If the array passes the loop, the code proceeds and true is returned.
 
-function isIsogram(str){
-    if(str.isEmpty){
-        return true; // .isEmpty() method checks whether string is empty or not
-    }else{
-        str = str.toLowerCase() // return is not case-sensitive
-    }
-    let sortedArr = str.split('').sort()
-    for(i=0;i<sortedArr.length;i++){
-        if (sortedArr[i + 1] == sortedArr[i]) {
-            return false //the array is sorted, so if any duplicates are found during iteration, false is returned
-        }
-    }
-    return true
-}
+// function isIsogram(str){
+//     if(str.isEmpty){
+//         return true; // .isEmpty() method checks whether string is empty or not
+    // }else{
+    //     str = str.toLowerCase() // return is not case-sensitive
+    // }
+    // let sortedArr = str.split('').sort()
+    // for(i=0;i<sortedArr.length;i++){
+    //     if (sortedArr[i + 1] == sortedArr[i]) {
+            // return false //the array is sorted, so if any duplicates are found during iteration, false is returned
+//         }
+//     }
+//     return true
+// }
 // Shorter but similar solution from other user:
 // function isIsogram(word){
 //     word = word.toLowerCase().split("").sort();
@@ -1767,3 +1767,31 @@ function isIsogram(str){
 //Test Cases:
 // console.log(isIsogram("Dermatoglyphics"))
 // console.log(isIsogram(""))
+
+//8 kyu Fake Binary 06/02/2022
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+// Note: input will never be an empty string
+//My solution:
+function fakeBin(x){
+    let xArray = x.split('').map(Number)
+    let xStringAnswer = ''
+    xArray.forEach(e=>{
+        if(e < 5){
+            xStringAnswer += '0'
+        }else{
+            xStringAnswer += '1'
+        }
+    })
+    return xStringAnswer
+}
+//Refactored:
+    //get rid of xArray
+    //incorporate ternary operation
+
+function fakeBin(x){
+    let xStringAnswer = ''
+    x.split('').map(Number).forEach(e=>{
+       return e < 5 ? xStringAnswer += '0' : xStringAnswer += '1'
+    })
+    return xStringAnswer
+}
