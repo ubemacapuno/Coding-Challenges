@@ -14,10 +14,10 @@ This repository is to track my solutions to Codewars problems. I strive to push 
 
 ## Optimizations
 
-I strive to refactor my code prior to each submission. I do this for efficiency and readability purposes. I also look through other user's solutions to learn different ways to coomplete the solutions.
+I strive to refactor my code prior to each submission. I do this for efficiency and readability purposes. I also look through other user's solutions to learn different ways to approach the problems.
 
 ## Lessons Learned:
 
 Through failing Codewars problems, I've learned countless JS methods. Learning from my mistakes and learning better ways to solve a problem from other Codewars users has helped to greatly improve my understanding of JS and concepts.
 
-One downside to Codewars I noticed is that a lot of the most upvoted Codewars solutions are refactored one-liners that are not very readable and often times take me more time to dissect and understand than if it were a multi-lined readable solution. This has taught me to favor readability and documentation to actually understand what is going on, than writing out and refactoring the shortest possible solution. This is also true when it comes to actual projects and cross-functional development teams; if you or another developer are struggling to understand your code, then you did a bad job.
+One downside to Codewars I noticed is that a lot of the most upvoted Codewars solutions are refactored one-liners that are not very readable and often times take me more time to dissect and understand than if it were a multi-lined readable solution. This has taught me to favor readability and documentation to actually understand what is going on, than writing out and refactoring the shortest possible solution. This is also true when it comes to actual projects and cross-functional development teams; if you or another developer are struggling to understand your code, then you didn't do your job!!
