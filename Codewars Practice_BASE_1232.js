@@ -1741,20 +1741,20 @@ getFetch()
             //return false if duplicates are found
     //If the array passes the loop, the code proceeds and true is returned.
 
-// function isIsogram(str){
-//     if(str.isEmpty){
-//         return true; // .isEmpty() method checks whether string is empty or not
-    // }else{
-    //     str = str.toLowerCase() // return is not case-sensitive
-    // }
-    // let sortedArr = str.split('').sort()
-    // for(i=0;i<sortedArr.length;i++){
-    //     if (sortedArr[i + 1] == sortedArr[i]) {
-    //         return false //the array is sorted, so if any duplicates are found during iteration, false is returned
-//         }
-//     }
-//     return true
-// }
+function isIsogram(str){
+    if(str.isEmpty){
+        return true; // .isEmpty() method checks whether string is empty or not
+    }else{
+        str = str.toLowerCase() // return is not case-sensitive
+    }
+    let sortedArr = str.split('').sort()
+    for(i=0;i<sortedArr.length;i++){
+        if (sortedArr[i + 1] == sortedArr[i]) {
+            return false //the array is sorted, so if any duplicates are found during iteration, false is returned
+        }
+    }
+    return true
+}
 // Shorter but similar solution from other user:
 // function isIsogram(word){
 //     word = word.toLowerCase().split("").sort();

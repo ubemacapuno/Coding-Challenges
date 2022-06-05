@@ -1750,7 +1750,7 @@ getFetch()
     // let sortedArr = str.split('').sort()
     // for(i=0;i<sortedArr.length;i++){
     //     if (sortedArr[i + 1] == sortedArr[i]) {
-    //         return false //the array is sorted, so if any duplicates are found during iteration, false is returned
+            // return false //the array is sorted, so if any duplicates are found during iteration, false is returned
 //         }
 //     }
 //     return true
@@ -1767,3 +1767,108 @@ getFetch()
 //Test Cases:
 // console.log(isIsogram("Dermatoglyphics"))
 // console.log(isIsogram(""))
+
+//8 kyu Fake Binary 06/02/2022
+// Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+// Note: input will never be an empty string
+//My solution:
+// function fakeBin(x){
+//     let xArray = x.split('').map(Number)
+//     let xStringAnswer = ''
+//     xArray.forEach(e=>{
+//         if(e < 5){
+//             xStringAnswer += '0'
+//         }else{
+//             xStringAnswer += '1'
+//         }
+//     })
+//     return xStringAnswer
+// }
+//Refactored:
+    //get rid of xArray
+    //incorporate ternary operation
+
+// function fakeBin(x){
+//     let xStringAnswer = ''
+//     x.split('').map(Number).forEach(e=>{
+//        return e < 5 ? xStringAnswer += '0' : xStringAnswer += '1'
+//     })
+//     return xStringAnswer
+// }
+
+// 6 kyu Stop gninnipS My sdroW!
+// Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.
+// Examples: spinWords( "Hey fellow warriors" ) => returns "Hey wollef sroirraw" spinWords( "This is a test") => returns "This is a test" spinWords( "This is another test" )=> returns "This is rehtona test"
+//Parameters: string of one or more words
+//Return: string with all five or more letter words reversed 
+//E: "Hey fellow warriors" => "Hey wollef sroirraw"
+//Psuedocode:
+  //string to array of strings => str.split(' ')
+  //map the array; use a conditional to apply .reverse() if length of element is >= 5
+  //convert array of strings to string using .join(' ')
+//My solution:
+// function spinWords(string){
+//     let splitString = string.split(' ') //converts string of words to array of string of words
+    // for(i=0;i<splitString.length;i++){
+    //     splitString[i] = splitString[i].split("") //places each word in its OWN subarray
+    // }
+    // let reversedStringsArray = splitString.map(e=>{ //reverses words if length of element is >= 5, and then joins the letters into a string (joining the subarray)
+    //     if(e.length >= 5){
+    //         return e.reverse().join('')
+    //     }else{
+    //         return e.join('')
+    //     }
+    // })
+    // return reversedStringsArray.join(' ') //joins the array into a string
+//   }
+//Refactor my solution:
+  //use ternary operator
+//   function spinWords(string){
+//     let splitString = string.split(' ') 
+//     for(i=0;i<splitString.length;i++){
+//         splitString[i] = splitString[i].split("") 
+//     }
+//     let reversedStringsArray = splitString.map(e => e.length >= 5 ? e.reverse().join('') : e.join(''))
+//     return reversedStringsArray.join(' ') //joins the array into a string
+//   }
+//Shorter but similar solution from other Codewars user:
+// function spinWords(str){
+//     return str.split(' ').map( w => w.length<5 ? w : w.split('').reverse().join('') ).join(' ');
+//   }
+//Test Case:
+// console.log(spinWords("Hey fellow warriors"))
+
+// 7 kyu Exes and Ohs 06/04/2022
+// Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+// Examples input/output:
+// XO("ooxx") => true
+// XO("xooxx") => false
+// XO("ooxXm") => true
+// XO("zpzpzpp") => true // when no 'x' and 'o' is present should return true
+// XO("zzoo") => false
+//P:String of X and O
+//R: Boolean
+//E:
+    // XO("ooxx") => true
+    // XO("xooxx") => false
+// Psuedo Code: 
+    //Not case sensitive, so convert string to same case (.toLowerCase())
+    //convert to an array, splitting to each character (.split(""))
+    //have two separate arrays and filter for X and O: 
+        // xArray.filter(filter out anything not an x)
+        // xArray.filter(filter out anything not an O)
+    //compare the array lengths; if equal then return true, else return false
+//My solution (Passed first try!!):
+// function XO(str) {
+//     let xArray = str.toLowerCase().split("").filter(e=>e=="x")
+//     let oArray = str.toLowerCase().split("").filter(e=>e=="o")
+//     return xArray.length == oArray.length ? true : false
+// }
+//Refactor:
+// function XO(str) {
+//     let xArray = str.toLowerCase().split("").filter(e=>e=="x")
+//     let oArray = str.toLowerCase().split("").filter(e=>e=="o")
+//     return xArray.length == oArray.length //ternary is not required to return true/false
+// }
+// Test Case:
+// console.log(XO("zzoo"))
