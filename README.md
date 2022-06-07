@@ -1,6 +1,6 @@
 ## Codewars Kata Challenges: <a target="_blank" href="https://www.codewars.com/users/ubemacapuno">Visit Here</a> 
 
-This repository is to track my solutions to Codewars problems. I strive to push at minimum 5 coding challenges a week to this repo. 
+This repository is to track my solutions to Codewars problems. I strive to push at minimum 5 coding challenges a week to this repo. Prior to writing out my solutions, I use the PREP method, in which I write out the <strong>P</strong>arameters of the problem, the <strong>R</strong>eturn of the solution, <strong>E</strong>xamples/test cases, and my <strong>P</strong>seudocode.
 
 ## How It's Made:
 
