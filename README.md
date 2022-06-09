@@ -1,6 +1,6 @@
-## Codewars Kata and Other Coding Challenges: <a target="_blank" href="https://www.codewars.com/users/ubemacapuno">Visit Here</a> 
+## Coding Challenges Tracker: <a target="_blank" href="https://www.codewars.com/users/ubemacapuno">Visit Here</a> 
 
-This repository is mainly to track my solutions to Codewars problems, but I will also include coding challenges from other parties as well. I strive to push at minimum 5 coding challenges a week to this repo. I have the problems and solutions broken up into individual files, and organized into their respective folders (by Kyu-level if from Codewars!). Prior to writing out some of my solutions, I use the PREP method, in which I write out the <strong>Parameters</strong> of the problem, the <strong>Return</strong> for the solution, <strong>Examples</strong>/test cases, and my <strong>Pseudocode</strong> that outlines my thought process for the solution.
+This repository is mainly to track my solutions to Codewars problems and coding challenges from other parties as well. I strive to push at minimum 5 coding challenges a week to this repo. Prior to writing out some of my solutions, I use the PREP method, in which I write out the <strong>Parameters</strong> of the problem, the <strong>Return</strong> for the solution, <strong>Examples</strong>/test cases, and my <strong>Pseudocode</strong> that outlines my thought process for the solution.
 
 ## How It's Made:
 
