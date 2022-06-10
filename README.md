@@ -14,10 +14,10 @@ This repository is to track my solutions to coding challenges. I strive to push 
 
 ## Optimizations
 
-I strive to refactor my code prior to each submission. I do this for efficiency and readability purposes. I also look through other user's solutions to learn different ways to approach the problems.
+I strive to refactor my code prior to each submission. I do this for efficiency and readability purposes. After attempting my own solution, I also like to take time to look through other user's solutions to learn different ways to approach the problems that I wouldn't have come up with.
 
 ## Lessons Learned:
 
-Through failing coding challenges, I've learned how to properly use countless JS methods. Learning from my mistakes and learning better ways to solve a problem from other users has helped to greatly improve my understanding of JS and concepts.
+Solving coding challenges has taught me the value in systematically breaking up problems into smaller chunks. Not every problem can (or should!) be solved in a one-liner, and I've learned that it's okay to have messy code at first. Also, through failing coding challenges, I've learned how to properly use countless JS methods.
 
-One downside to Codewars I noticed is that a lot of the most upvoted Codewars solutions are refactored one-liners that are not very readable and often times take me more time to dissect and understand than if it were a multi-lined readable solution. This has taught me to favor readability and documentation to actually understand what is going on, than writing out and refactoring the shortest possible solution. This is also true when it comes to actual projects and cross-functional development teams; if you or another developer are struggling to understand your code, then you didn't do your job!!
+One thing I noticed is that a lot of the most upvoted Codewars solutions are refactored one-liners that are not very readable and often times take me more time to dissect and understand than if it were a multi-lined readable solution. This has taught me to favor readability and documentation to actually understand what is going on, than writing out and refactoring the shortest possible solution. This is also true when it comes to actual projects and cross-functional development teams; if you or another developer are struggling to understand your code, then you didn't do your job!! I'd recommend coding challenges to anyone trying to understand and apply coding concepts in a fun way.
