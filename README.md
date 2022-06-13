@@ -4,7 +4,7 @@ This repository is to track my solutions to coding challenges. I strive to push 
 
 ## How It's Made: <a target="_blank" href="https://coreydamocles-codewars.netlify.app">Live Demo!</a>
 
-**Tech used:** JavaScript! In addition to the problems I solve, within this repo is a function that pulls data from the Codewars API and displays my current Codewars stats in the browser!
+**Tech used:** JavaScript! In addition to the problems I solve, within this repo is a function that pulls data from the Codewars API and displays my current Codewars stats in the browser.
 
  <tr>
     <td width="33.3%"  style="align:center;" valign="top">
@@ -12,7 +12,7 @@ This repository is to track my solutions to coding challenges. I strive to push 
     </td>
   </tr>
 
-## Optimizations
+## Optimizations:
 
 I strive to refactor my code prior to each submission. I do this for efficiency and readability purposes. After attempting my own solution, I also like to take time to look through other user's solutions to learn different ways to approach the problems that I wouldn't have come up with.
 
