@@ -2304,3 +2304,80 @@ getFetch()
 // }
 //Refactored - use arrow syntax:
 // const findNextSquare = sq => Math.sqrt(sq) % 1 != 0 ? -1 : Math.pow((Math.sqrt(sq) + 1),2)
+
+// 6 kyu Give me a Diamond 06/16/2022
+// Jamie is a programmer, and James' girlfriend. She likes diamonds, and wants a diamond string from James. Since James doesn't know how to make this happen, he needs your help.
+// Task
+// You need to return a string that looks like a diamond shape when printed on the screen, using asterisk (*) characters. Trailing spaces should be removed, and every line must be terminated with a newline character (\n).
+// Return null/nil/None/... if the input is an even number or negative, as it is not possible to print a diamond of even or negative size.
+// Examples
+// A size 3 diamond:
+//  *
+// ***
+//  *
+// ...which would appear as a string of " *\n***\n *\n"
+// A size 5 diamond:
+//   *
+//  ***
+// *****
+//  ***
+//   *
+// ...that is:
+// "  *\n ***\n*****\n ***\n  *\n"
+//P: num
+//R: string using * and \n to represent each diamond; the * increases by 2 starting from 1 up to #n. return null if n is even or negative
+//E: see above with n= 3 and n = 5
+//Psuedocode:
+    //set a conditional to return null when the number is even or negative: num % 2 == 1 || num < 1 ? null : (else condition here)
+    //if number is odd and not negative, for loop to make the diamonds:
+    // let diamondString = ''
+    // for(i= 1;i <= n; i +=2 ){
+    //     diamondString += `*\n`
+    // }
+    // return diamondString
+//My solution: 
+//WORK IN PROGRESS - COME BACK LATER
+// function diamond(n){
+//     let diamondString = `*`
+//     let asterisks = ''
+//     let diamondStringAsterisks = diamondString + asterisks
+//     if(n % 2 == 0 || n < 1){
+//         return null
+//     }else{
+//         for(i= 0;i < n; i ++){
+//             diamondString += `\n`
+//             }
+//         }for(x=0; i < n; i++){
+//             asterisks = `*`
+//         }
+//         return diamondStringAsterisks
+//     }
+    
+// console.log(diamond(5))
+
+// 8 kyu Is it even? 06/16/2022
+// In this Kata we are passing a number (n) into a function.
+// Your code will determine if the number passed is even (or not).
+// The function needs to return either a true or false.
+// Numbers may be positive or negative, integers or floats.
+// Floats with decimal part non equal to zero are considered UNeven for this kata.
+//P: number, can be float
+//R: true or false
+//E: 0.5 returns false, 1 returns false, -4 returns true
+//Psuedocode: if n (rounded DOWN) % 2 == 0, return true. Otherwise false.
+//My solution:
+// function testEven(n) {
+//     return Math.ceil(n) % 2 == 0 ? true : false
+// }
+//My solution refactored:
+// const testEven = n => Math.ceil(n) % 2 == 0 ? true : false
+//Refactored:
+// const testEven = n => Math.ceil(n) % 2 == 0 
+//Refactored - Math.ceil not needed:
+// const testEven = n => n % 2 == 0 
+//test cases:
+// console.log(testEven(-4))
+// console.log(testEven(1))
+// console.log(testEven(0.5))
+// console.log(testEven(200.5))
+// console.log(testEven(200))
