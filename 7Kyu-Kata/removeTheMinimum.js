@@ -19,7 +19,7 @@
     //input lowest int variable into numbers.indexOf'; hold in a new variable "lowestIntIndex"
     //use numbers.splice(lowestIntIndex,1) to remove the lowestInt, but use a copy of numbers ("numbers2") so that the original array isn't mutated.
     //return numbers2
-//My solution:
+//My solution - (sort() to find lowest number):
 function removeSmallest(numbers) {
     let numbers2 = numbers.map(e=>e)
     let sortedNumbers = numbers.map(e=>e).sort((a,b)=>(a-b))
@@ -32,5 +32,13 @@ function removeSmallest(numbers) {
     numbers2.splice(lowestIntIndex,1)
     return numbers2
   }
+
+//Other solution from other user:
+//Instead of using sort, you can use Math.min() and also indexOf() to capture the smallest number:
+function removeSmallest(numbers) {
+    let lowest = numbers.indexOf( Math.min(...numbers) )
+    return numbers.slice( 0, lowest ).concat( numbers.slice( lowest + 1 ) )
+  }
+
 //Test:
 // console.log(removeSmallest([2,2,1,2,1]))
