@@ -1,13 +1,13 @@
-## Coding Challenges Tracker:
+# Coding Challenges Tracker:
 
 This repository is to track my solutions to coding challenges. I strive to push at minimum 5 coding challenges a week to this repo. Prior to writing out some of my solutions, I use the PREP method, in which I write out the <strong>Parameters</strong> of the problem, the <strong>Return</strong> for the solution, <strong>Examples</strong>/test cases, and my <strong>Pseudocode</strong> that outlines my thought process for the solution. Visit my <a target="_blank" href="https://www.codewars.com/users/ubemacapuno">Codewars Profile here</a>. 
 
-## How It's Made: <a target="_blank" href="https://coreydamocles-codewars.netlify.app">Live Demo!</a>
+## How It's Made:
 
-**Tech used:** JavaScript! In addition to the problems I solve, within this repo is a function that pulls data from the Codewars API and displays my current Codewars stats in the browser.
+**Tech used:** JavaScript! In addition to the problems I solve, within this repo is a front-end I built that pulls data from the Codewars API and displays my current Codewars stats in the browser, which can be <a target="_blank" href="https://coreydamocles-codewars.netlify.app">found here</a>!
 
  <tr>
-    <td width="33.3%"  style="align:center;" valign="top">
+    <td width="100%"  style="align:center;" valign="top">
             <img src="https://github.com/ubemacapuno/images-for-github-readme/blob/main/codewars/codewars.gif?raw=true" width="100%"  alt="codewars repo gif."/>
     </td>
   </tr>
