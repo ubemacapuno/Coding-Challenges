@@ -2607,10 +2607,10 @@ getFetch()
     //combine !arrayFilter.includes() with the filter method, and the new array will filter out elements included in the arrayFilter array.
     //filtering: a.filter(e => !b.includes(e))
 //My solution:
-function arrayDiff(a, b) {
-    return a.filter(e => !b.includes(e))  
-}
+// function arrayDiff(a, b) {
+//     return a.filter(e => !b.includes(e))  
+// }
 //Refactored:
-const arrayDiff = (a,b) => a.filter(e => !b.includes(e))  
+// const arrayDiff = (a,b) => a.filter(e => !b.includes(e))  
 //Test Case
 // console.log(arrayDiff([1,2,2,2,3],[2]))
