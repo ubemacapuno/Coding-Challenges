@@ -2646,3 +2646,62 @@ getFetch()
 // }
 //Test Case:
 // console.log(dontGiveMeFive(4,17))
+
+// 8 kyu Grasshopper - Check for factor
+// This function should test if the factor is a factor of base.
+// Return true if it is a factor or false if it is not.
+// About factors
+// Factors are numbers you can multiply together to get another number.
+// 2 and 3 are factors of 6 because: 2 * 3 = 6
+// You can find a factor by dividing numbers. If the remainder is 0 then the number is a factor.
+// You can use the mod operator (%) in most languages to check for a remainder
+// For example 2 is not a factor of 7 because: 7 % 2 = 1
+// Note: base is a non-negative number, factor is a positive number.
+//P: two ints (base, factor)
+//R: boolean if factor is a factor for base.
+//E: 10, 2 true; 24612, 3 true
+//Pseudocode: if base % factor === 0 return true
+//My solution:
+// const checkForFactor = (base, factor) => base % factor == 0
+
+// 7 kyu Round up to the next multiple of 5
+// Given an integer as input, can you round it to the next (meaning, "higher") multiple of 5?
+// Examples:
+// input:    output:
+// 0    ->   0
+// 2    ->   5
+// 3    ->   5
+// 12   ->   15
+// 21   ->   25
+// 30   ->   30
+// -2   ->   0
+// -5   ->   -5
+// etc.
+// Input may be any positive or negative integer (including 0).
+// You can assume that all inputs are valid integers.
+//P integer as input
+//R next multiple of 5 integer (higher)
+//E See above examples
+//Pseudocode:
+    //if n % 5 == 0, return n
+    //else, make a loop from n till the next integer that will make n % 5 true.
+//My solution:
+// function roundToNext5(n){
+//     if(n % 5 == 0){
+//         return n
+//     }else{
+//         do{
+//             n++
+//         } while (n % 5 !=0)
+//     }
+//     return n
+// }
+//Refactored - if statement not needed. Just keep the while-loop:
+// function roundToNext5(n){
+//     while (n % 5 !=0){
+//         n++
+//     }
+//     return n
+// }
+//Test case:
+// console.log(roundToNext5(22))
