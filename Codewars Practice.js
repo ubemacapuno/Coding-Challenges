@@ -2741,3 +2741,30 @@ getFetch()
 // const sumArray = array => !array ? 0 : array.sort((a,b)=>a-b).splice(1,array.length-2).reduce((a,c)=>a+c,0)
 //Test case:
 // console.log(sumArray([1,1,11,2,3]))
+
+// 7 kyu Count the divisors of a number
+// Count the number of divisors of a positive integer n.
+// Random tests go up to n = 500000.
+// Examples (input --> output)
+// 4 --> 3 (1, 2, 4)
+// 5 --> 2 (1, 5)
+// 12 --> 6 (1, 2, 3, 4, 6, 12)
+// 30 --> 8 (1, 2, 3, 5, 6, 10, 15, 30)
+//P: positive integer n
+//R: integer number of divisors
+//E: See above
+//Pseudocode:
+    //use a for loop, from i=1 to i=n
+    //if n%i == 0, increase divisors++
+//My Solution:
+function getDivisorsCnt(n){
+    let divisors = 0
+    for(i=1;i<=n;i++){
+        if(n%i == 0){
+            divisors++
+        }
+    }
+    return divisors
+}
+//Test Case:
+// console.log(getDivisorsCnt(500000))
