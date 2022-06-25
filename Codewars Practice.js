@@ -2757,14 +2757,84 @@ getFetch()
     //use a for loop, from i=1 to i=n
     //if n%i == 0, increase divisors++
 //My Solution:
-function getDivisorsCnt(n){
-    let divisors = 0
-    for(i=1;i<=n;i++){
-        if(n%i == 0){
-            divisors++
-        }
-    }
-    return divisors
-}
+// function getDivisorsCnt(n){
+//     let divisors = 0
+//     for(i=1;i<=n;i++){
+//         if(n%i == 0){
+//             divisors++
+//         }
+//     }
+//     return divisors
+// }
 //Test Case:
 // console.log(getDivisorsCnt(500000))
+
+//come back later when you learn hash map!!
+// 6 kyu Counting Duplicates 06/24/2022
+// Count the number of Duplicates
+// Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+// Example
+// "abcde" -> 0 # no characters repeats more than once
+// "aabbcde" -> 2 # 'a' and 'b'
+// "aabBcde" -> 2 # 'a' occurs twice and 'b' twice (`b` and `B`)
+// "indivisibility" -> 1 # 'i' occurs six times
+// "Indivisibilities" -> 2 # 'i' occurs seven times and 's' occurs twice
+// "aA11" -> 2 # 'a' and '1'
+// "ABBA" -> 2 # 'A' and 'B' each occur twice
+//P: input string of only alphabets and numeric digits
+//R: return the COUNT/num of distinct case-insensitive alphabetic characters and digits
+//E: See above:
+//Pseudocode:
+    //split each letter and number and place into an array using .split()
+    //sort from least to greatest .sort((a,b)=>a-b)
+    //loop through each element
+//My solution:
+// function duplicateCount(text){
+//   }
+// function duplicateCount(text) {
+//     var nText = text.toLowerCase(); //this changes every character to lower case 
+//     var myObj = {}; // Declaring an empty object
+//     var counter = 0;
+//     for (var i = 0; i < nText.length; i++) {
+//     // assigning character as property and giving value 1 
+//         if (!myObj[nText[i]]){
+//             myObj[nText[i]] = 1;
+//         }//checking if character already added
+//         else if (myObj[nText[i]] < 2) {
+//             myObj[nText[i]] += 1;
+//             counter++;
+//         }
+//     }
+//     return counter;
+// }
+// console.log(duplicateCount('ndvsbltesiiiiiii'))
+
+//7 kyu Testing 1-2-3 06/25/2022
+// Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+// Write a function which takes a list of strings and returns each line prepended by the correct number.
+// The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+// Examples: (Input --> Output)
+// [] --> []
+// ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+//P: list of strings
+//R: each line prepended by the correct number
+//E: See above examples
+//Pseudocoode:
+    //use a loop, declare variable = 0 and array = []
+    //for each iteration through the array, add 1 to variable and push `${variable: [i]}` to an array, and return the array
+//My solution:
+// var number=function(array){
+//     let counter = 0
+//     let returnArray = []
+//     for(i=0;i<=array.length-1;i++){
+//         counter++
+//         returnArray.push(`${counter}: ${array[i]}`)
+//     }
+//     return returnArray
+// }
+//Similar solution but using map:
+// var number = function(array) {
+//     return array.map((item, index) => `${index + 1}: ${item}`);
+//   }
+//Test case:
+// console.log(number(["a", "b", "c"]))
