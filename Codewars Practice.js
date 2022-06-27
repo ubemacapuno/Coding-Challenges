@@ -2875,3 +2875,61 @@ getFetch()
 // const longest = (s1,s2) => ([...new Set((s1 + s2).split('').sort())]).join("")
 //Test Case:
 // console.log(longest("xyaabbbccccdefww","xxxxyyyyabklmopq"))
+
+//8 kyu Filling an array (part 1)
+// We want an array, but not just any old array, an array with contents!
+// Write a function that produces an array with the numbers 0 to N-1 in it.
+// For example, the following code will result in an array containing the numbers 0 to 4:
+// arr(5)  => [0,1,2,3,4]
+// Note: The parameter is optional. So you have to give it a default value.
+//P:
+//R: An array with the numbers 0 to N-1
+//E: arr(5) // => [0,1,2,3,4]
+//Pseudocode:
+    //Set an empty array []
+    //Use a loop going from 0 to n.length-1
+//My solution:
+// function arr(N){
+//     let returnArray = []
+//     for (i=0; i < N; i++){
+//         returnArray.push(i)
+//     }
+//     return returnArray
+// }
+//Test:
+// console.log(arr(5))
+
+// 7 kyu Sum of all the multiples of 3 or 5
+// Your task is to write function findSum.
+// Upto and including n, this function will return the sum of all multiples of 3 and 5.
+// For example:
+// findSum(5) should return 8 (3 + 5)
+// findSum(10) should return 33 (3 + 5 + 6 + 9 + 10)
+//P: integer n
+//R: the sum of all multiples of 3 and 5
+//E: see above example:
+//Pseudocode:
+    //First find the multiples of 3 and five between 0 and N (assuming N cannot be negative)
+    //use a for loop going from  0 to n
+    //when iterating, if (i) % 3 == 0 or i % 5 == 0, push it to a sum array.
+    //after the loop, return the sum of the sum array using .reduce((acc,c)=>acc + c, 0)
+//My solution (using an array)
+// function findSum(n) {
+//     let sumArray = []
+//     for (i=0; i<=n; i++){
+//         if (i % 3 == 0 || i % 5 == 0){
+//             sumArray.push(i)
+//         }
+//     }return sumArray.reduce((acc,c)=>acc + c, 0)
+// }
+//Refactored - Array is not needed, just use an integer and add to it:
+// function findSum(n) {
+//     let sum = 0
+//     for (i=0; i<=n; i++){
+//         if (i % 3 == 0 || i % 5 == 0){
+//             sum += i
+//         }
+//     } return sum
+// }
+//Test case:
+// console.log(findSum(10))
