@@ -3017,3 +3017,12 @@ getFetch()
 // const correct = string => string.replace(/5/g,'S').replace(/0/g,'O').replace(/1/g,'I')
 //Test Case:
 // console.log(correct("51NGAP0RE"))
+
+// 8 kyu String Templates - Bug Fixing #5
+// Oh no! Timmy hasn't followed instructions very carefully and forgot how to use the new String Template feature, Help Timmy with his string template so it works as he expects!
+//My solution:
+// function buildString(...template){
+//     return `I like ${template.join(', ')}!`;
+//   }
+//Arrow Syntax:
+// const buildString = (...template) => `I like ${template.join(', ')}!`
