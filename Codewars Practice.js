@@ -3337,20 +3337,51 @@ getFetch()
 //          Loop through the array; as we are iterating, compare the complement pairs to see if they add up to target.
 //          Use a hashmap to record pairs we have already seen, so that we're not going over the same pairs
 //My solution:
-function twoSum(numbers, target) {
-    // Use a hashmap to record pairs we have already seen:
-    let hashMap = {}
-    for(i=0; i<numbers.length; i++){
-        let value = numbers[i]
-        let complementPair = target - value
-        if(hashMap[complementPair] !== undefined){
-            //If the map DOES contain the complement pair, we want to return the array:
-            return [hashMap[complementPair], i] //return hashMap [complement pair], index i
-        }else{
-            //If the map does NOT contain the complement pair, we'll record it in the hashmap to record we've seen it:
-            hashMap[value] = i
-        }
-    }
-  }
+// function twoSum(numbers, target) {
+//     // Use a hashmap to record pairs we have already seen:
+//     let hashMap = {}
+//     for(i=0; i<numbers.length; i++){
+//         let value = numbers[i]
+//         let complementPair = target - value
+//         if(hashMap[complementPair] !== undefined){
+//             //If the map DOES contain the complement pair, we want to return the array:
+//             return [hashMap[complementPair], i] //return hashMap [complement pair], index i
+//         }else{
+//             //If the map does NOT contain the complement pair, we'll record it in the hashmap to record we've seen it:
+//             hashMap[value] = i
+//         }
+//     }
+//   }
 //Test case:
 // console.log(twoSum([1, 2, 3], 4)) //[0, 2] or [2, 0]
+
+// 8 kyu Exclamation marks series #1: Remove an exclamation mark from the end of string
+// Description:
+// Remove an exclamation mark from the end of a string. For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+// Examples
+// remove("Hi!") === "Hi"
+// remove("Hi!!!") === "Hi!!"
+// remove("!Hi") === "!Hi"
+// remove("!Hi!") === "!Hi"
+// remove("Hi! Hi!") === "Hi! Hi"
+// remove("Hi") === "Hi"
+//P: String
+//R: Same string but with exclamation mark removed if present at the end of the original.
+//E: See above examples
+//Pseudocode:
+//          if charAt(end of string) is "!", then splice it out and return the string
+//My solution:
+// function remove (string) {
+//     if(string.charAt(string.length-1)==="!"){
+//         return string.slice(0,string.length-1)
+//     }else{
+//         return string
+//     }
+//   }
+// //Refactored:
+// const remove = string => string.charAt(string.length-1)==="!" ? string.slice(0,string.length-1) : string
+// //Refactored - for slice, going from RIGHT TO LEFT, you can use negative indices:
+// const remove = string => string.charAt(string.length-1)==="!" ? string.slice(0,-1) : string
+// //Test Cases:
+// console.log(remove("hi!!"))
+// console.log(remove("hi"))
