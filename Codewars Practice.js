@@ -3728,6 +3728,69 @@ getFetch()
 //     let concatStringAndNum = xStringToNum.concat(xNum)
 //     return concatStringAndNum.reduce((a,c)=>a+c, 0)
 //   }
-
 // //Test case:
 // console.log(divCon([9, 3, '7', '3']))
+
+// Leet Code 26 Remove Duplicates from Sorted Array
+// Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once. The relative order of the elements should be kept the same.
+// Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
+//P: array of nums sorted in non-decreasing order
+//R: return k (k is the number of elements AFTER REMOVING DUPLICATES)
+//E:
+        // Input: nums = [1,1,2]
+        // Output: 2, nums = [1,2,_]    
+        // Input: nums = [0,0,1,1,1,2,2,3,3,4]
+        // Output: 5, nums = [0,1,2,3,4,_,_,_,_,_]     
+//Pseudocode:
+        //declare a variable that will find the length of the array after removing the duplicates (k)
+        //create a for loop that will check to see if nums[i] is != nums[i-1] (basically checking if the index your looking at is not equal to the previous index)
+        //if true, then set the array[i] equal to array[k], and increment k (k++). Return k
+//My solution:
+// var removeDuplicates = function(nums) {
+//     let k = 0
+//     for(let i = 0; i < nums.length; i++){
+//         if(nums[i] != nums[i-1]){
+//             nums[k] = nums[i]
+//             k++
+//         }
+//     }
+//     return k
+// };
+//test case:
+//input: [0,0,1,1,1,2,2,3,3,4]
+//Go through the loop one step at a time to visually keep track of i, k, and nums:
+//i: 0 1 2 3 4 5 6
+//k: 0 1 2 3
+//nums: [0,1,2,3,4,2,2,3,4]
+//Other solution that pertains more to JavaScript, since JS has a slice method and can mutate the original array length, and return the length (not all languages can do this, hence the solution above is still valid):
+// const removeDuplicates = nums => {
+//     for (let i = 0; i < nums.length; i++) {
+//         if (nums[i] === nums[i + 1]) {
+//             nums.splice(i, 1);
+//             i--;
+//         }
+//     }
+//     return nums.length;
+// };
+
+// 7 kyu All Star Code Challenge #3
+// Create a function, called removeVowels (or remove_vowels), that takes a string argument and returns that same string with all vowels removed (vowels are "a", "e", "i", "o", "u").
+//P: string
+//R: String but filter out the vowels
+//E: drake -> drk, aeiou -> ""
+//Pseudocode:
+    //Create a loop that iterates through the str length
+    //declare a return string
+    //if charAt(i) is not a vowel, strRemovedVowels+charAt(i)
+    // return the string
+// var removeVowels = function(str){
+//     let strRemovedVowels = ""
+//     for(i=0;i<str.length;i++){
+//         if(str.charAt(i) != "a" && str.charAt(i) != "e" && str.charAt(i) != "i" && str.charAt(i) != "o" && str.charAt(i) != "u"){
+//             strRemovedVowels += str.charAt(i)
+//         }    
+//     }
+//     return strRemovedVowels
+// }
+// //Test Case:
+// console.log(removeVowels("drake"))
