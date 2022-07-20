@@ -1,21 +1,21 @@
-// 7 kyu All Star Code Challenge #3
-// Create a function, called removeVowels (or remove_vowels), that takes a string argument and returns that same string with all vowels removed (vowels are "a", "e", "i", "o", "u").
-//P: string
-//R: String but filter out the vowels
-//E: drake -> drk, aeiou -> ""
+// 7 kyu All Star Code Challenge #1
+// Write a function, called sumPPG, that takes two NBA player objects/struct/Hash/Dict/Class and sums their PPG
+//Parameters: playerOne, playerTwo (objects)
+//Return: sum of playerOne and playerTwo PPG
+//Example:
+// var iverson = new NBAplayer("Iverson", "76ers", 11.2);
+// var jordan = new NBAplaer("Jordan", "bulls", 20.2);
+// sumPPG(iverson, jordan); // => 31.4
 //Pseudocode:
-    //Create a loop that iterates through the str length
-    //declare a return string
-    //if charAt(i) is not a vowel, strRemovedVowels+charAt(i)
-    // return the string
-    var removeVowels = function(str){
-        let strRemovedVowels = ""
-        for(i=0;i<str.length;i++){
-            if(str.charAt(i) != "a" && str.charAt(i) != "e" && str.charAt(i) != "i" && str.charAt(i) != "o" && str.charAt(i) != "u"){
-                strRemovedVowels += str.charAt(i)
-            }    
-        }
-        return strRemovedVowels
-    }
-    //Test Case:
-    console.log(removeVowels("drake"))
+        //use dot notation or bracket notation to add the ppg properties from playerOne and playerTwo
+//My solution - dot notation
+function sumPPG(playerOne, playerTwo){
+    return playerOne.ppg + playerTwo.ppg
+}
+//My solution - bracket notation
+function sumPPG(playerOne, playerTwo){
+      return playerOne['ppg'] + playerTwo['ppg']
+}
+//Arrow syntax solutions:
+const sumPPG = (playerOne, playerTwo) => playerOne.ppg + playerTwo.ppg
+const sumPPG = (playerOne, playerTwo) => playerOne['ppg'] + playerTwo['ppg']
