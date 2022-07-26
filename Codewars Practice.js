@@ -3955,3 +3955,74 @@ getFetch()
 //   }
 // console.log(order("4of Fo1r pe6ople g3ood th5e the2"))
 // //output: 'Fo1r the2 g3ood 4of th5e pe6ople'
+
+// 8 kyu The Feast of Many Beasts
+// There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+// // Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+// Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
+//P: Two strings: beast and dish
+//R: Return true if the dish string starts and ends with the same letters as the best string
+//E: See example above
+//Pseudocode:
+        //Use charAt and compare. If charAt 0 and charAt beast.length and dish.length are equal, return true. else return false
+
+// const feast = (beast, dish) => beast.charAt(0) === dish.charAt(0) && beast.charAt(beast.length-1) === dish.charAt(dish.length-1) ? true : false
+//My solution:
+// function feast(beast, dish) {
+//     if(beast.charAt(0) === dish.charAt(0) && beast.charAt(beast.length-1) === dish.charAt(dish.length-1)){
+//         return true
+//     }else{
+//         return false
+//     }
+// }
+// //Refactored using arrow syntax and ternary operator:
+// const feast = (beast, dish) => beast.charAt(0) === dish.charAt(0) && beast.charAt(beast.length-1) === dish.charAt(dish.length-1) ? true : false
+// //Refactored using arrow syntax and ternary operator and BRACKET NOTATION (I didn't know brackets could be used on strings!! Learn something new everyday):
+// const feast = (beast, dish) => beast[0] === dish[0] && beast[beast.length-1] === dish[dish.length-1] ? true : false
+// console.log(feast("brown bear", "bear claw"))
+
+// 7 kyu Fix string case
+// You will be given a string that may have mixed uppercase and lowercase letters and your task is to convert that string to either lowercase only or uppercase only based on:
+// make as few changes as possible.
+// if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
+// For example:
+// solve("coDe") = "code". Lowercase characters > uppercase. Change only the "D" to lowercase.
+// solve("CODe") = "CODE". Uppercase characters > lowecase. Change only the "e" to uppercase.
+// solve("coDE") = "code". Upper == lowercase. Change all to lowercase.
+//P: given string mixed with uppercase and lowercase
+//R: return the string either converted to all upper or lowercase. Upper if letters in the given string are mostly uppercase, otherwise return all in lowercase
+//E: (see above)
+//Pseudocode:
+    //Have a variable that tracks the number lowercase letters. If lowercase letters is equal to or greater than s.length, then return lowercase. otherwise return uppercase
+    //use loop to iterate through s to compare if lower or uppercase
+//My solution:
+// function solve(s){
+//     let lowerCaseCounter = 0
+//     let sLengthDividedByTwo = s.length / 2
+//     let sToLowerCase = s.toLowerCase()
+//     for(i=0;i<s.length;i++){
+//         if(sToLowerCase[i] === s[i]){
+//             lowerCaseCounter++
+//         }
+//     }
+//     if (lowerCaseCounter >= sLengthDividedByTwo ){
+//         console.log(`True: lowerCaseCounter is ${lowerCaseCounter}, sLengthDividedByTwo is ${sLengthDividedByTwo}`)
+//         return sToLowerCase
+//     }else{
+//         console.log(`False: lowerCaseCounter is ${lowerCaseCounter} sLengthDividedByTwo is ${sLengthDividedByTwo}`)
+//         return s.toUpperCase()
+//     }
+// }
+//Refactored
+// function solve(s){
+//     let lowerCaseCounter = 0
+//     let sToLowerCase = s.toLowerCase()
+//     for(i=0;i<s.length;i++){
+//         if(sToLowerCase[i] === s[i]){
+//             lowerCaseCounter++
+//         }
+//     }
+//     return lowerCaseCounter >= s.length / 2 ? sToLowerCase : s.toUpperCase()
+// }
+// //Test Case:
+// console.log(solve("Code"))
