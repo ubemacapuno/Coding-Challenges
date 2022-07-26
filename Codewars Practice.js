@@ -3956,58 +3956,73 @@ getFetch()
 // console.log(order("4of Fo1r pe6ople g3ood th5e the2"))
 // //output: 'Fo1r the2 g3ood 4of th5e pe6ople'
 
-// // 8 kyu Grasshopper - Basic Function Fixer
-// // Fix the function
-// // I created this function to add five to any number that was passed in to it and return the new value. It doesn't throw any errors but it returns the wrong number.
-// // Can you help me fix the function?
-// //P: function addFive
-// //R: function but fixed
-// //E: function should return num + 5
-// //Pseudocode: total has the correct operation, but is never returned. Return statement should be total, not num.
-// //My solution
-// function addFive(num) {
-//     var total = num + 5
-//     return total
-//   }
-// //Refactored to arrow syntax:
-// const addFive = num => num + 5
-
-// 7 kyu All Star Code Challenge #20
-// Create a function called addArrays() that combines two arrays of equal length, summing each element of the first with the corresponding element in the second, returning the "combined" summed array.
-// Raise an error if input arguments are not of equal length.
-// addArrays([1,2],[4,5]); // => [5,7]
-// addArrays([1,2,3],[4,5]); // => Error
-//P: two arrays
-//R: If both arrays are of equal length, map a new array that takes in array1[i] + array2[i]
-//E: See examples above
+// 8 kyu The Feast of Many Beasts
+// There is just one rule: the dish must start and end with the same letters as the animal's name. For example, the great blue heron is bringing garlic naan and the chickadee is bringing chocolate cake.
+// // Write a function feast that takes the animal's name and dish as arguments and returns true or false to indicate whether the beast is allowed to bring the dish to the feast.
+// Assume that beast and dish are always lowercase strings, and that each has at least two letters. beast and dish may contain hyphens and spaces, but these will not appear at the beginning or end of the string. They will not contain numerals.
+//P: Two strings: beast and dish
+//R: Return true if the dish string starts and ends with the same letters as the best string
+//E: See example above
 //Pseudocode:
-        //Declare empty array for return array
-        //Add a condition to throw Error if lengths are not equal
-        //If lengths are equal,
-        //return the return array
+        //Use charAt and compare. If charAt 0 and charAt beast.length and dish.length are equal, return true. else return false
+
+// const feast = (beast, dish) => beast.charAt(0) === dish.charAt(0) && beast.charAt(beast.length-1) === dish.charAt(dish.length-1) ? true : false
 //My solution:
-// function addArrays(array1, array2) {
-//     let returnArray = []
-//     if(array1.length != array2.length){
-//         throw new Error('Arrays not equal length')
+// function feast(beast, dish) {
+//     if(beast.charAt(0) === dish.charAt(0) && beast.charAt(beast.length-1) === dish.charAt(dish.length-1)){
+//         return true
 //     }else{
-//         for(let i=0; i<array1.length;i++){
-//             returnArray.push(array1[i] + array2[i])
+//         return false
+//     }
+// }
+// //Refactored using arrow syntax and ternary operator:
+// const feast = (beast, dish) => beast.charAt(0) === dish.charAt(0) && beast.charAt(beast.length-1) === dish.charAt(dish.length-1) ? true : false
+// //Refactored using arrow syntax and ternary operator and BRACKET NOTATION (I didn't know brackets could be used on strings!! Learn something new everyday):
+// const feast = (beast, dish) => beast[0] === dish[0] && beast[beast.length-1] === dish[dish.length-1] ? true : false
+// console.log(feast("brown bear", "bear claw"))
+
+// 7 kyu Fix string case
+// You will be given a string that may have mixed uppercase and lowercase letters and your task is to convert that string to either lowercase only or uppercase only based on:
+// make as few changes as possible.
+// if the string contains equal number of uppercase and lowercase letters, convert the string to lowercase.
+// For example:
+// solve("coDe") = "code". Lowercase characters > uppercase. Change only the "D" to lowercase.
+// solve("CODe") = "CODE". Uppercase characters > lowecase. Change only the "e" to uppercase.
+// solve("coDE") = "code". Upper == lowercase. Change all to lowercase.
+//P: given string mixed with uppercase and lowercase
+//R: return the string either converted to all upper or lowercase. Upper if letters in the given string are mostly uppercase, otherwise return all in lowercase
+//E: (see above)
+//Pseudocode:
+    //Have a variable that tracks the number lowercase letters. If lowercase letters is equal to or greater than s.length, then return lowercase. otherwise return uppercase
+    //use loop to iterate through s to compare if lower or uppercase
+//My solution:
+// function solve(s){
+//     let lowerCaseCounter = 0
+//     let sLengthDividedByTwo = s.length / 2
+//     let sToLowerCase = s.toLowerCase()
+//     for(i=0;i<s.length;i++){
+//         if(sToLowerCase[i] === s[i]){
+//             lowerCaseCounter++
 //         }
 //     }
-//     return returnArray
-// }
-// //Use map:
-// function addArrays(array1, array2) {
-//     if(array1.length != array2.length){
-//         throw new Error('Arrays not equal length')
+//     if (lowerCaseCounter >= sLengthDividedByTwo ){
+//         console.log(`True: lowerCaseCounter is ${lowerCaseCounter}, sLengthDividedByTwo is ${sLengthDividedByTwo}`)
+//         return sToLowerCase
+//     }else{
+//         console.log(`False: lowerCaseCounter is ${lowerCaseCounter} sLengthDividedByTwo is ${sLengthDividedByTwo}`)
+//         return s.toUpperCase()
 //     }
-//     return array1.map((e,i) => array1[i] + array2[i])              
 // }
-// //use ternary (very unreadable, don't actually do this in real-life scenario):
-// const addArrays = (array1, array2) => array1.length != array2.length ? (function(){throw new Error('Arrays not equal length')}()) : array1.map((e,i) => array1[i] + array2[i])   
-// //Test Cases:
-// console.log(addArrays([1,2,3],[4,5]))
-
-
-
+//Refactored
+// function solve(s){
+//     let lowerCaseCounter = 0
+//     let sToLowerCase = s.toLowerCase()
+//     for(i=0;i<s.length;i++){
+//         if(sToLowerCase[i] === s[i]){
+//             lowerCaseCounter++
+//         }
+//     }
+//     return lowerCaseCounter >= s.length / 2 ? sToLowerCase : s.toUpperCase()
+// }
+// //Test Case:
+// console.log(solve("Code"))
