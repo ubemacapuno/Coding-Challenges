@@ -4078,3 +4078,42 @@ getFetch()
 // const addArrays = (array1, array2) => array1.length != array2.length ? (function(){throw new Error('Arrays not equal length')}()) : array1.map((e,i) => array1[i] + array2[i])   
 // //Test Cases:
 // console.log(addArrays([1,2,3],[4,5]))
+
+// // 8 kyu Training JS #7: if..else and ternary operator
+// // Complete function saleHotdogs/SaleHotDogs/sale_hotdogs, function accept 1 parameters:n, n is the number of customers to buy hotdogs, different numbers have different prices (refer to the following table), return a number that the customer need to pay how much money.
+// // number	price (cents)
+// // n < 5	100
+// // n >= 5 and n < 10	95
+// // n >= 10	90
+// // You can use if..else or ternary operator to complete it.
+// //P: Given n, number of customers to buy hot dogs
+// //R: Return a number that the customer needs to pay
+// //E: 4 should return 400 (n*100), 5 should return 475 (n*95), 10 should return 900 (n*90)
+// //Pseudocode:
+//         //Using the three conditions, use ternary operator. Since there are three conditions, add at least two conditions in the function:
+// //My solution using ternary operator:
+// const saleHotdogs = n => n < 5 ? n*100 : n >= 5 && n < 10 ? n*95 : n*90
+// //refactored using parentheses:
+// const saleHotdogs = n => n*(n < 5 ? 100 : n >= 5 && n < 10 ? 95 : 90)
+
+// 7 kyu Area of an arrow
+// An arrow is formed in a rectangle with sides a and b by joining the bottom corners to the midpoint of the top edge and the centre of the rectangle.
+// a and b are integers and > 0
+// Write a function which returns the area of the arrow.
+//P: Given nums a and b (view diagram) which are sides of a rectangle
+//R: Return the area of the arrow in the rectangle that is formed by joining the bottom corners to the midpoint of the top edge and the centre of the rectangle.
+//E: (arrowArea(4,2), 2), (arrowArea(7,6), 10.5), (arrowArea(25,25), 156.25)
+//Pseudocode:
+        //declare variables for a,b,c of right triangle made inside the arrow.
+        //Use pythagorean theorom.
+        //Once area of half the triangle is determined, multiply it by 2 and return it
+//My solution:
+// function arrowArea(a,b) {
+//     let smallA = a/2
+//     let smallB = b/2
+//     return smallA * smallB
+// }
+// //Refactored:
+// const arrowArea = (a,b) => (a/2) * (b/2)
+// //Test Case:
+// console.log(arrowArea(25,25))
