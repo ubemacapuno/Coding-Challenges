@@ -4117,3 +4117,42 @@ getFetch()
 // const arrowArea = (a,b) => (a/2) * (b/2)
 // //Test Case:
 // console.log(arrowArea(25,25))
+
+// 8 kyu The Wide-Mouthed frog!
+// Your goal in this kata is to create complete the mouth_size method this method takes one argument animal which corresponds to the animal encountered by the frog. If this one is an alligator (case-insensitive) return small otherwise return wide
+//P: animal as a string
+//R: Return small if the argument is 'alligator' in ANY case (lower, upper, doesn't matter), otherwise return wide.
+//E: alligator returns small, toucan returns wide
+//Pseudocode:
+    //Use conditional statement to return small if the argument is alligator, otherwise return wide
+//My solution:
+// const mouthSize = animal => animal.toLowerCase() === 'alligator' ? 'small' : 'wide'
+
+// 6 kyu All Star Code Challenge #15 - RETURN TO THIS LATER. Too hard
+// Create a function named rotate() that accepts a string argument and returns an array of strings with each letter from the input string being rotated to the end.
+// rotate("Hello") // => ["elloH", "lloHe", "loHel", "oHell", "Hello"]
+// Note: The original string should be included in the output array The order matters. Each element of the output array should be the rotated version of the previous element. The output array SHOULD be the same length as the input string The function should return an emptry array with a 0 length string, '', as input
+//P: Given a string
+//R: Return an array. Each element of the output array should be the rotated version of the previous element. output array SHOULD be the same length as the input string
+//E: // rotate("Hello") // => ["elloH", "lloHe", "loHel", "oHell", "Hello"]
+//Pseudocode:
+        //Declare a variable and set it as (str); we will mutate this variable.
+        //Declare an array for the return; we will keep pushing elements into this array and return it at the end
+        //for the length of the string, we will add to the array 
+
+//My solution:
+// function rotate(str){
+//     // let mutableStr = str
+//     let strArray = []
+//     let returnArray = []
+//     // return mutableStr.split('')
+//     for(let i=0;i<str.length-1;i++){
+//         strArray.push(str[i+1])
+//         console.log(strArray)
+//     }
+//     strArray.push(str[0])
+
+
+    
+// }
+// console.log(rotate("Hello"))
