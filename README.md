@@ -4,7 +4,7 @@ This repository is to track my solutions to coding challenges. I strive to push 
 
 ## How It's Made:
 
-**Tech used:** JavaScript! In addition to the problems I solve, within this repo is a front-end I built that pulls data from the Codewars API and displays my current Codewars stats in the browser, which can be <a target="_blank" href="https://coreydamocles-codewars.netlify.app">found here</a>!
+**Tech used:** JavaScript! In addition to the problems I solve, within this repo is a front-end I built that pulls data from the Codewars API and displays my current Codewars stats in the browser, which can be found <a target="_blank" href="https://codepen.io/corey-damocles/pen/OJQmbWb">here on codepen.io</a>!
 
  <tr>
     <td width="100%"  style="align:center;" valign="top">
