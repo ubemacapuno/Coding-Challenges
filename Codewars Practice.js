@@ -4470,9 +4470,53 @@ getFetch()
         //sort the array from least to greatest.
         //if element at index 0 is the same as element as index 1 (meaning the stray number is NOT located at index 0 and 1), then return index[array.length-1]. Otherwise, return element at index 0
 //My Solution:
-function stray(numbers) {
-    numbers.sort((a,b)=>a-b)
-    return Number(numbers[0]) === Number(numbers[1]) ? Number(numbers[numbers.length-1]) : Number(numbers[0])
-  }
-//Test case:
-console.log(stray([1, 1, 2,1,1,1]))
+// function stray(numbers) {
+//     numbers.sort((a,b)=>a-b)
+//     return Number(numbers[0]) === Number(numbers[1]) ? Number(numbers[numbers.length-1]) : Number(numbers[0])
+//   }
+// //Test case:
+// console.log(stray([1, 1, 2,1,1,1]))
+
+// 8 kyu Grasshopper - Terminal game move function
+// Terminal game move function
+// In this game, the hero moves from left to right. The player rolls the dice and moves the number of spaces indicated by the dice two times.
+// Create a function for the terminal game that takes the current position of the hero and the roll (1-6) and return the new position.
+// Example:
+// move(3, 6) should equal 15
+//Parameters: 2 nums: current position, and the dice number
+//Return: number of the new position
+//Example: move(3,6) equals 15. Player starts on position 3. 3 + (6*2) = 15
+//Pseudocode:
+        //(dice roll * 2) plus current position equals the new position
+// function move (position, roll) {
+//   return (roll * 2) + position
+// }
+// //refactored:
+// const move = (position,roll) => roll * 2 + position
+
+// 7 kyu Flatten and sort an array
+// Challenge:
+// Given a two-dimensional array of integers, return the flattened version of the array with all the integers in the sorted (ascending) order.
+// Example:
+// Given [[3, 2, 1], [4, 6, 5], [], [9, 7, 8]], your function should return [1, 2, 3, 4, 5, 6, 7, 8, 9].
+// Addendum:
+// Please, keep in mind, that JavaScript is by default sorting objects alphabetically. For more information, please consult:
+// http://stackoverflow.com/questions/6093874/why-doesnt-the-sort-function-of-javascript-work-well
+//Parameters: 2-d array of integers
+//Return: 1-d array sorted
+//Example: see above
+//Pseudocode:
+    //Declare an array that we will return (returnArray) at the end
+    //Loop through the elements of the multi-dim array and push each element into the returnArray
+    //Sort returnArray in ascending order and return it
+//My solution:
+// "use strict";
+// function flattenAndSort(array) {
+//     let returnArray = []
+//     array.forEach((e)=>returnArray.push(e))
+//     return returnArray.flat().sort((a,b)=>(a-b))
+// }
+// //Refactored (shortened but not as readable):
+// const flattenAndSort = array => array.flat().sort((a,b)=>a-b)
+// //Test Case:
+// console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]))
