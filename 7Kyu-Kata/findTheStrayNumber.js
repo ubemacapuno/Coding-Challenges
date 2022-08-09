@@ -1,17 +1,20 @@
-// 7 kyu Find the stray number
-// You are given an odd-length array of integers, in which all of them are the same, except for one single number.
-// Complete the method which accepts such an array, and returns that single different number.
-// The input array will always be valid! (odd-length >= 3)
-// Examples
-// [1, 1, 2] ==> 2
-// [17, 17, 3, 17, 17, 17, 17] ==> 3
-//Parameters: odd-length array of integers (odd-length >= 3)
-//Return: return the single different number
-//Examples: see above
+// 7 kyu Recursion #2 - Fibonacci
+// Do you know recursion?
+// This is a kata series that you can only solve using recursion.
+// ##2 - Fibonacci number
+// In mathematical terms, the sequence f(n) of fibonacci numbers is defined by the recurrence relation
+// f(n) = f(n-1) + f(n-2)
+// with seed values
+// f(1) = 1 and f(2) = 1
+// #Your task
+// You have to create the function fibonacci that receives n and returns f(n). You have to use recursion.
+//Parameters: number n
+//Return: return f(n)
+//E: f(1) = 1 and f(2) = 1
 //Pseudocode:
-        //sort the array from least to greatest.
-        //if element at index 0 is the same as element as index 1 (meaning the stray number is NOT located at index 0 and 1), then return index[array.length-1]. Otherwise, return element at index 0
-//My Solution:
+    //if n is 1 or less than 1, return n
+    //Otherwise, return function(n-1) + function(n-2) (this is the fibonnaci formula mentioned above)
+//My solution:
 function stray(numbers) {
     numbers.sort((a,b)=>a-b)
     return Number(numbers[0]) === Number(numbers[1]) ? Number(numbers[numbers.length-1]) : Number(numbers[0])
