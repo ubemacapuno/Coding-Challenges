@@ -19,13 +19,15 @@
 // strictEqual(humanReadable(86400), '24:00:00', 'humanReadable(86400)');
 // strictEqual(humanReadable(359999), '99:59:59', 'humanReadable(359999)');
 //Pseudocode:
-        //There will be three main conditions. If seconds are within this range/digits:
+        //There will be three main variables, HH MM SS
             //find out how many hours will need to be returned and have an HH variable
                     //HH will be seconds / 60 * 60
             //find out how many minutes will need to be returned and have a MM variable
             //find out how many seconds will need to be returned and have a SS variable
             //Make sure all floats are integers. We can do this using parseInt(string, radix) for all HH MM SS, but omit radix parameter since we are using base 10 numbers
             //Have a string leading '0' for each HH MM SS
+            //must only return the last TWO digits. For example, we don't want 36000 seconds to return 010:00:00, we want 10:00:00.
+                //To address this, we should use .slice(-2) so that we are only returning up to 2 digits
             //We can use a template literal for the function return, example `${HH}:${MM}:${SS}`
 //My solution:
 function humanReadable (seconds) {
@@ -35,4 +37,4 @@ function humanReadable (seconds) {
     return `${HH}:${MM}:${SS}`
   }
 //Test case
-console.log(humanReadable(3601))
+console.log(humanReadable(36000))
