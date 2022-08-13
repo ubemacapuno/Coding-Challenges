@@ -4719,3 +4719,30 @@ getFetch()
 // //Test Case
 // console.log(digitalRoot(942)) //6
 // console.log(digitalRoot(16)) //7
+
+// 7 kyu Recursion 101
+// In this Kata, you will be given two positive integers a and b and your task will be to apply the following operations:
+// i) If a = 0 or b = 0, return [a,b]. Otherwise, go to step (ii);
+// ii) If a ≥ 2*b, set a = a - 2*b, and repeat step (i). Otherwise, go to step (iii);
+// iii) If b ≥ 2*a, set b = b - 2*a, and repeat step (i). Otherwise, return [a,b].
+// a and b will both be lower than 10E8.
+// More examples in tests cases. Good luck!
+//Parameters: given two positive integers a, b
+//Return: [a,b] if a=0 or b=0 ...see conditions above
+//Examples: See on codewars
+//Pseudocode:
+    //The logic is all written above already, just write the conditions in Javascript with their respective return clauses.
+// function solve(a,b){
+//     if(a===0 || b===0){
+//         return [a,b]
+//     }
+//     if (a >= 2*b){
+//         a = a - 2*b
+//         return solve(a,b)
+//     }
+//     if (b >= 2*a){
+//         b = b -2*a
+//         return solve(a,b)
+//     }
+//     return [a,b]
+// }
