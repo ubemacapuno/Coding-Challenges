@@ -4867,3 +4867,64 @@ getFetch()
 //   }
 // //Test Case:
 // console.log(predictAge(65, 60, 75, 55, 60, 63, 64, 45))
+
+// 8 kyu I love you, a little , a lot, passionately ... not at all
+// Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
+// I love you
+// a little
+// a lot
+// passionately
+// madly
+// not at all
+// When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+// Your goal in this kata is to determine which phrase the girls would say for a flower of a given number of petals, where nb_petals > 0.
+//P: num
+//R: phrase (listed phrases above)
+//E: (7),"I love you")
+//Pseudocode:
+    // if % 6 === 1 "I love you" and so on . . .
+//Solution:
+// function howMuchILoveYou(nbPetals) {
+//     if(nbPetals % 6 === 1){
+//         return "I love you"
+//     }else if(nbPetals % 6 === 2){
+//         return "a little"
+//     }else if(nbPetals % 6 === 3){
+//         return "a lot"
+//     }else if(nbPetals % 6 === 4){
+//         return "passionately"
+//     }else if(nbPetals % 6 === 5){
+//         return  "madly"
+//     }else{
+//         return "not at all"
+//     }
+// }
+
+// // 6 kyu Find the unique number
+// // There is an array with some numbers. All numbers are equal except for one. Try to find it!
+// // findUniq([ 1, 1, 1, 2, 1, 1 ]) === 2
+// // findUniq([ 0, 0, 0.55, 0, 0 ]) === 0.55
+// // It’s guaranteed that array contains at least 3 numbers.
+// // The tests contain some very huge arrays, so think about performance.
+// //P: Array with numbers
+// //R: the unique number in the array
+// //E: See above
+// //Pseudocode:
+//     //Sort the array from least to greatest
+//     //if array[0] === array[1] then return array[array.length], otherwise return array[0]
+// //My solution:
+// function findUniq(arr) {
+//     arr.sort((a,b) => a-b)
+//     return arr[0] === arr[1] ? arr[arr.length-1] : arr[0]
+// }
+// //using pop and shift:
+// function findUniq(arr) {
+//     arr.sort((a,b) => a-b)
+//     return arr[0] === arr[1] ? arr.pop() : arr.shift()
+// }
+
+// //Test cases:
+// console.log(findUniq([ 0, 0, 0.55, 0, 0 ]))
+// console.log(findUniq([ 1, 1, 1, 2, 1, 1 ]))
+// console.log(findUniq([ 1, 1, 2, 1, 1 ]))
+// console.log(findUniq([ 3, 10, 3, 3, 3 ]))
