@@ -4962,3 +4962,62 @@ getFetch()
 //   }
 // //Test Case:
 // console.log(isPalindrome('abbaasfa'))
+
+// 4 kyu Don't give me five! Really!
+// This kata is the performance version of Don't give me five by user5036852.
+// Your mission, should you accept it, is to return the count of all integers in a given range which do not contain the digit 5 (in base 10 representation).
+// You are given the start and the end of the integer range. The start and the end are both inclusive.
+// Examples:
+// 1,9 -> 1,2,3,4,6,7,8,9 -> return 8
+// 4,17 -> 4,6,7,8,9,10,11,12,13,14,16,17 -> return 12
+// The result may contain fives. ;-)
+// The start will always be smaller than the end. Both numbers can be also negative.
+// The regions can be very large and there will be a large number of test cases. So brute force solutions will certainly time out!
+// Good luck, warrior!
+//P: start and end nums
+//R: number of all integers in the range which do NOT contain the digit "5"
+//E: 
+    // 1,9 -> 1,2,3,4,6,7,8,9 -> return 8
+    // 4,17 -> 4,6,7,8,9,10,11,12,13,14,16,17 -> return 12
+//Pseudocode:
+//Use a loop going from start to end
+//As the loop iterates, if the number does not end with 5, push to the array
+//return the count of the array
+
+// function dontGiveMeFive(start, end){
+//     let returnArr = []
+//     for(let i=start; i<=end; i++){
+//         if(i.toString().endsWith('5') === false){
+//             returnArr.push(i)
+//         }
+//     }
+//     return returnArr.length
+// }
+// console.log(dontGiveMeFive(-90000000000000, 900000000000000))
+
+//7 kyu The Coupon Code
+// Story
+// Your online store likes to give out coupons for special occasions. Some customers try to cheat the system by entering invalid codes or using expired coupons.
+// Task
+// Your mission:
+// Write a function called checkCoupon which verifies that a coupon code is valid and not expired.
+// A coupon is no more valid on the day AFTER the expiration date. All dates will be passed as strings in this format: "MONTH DATE, YEAR".
+// Examples:
+// checkCoupon("123", "123", "July 9, 2015", "July 9, 2015")  ===  true
+// checkCoupon("123", "123", "July 9, 2015", "July 2, 2015")  ===  false
+//P: enteredCode, correctCode, currentDate, expirationDate
+//R: true or false
+//E: 
+        // checkCoupon("123", "123", "July 9, 2015", "July 9, 2015")  ===  true
+        // checkCoupon("123", "123", "July 9, 2015", "July 2, 2015")  ===  false
+        // checkCoupon('123','123','September 5, 2014','October 1, 2014'), true)
+        // checkCoupon('123a','123','September 5, 2014','October 1, 2014'), false)
+//Pseudocode:
+//Conditional statements - if enteredCode === correctCode and currentDate <= expirationDate, return TRUE else false
+//To convert the date from string to date so that we can use comparison operators, use Date.parse(dateStringHere)
+//My solution:
+// function checkCoupon(enteredCode, correctCode, currentDate, expirationDate){
+//     return enteredCode === correctCode && Date.parse(currentDate) <= Date.parse(expirationDate)
+// }
+// //Arrow fxn:
+// const checkCoupon = (enteredCode, correctCode, currentDate, expirationDate) => enteredCode === correctCode && Date.parse(currentDate) <= Date.parse(expirationDate)
