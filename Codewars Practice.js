@@ -5384,3 +5384,79 @@ getFetch()
 //       return 'Fail!'
 //     }
 //   }
+
+// 6 kyu Simple Encryption #1 - Alternating Split
+// Implement a pseudo-encryption algorithm which given a string S and an integer N concatenates all the odd-indexed characters of S with all the even-indexed characters of S, this process should be repeated N times.
+// Examples:
+// encrypt("012345", 1)  =>  "135024"
+// encrypt("012345", 2)  =>  "135024"  ->  "304152"
+// encrypt("012345", 3)  =>  "135024"  ->  "304152"  ->  "012345"
+// encrypt("01234", 1)  =>  "13024"
+// encrypt("01234", 2)  =>  "13024"  ->  "32104"
+// encrypt("01234", 3)  =>  "13024"  ->  "32104"  ->  "20314"
+// Together with the encryption function, you should also implement a decryption function which reverses the process.
+// If the string S is an empty value or the integer N is not positive, return the first argument without changes.
+
+//Encrypt function
+//P:Given a string "text" and an integer N
+//R: String but with odd indexes concatonated with even indexes; this happens N times
+//E: 
+        // encrypt("012345", 1)  =>  "135024"
+        // encrypt("012345", 2)  =>  "135024"  ->  "304152"
+        // encrypt("012345", 3)  =>  "135024"  ->  "304152"  ->  "012345"
+//Pseudocode:
+        //split string to array
+        //map the odd indexes to an "odd" array
+        //map the even indexes to an "even" array
+        //concatonate these and return as a STRING! Maybe at this point, use recursion:
+            //For the occurence of N times - think about how to recursively call this function n times??
+
+//Decrypt function
+//P:Given text and integer n
+//R: Return the original text prior to encryption
+//E: ("hsi  etTi sats!", 1), "This is a test!")
+//Pseudocode:
+        //
+//My attempt:
+function encrypt(text, n){
+    if(n<=0){
+        return text
+    }
+    let oddArray = []
+    let evenArray = []
+    let textArrayOdd = text.split('') //will mutate on map
+    let textArrayEven = text.split('') //will mutate on map
+    oddArray = textArrayOdd.filter((e,i)=>i%2!=0)
+    evenArray = textArrayOdd.filter((e,i)=>i%2===0)
+    let concatWithText = oddArray.concat(evenArray).join('')
+    let nTracker = n-1
+    if(nTracker<=0){
+        return concatWithText
+    }else{
+        console.log(concatWithText, nTracker)
+        return encrypt(concatWithText, nTracker)
+    }
+}
+
+function decrypt(encryptedText, n){
+    if(n<=0 || !encryptedText){
+        return encryptedText
+    }
+    let mid = encryptedText.length/2
+    let first = encryptedText.split('').slice(mid)
+    let second = encryptedText.split('').slice(0,mid)
+    let returnArr = []
+    for (let i=1; i<encryptedText.length;i++){
+        if(i%2===i-1){
+            returnArr.push(second[i])
+            returnArr.push(first[i])
+        }else{
+            returnArr.push(first[i])
+            returnArr.push(second[i])
+        }
+    }
+    return decrypt(returnArr.join(''),n-1)
+}
+
+// console.log(encrypt("This is a test!", -1))
+console.log(decrypt("hsi  etTi sats!", 1))
