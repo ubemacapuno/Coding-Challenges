@@ -5418,45 +5418,81 @@ getFetch()
 //Pseudocode:
         //
 //My attempt:
-function encrypt(text, n){
-    if(n<=0){
-        return text
-    }
-    let oddArray = []
-    let evenArray = []
-    let textArrayOdd = text.split('') //will mutate on map
-    let textArrayEven = text.split('') //will mutate on map
-    oddArray = textArrayOdd.filter((e,i)=>i%2!=0)
-    evenArray = textArrayOdd.filter((e,i)=>i%2===0)
-    let concatWithText = oddArray.concat(evenArray).join('')
-    let nTracker = n-1
-    if(nTracker<=0){
-        return concatWithText
-    }else{
-        console.log(concatWithText, nTracker)
-        return encrypt(concatWithText, nTracker)
-    }
-}
+// function encrypt(text, n){
+//     if(n<=0){
+//         return text
+//     }
+//     let oddArray = []
+//     let evenArray = []
+//     let textArrayOdd = text.split('') //will mutate on map
+//     let textArrayEven = text.split('') //will mutate on map
+//     oddArray = textArrayOdd.filter((e,i)=>i%2!=0)
+//     evenArray = textArrayOdd.filter((e,i)=>i%2===0)
+//     let concatWithText = oddArray.concat(evenArray).join('')
+//     let nTracker = n-1
+//     if(nTracker<=0){
+//         return concatWithText
+//     }else{
+//         console.log(concatWithText, nTracker)
+//         return encrypt(concatWithText, nTracker)
+//     }
+// }
 
-function decrypt(encryptedText, n){
-    if(n<=0 || !encryptedText){
-        return encryptedText
-    }
-    let mid = encryptedText.length/2
-    let first = encryptedText.split('').slice(mid)
-    let second = encryptedText.split('').slice(0,mid)
-    let returnArr = []
-    for (let i=1; i<encryptedText.length;i++){
-        if(i%2===i-1){
-            returnArr.push(second[i])
-            returnArr.push(first[i])
-        }else{
-            returnArr.push(first[i])
-            returnArr.push(second[i])
-        }
-    }
-    return decrypt(returnArr.join(''),n-1)
-}
+// function decrypt(encryptedText, n){
+//     if(n<=0 || !encryptedText){
+//         return encryptedText
+//     }
+//     let mid = encryptedText.length/2
+//     let first = encryptedText.split('').slice(mid)
+//     let second = encryptedText.split('').slice(0,mid)
+//     let returnArr = []
+//     for (let i=1; i<encryptedText.length;i++){
+//         if(i%2===i-1){
+//             returnArr.push(second[i])
+//             returnArr.push(first[i])
+//         }else{
+//             returnArr.push(first[i])
+//             returnArr.push(second[i])
+//         }
+//     }
+//     return decrypt(returnArr.join(''),n-1)
+// }
 
-// console.log(encrypt("This is a test!", -1))
-console.log(decrypt("hsi  etTi sats!", 1))
+// // console.log(encrypt("This is a test!", -1))
+// console.log(decrypt("hsi  etTi sats!", 1))
+
+// // 8 kyu Welcome to the City
+// // Create a method sayHello/say_hello/SayHello that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.
+// // Example:
+// // sayHello(['John', 'Smith'], 'Phoenix', 'Arizona')
+// // This example will return the string Hello, John Smith! Welcome to Phoenix, Arizona!
+// //P array with names (strings), city (string), state(string)
+// //R String in format of example above
+// //Example: see above
+// //Pseudocode: use join array method to get the strings in the array as strings sep. by a space. Use template literal to return in proper format
+// function sayHello( name, city, state ) {
+//     return `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
+// }
+// //Arrow:
+// const sayHello = ( name, city, state ) => `Hello, ${name.join(' ')}! Welcome to ${city}, ${state}!`
+
+// //test case:
+// console.log(sayHello(['John', 'Smith'], 'Phoenix', 'Arizona'))
+
+// // 8 kyu Capitalization and Mutability
+// // Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation.
+// // Unfortunately, they have now left and the code they gave you doesn't work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case).
+// // Don't worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
+// // Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation.
+// // Unfortunately, they have now left and the code they gave you doesn't work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case).
+// // Don't worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
+// //P: word lowercase
+// //R: word with word[0] uppercase
+// //E: word -> Word
+// //Pseudocode: set word[0] to uppercase and concatonate with word.slice(1)
+// //Solution:
+// function capitalizeWord(word) {
+//     return `${word[0].toUpperCase()}${word.slice(1)}`
+//   }
+// //Arrow: 
+// const capitalizeWord = word => `${word[0].toUpperCase()}${word.slice(1)}`
