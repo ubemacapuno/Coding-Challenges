@@ -5595,7 +5595,6 @@ getFetch()
 // //Test case:
 // console.log(sumOfMinimums([ [ 1, 2, 3, 4, 5 ], [ 5, 6, 7, 8, 9 ], [ 20, 21, 34, 56, 100 ]]))
 
-<<<<<<< HEAD
 // 7 kyu Counting Array Elements
 // Write a function that takes an array and counts the number of each unique element present.
 // count(['james', 'james', 'john']) 
@@ -5622,7 +5621,6 @@ getFetch()
 //     })
 //     return map;
 //   }
-=======
 // 7 kyu Spacify
 // Modify the spacify function so that it returns the given string with spaces inserted between each character.
 // spacify("hello world") // returns "h e l l o   w o r l d"
@@ -5647,4 +5645,3 @@ getFetch()
 // }
 // //Test Case:
 // console.log(spacify("Hello World"))
->>>>>>> 35a958e411e68866407a02335afe009c87a2fffa
