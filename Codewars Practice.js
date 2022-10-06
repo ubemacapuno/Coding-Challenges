@@ -6333,3 +6333,34 @@ getFetch()
 // }
 // //Test case:
 // // console.log(alphabetWar("wwwwwwz"))
+
+// // 7kyu Caffeine Script
+// // Complete the function caffeineBuzz, which takes a non-zero integer as its argument.
+// // If the integer is divisible by 3, return the string "Java".
+// // If the integer is divisible by 3 and divisible by 4, return the string "Coffee"
+// // If one of the condition above is true and the integer is even, add "Script" to the end of the string.
+// // If none of the condition is true, return the string "mocha_missing!"
+// // caffeineBuzz(1)   => "mocha_missing!"
+// // caffeineBuzz(3)   => "Java"
+// // caffeineBuzz(6)   => "JavaScript"
+// // caffeineBuzz(12)  => "CoffeeScript"
+
+// //P:non-zero integer
+// //R: 
+//     // return java if divisible by 3 
+//     // coffee if divisible by 3 and 4
+//     //If one above is true and integer is even, add script to the end of the string
+//     //if no condition is true return mocha missing
+// //E: see above
+// //Pseudocode:
+// //have a condition for the 3 and 4, coffee
+// //have condition for 3, java
+// //if coffee or java and even, add script
+// function caffeineBuzz(n){
+//     if (n % 12 === 0) return 'CoffeeScript'
+//     if (n % 6 === 0) return 'JavaScript'
+//     if (n % 3 === 0) return 'Java'
+//     return 'mocha_missing!'
+//   }
+
+// console.log(caffeineBuzz(12))
