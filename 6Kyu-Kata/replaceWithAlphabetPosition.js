@@ -17,23 +17,23 @@
     //if -1, continue
     //Otherwise, push to the array (index + 1) since a === 1, b === 2, etc.
 //Solution:
-function alphabetPosition(text) {
-    text = text.toLowerCase()
-    const alphabet = "abcdefghijklmnopqrstuvwxyz"
-    let alphabetArr = []
-    //iterate through text:
-    for (let i=0; i<text.length; i++){
-        let alphabetIndex = alphabet.indexOf(text[i])
-            //alphabet.indexOf(text[i]) returns -1 for characters that aren't in alphabet variable.
-            //Don't push anything to the array and continue the interation:
-        if (alphabetIndex === -1){
-            continue
-        }else{
-            //Otherwise, push the index "+ 1" because per the question, a is index 1, not 0.
-            alphabetArr.push(alphabetIndex + 1)
-        }
-    }
-    return alphabetArr.join(' ')
-  }
-//Test:
-console.log(alphabetPosition("The sunset sets at twelve o' clock."))
+// function alphabetPosition(text) {
+//     text = text.toLowerCase()
+//     const alphabet = "abcdefghijklmnopqrstuvwxyz"
+//     let alphabetArr = []
+//     //iterate through text:
+//     for (let i=0; i<text.length; i++){
+//         let alphabetIndex = alphabet.indexOf(text[i])
+//             //alphabet.indexOf(text[i]) returns -1 for characters that aren't in alphabet variable.
+//             //Don't push anything to the array and continue the interation:
+//         if (alphabetIndex === -1){
+//             continue
+//         }else{
+//             //Otherwise, push the index "+ 1" because per the question, a is index 1, not 0.
+//             alphabetArr.push(alphabetIndex + 1)
+//         }
+//     }
+//     return alphabetArr.join(' ')
+//   }
+// //Test:
+// console.log(alphabetPosition("The sunset sets at twelve o' clock."))
