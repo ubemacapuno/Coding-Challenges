@@ -6509,3 +6509,17 @@ getFetch()
     //return num plus halvingSum(Math.floor(num/2))
 //My solution: 
 // const halvingSum = num => num === 1 ? 1 : num+halvingSum(Math.floor(num/2))
+
+//If you can't sleep, just count sheep!!
+// 8Kyu
+// Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+
+var countSheep = function (num){
+    let rString = ''
+    for(let i=1; i<=num; i++){
+        rString += `${i} sheep...`       
+    }
+    return rString
+  }
+
+console.log(countSheep(3))
