@@ -6544,3 +6544,19 @@ getFetch()
 //       return "Obese"
 //     }
 //   }
+
+//8 kyu Grasshopper - Personalized Message
+// Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
+// Use conditionals to return the proper message:
+// case	return
+// name equals owner	'Hello boss'
+// otherwise	'Hello guest'
+//P: name, owner
+//R: Hello boss or Hello guest
+//E: 
+// Test.assertEquals(greet('Daniel', 'Daniel'), 'Hello boss')
+// Test.assertEquals(greet('Greg', 'Daniel'), 'Hello guest')
+//Pseudocode:
+//Use ternary operator. If name is exactly equal to owner, say hello boss, otherwise say hello guest! 
+//Also use arrow syntax
+const greet = (name, owner) => name === owner ? "Hello boss" : "Hello guest"
