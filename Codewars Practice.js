@@ -6510,10 +6510,16 @@ getFetch()
 //My solution: 
 // const halvingSum = num => num === 1 ? 1 : num+halvingSum(Math.floor(num/2))
 
-//If you can't sleep, just count sheep!!
-// 8Kyu
-// Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
 
+// // 8Kyu If you can't sleep, just count sheep!!
+// // Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+// //P integer
+// //R counting sheep string with integer from 1 to num
+// //E see above example
+// //Pseudocode:
+//   //Make a loop iterating from to num
+//   //on each iteration, add to a return sring the following:
+//     //(num sheep...)
 // var countSheep = function (num){
 //     let rString = ''
 //     for(let i=1; i<=num; i++){
@@ -6521,42 +6527,29 @@ getFetch()
 //     }
 //     return rString
 //   }
-
+// //Test case
 // console.log(countSheep(3))
 
-//8 kyu Calculate BMI
-//P: weight, height
-//R: Return a string based on the conditions of "BMI"
-//E: If bmi meets condition x, return string y
-//Pseudocode:
-    //declare bmi as weight over height squared
-    //use if/then conditions and return the applicable string
-//Solution:
-// function bmi(weight, height) {
-//     let bmi = (weight/(height*height))
-//     if(bmi <= 18.5){
-//       return "Underweight"
-//     }else if(bmi <= 25.0){
-//       return "Normal"
-//     }else if(bmi <= 30.0){
-//       return "Overweight"
-//     }else{
-//       return "Obese"
-//     }
-//   }
+//8 kyu Regular Ball Super Ball
+//Create a class Ball. Ball objects should accept one argument for "ball type" when instantiated.
 
-//8 kyu Grasshopper - Personalized Message
-// Create a function that gives a personalized greeting. This function takes two parameters: name and owner.
-// Use conditionals to return the proper message:
-// case	return
-// name equals owner	'Hello boss'
-// otherwise	'Hello guest'
-//P: name, owner
-//R: Hello boss or Hello guest
-//E: 
-// Test.assertEquals(greet('Daniel', 'Daniel'), 'Hello boss')
-// Test.assertEquals(greet('Greg', 'Daniel'), 'Hello guest')
+// If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
+
+// ball1 = new Ball();
+// ball2 = new Ball("super");
+
+// ball1.ballType     //=> "regular"
+// ball2.ballType     //=> "super"
+//P: ballType
+//R: 'regular' or whatever the balltype is
+//Example: see above
 //Pseudocode:
-//Use ternary operator. If name is exactly equal to owner, say hello boss, otherwise say hello guest! 
-//Also use arrow syntax
-const greet = (name, owner) => name === owner ? "Hello boss" : "Hello guest"
+    //we are using classes, so use this.balltype
+    //If there is a balltype, then .balltype of the class should be equal to balltype
+    //else, return 'regular'
+//Solution
+class Ball {
+    constructor(ballType = "regular") {
+      this.ballType = ballType;
+    }
+  }
