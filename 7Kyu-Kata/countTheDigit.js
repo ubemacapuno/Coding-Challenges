@@ -41,8 +41,9 @@
     //Join the numbers into one long number, and iterate through it. For each value equals "d", increase a count by 1.
     let longNumber = array.join('')
     for(let i=0; i<=longNumber.length; i++){
-        longNumber[i] === d ? count++ : null
+        longNumber[i] == d ? count++ : null
     }
+    //Return that count.
     return count
 }
 //Test case:
