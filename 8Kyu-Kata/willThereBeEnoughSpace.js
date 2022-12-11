@@ -1,0 +1,22 @@
+//8 kyu Will there be enough space?
+//The Story:
+// Bob is working as a bus driver. However, he has become extremely popular amongst the city's residents. With so many passengers wanting to get aboard his bus, he sometimes has to face the problem of not enough space left on the bus! He wants you to write a simple program telling him if he will be able to fit all the passengers.
+// Task Overview:
+// You have to write a function that accepts three parameters:
+// cap is the amount of people the bus can hold excluding the driver.
+// on is the number of people on the bus excluding the driver.
+// wait is the number of people waiting to get on to the bus excluding the driver.
+// If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
+//P: cap (# ppl the bus can hold), on (# ppl on the bus), wait (number of people waiting to get on bus)
+//R: # of passengers bus CAN'T take, or 0 if there is enough space
+//E: 
+    // cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
+    // cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
+//Pseudocode:
+    //if wait + on is greater than cap then return on + wait - cap, otherwise return 0
+//My solution:
+function enough(cap, on, wait) {
+    return (on + wait) >= cap ? on + wait - cap : 0
+   }
+ //Refactored using arrow syntax:
+ const enough = (cap, on, wait) => (on + wait) >= cap ? on + wait - cap : 0

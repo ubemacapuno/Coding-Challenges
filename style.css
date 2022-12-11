@@ -1,0 +1,114 @@
+* {
+     box-sizing: border-box;
+     font-family: 'Spline Sans Mono', monospace;
+}
+
+body {
+     background-color: #1c1c1c;
+     color: white;
+}
+
+header {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     flex-direction: column;
+     flex-wrap: wrap;
+}
+
+h1, h2 {
+     -webkit-text-stroke: 0.3px rgb(26, 26, 26);
+     text-shadow: 
+      0 0 7px black,
+      0 0 50px #A23229,
+      0 0 122px #A23229;
+     color: #A23229;
+}
+
+h1 {
+     font-size: 2.4rem;
+}
+
+h2 {
+     font-size: 1.8rem;
+}
+
+h3 {
+     font-size: 1rem;
+     margin: 0.4rem;
+}
+
+svg{
+     padding: 10px;
+     filter: drop-shadow(3px 5px 20px rgb(0 0 0 / 0.7));
+}
+
+.rotate{
+     animation: rotation 10s infinite linear;
+}
+
+div {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     border: 2px solid #e2ad14;
+     padding: 10px;
+     background-color: #303133;
+}
+
+.username::before, .name::before, .honor::before, .clan::before, .kyu::before, .completed::before  {
+     text-shadow: 
+     0 0 7px black,
+     0 0 50px #A23229,
+     0 0 122px #A23229;
+    color: #A23229;
+}
+
+.username::before {
+     content: '<';
+     color: #e2ad14;
+}
+
+.username::after{
+     content: '/>';
+     color: #e2ad14;
+}
+
+.name::before {
+     content: 'Name: ';
+}
+
+.honor::before {
+     content: 'Honor: ';
+}
+
+.clan::before {
+     content: 'Clan: ';
+}
+
+.kyu::before {
+     content: 'Rank: ';
+}
+
+.completed::before {
+     content: 'Codewars Completed: '
+}
+
+.codewars-banner {
+  padding: 5px;  
+}
+
+@keyframes rotation {
+     0% {
+         transform: rotate(0deg);
+     }
+     55% {
+         transform: rotate(720deg);
+     }
+     80% {
+          transform: rotate(-355deg);
+      }
+     100% {
+          transform: rotate(-360deg);
+      }
+   }
