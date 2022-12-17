@@ -6744,15 +6744,15 @@ getFetch()
   //Loop through the string, have a counter that increases everytime it sees "1"
   //Return the string
 
-var countBits = function(n) {
-    //Convert integer to binary string:
-    let binary = n.toString(2)
-    //Loop through the string, have a counter that increases everytime it sees "1":
-    let counter = 0
-    for(let i=0; i<binary.length; i++){
-        binary[i] == 1 ? counter++ : null
-    }
-    return counter
-};
-//Test cases:
-console.log(countBits(10))
+// var countBits = function(n) {
+//     //Convert integer to binary string:
+//     let binary = n.toString(2)
+//     //Loop through the string, have a counter that increases everytime it sees "1":
+//     let counter = 0
+//     for(let i=0; i<binary.length; i++){
+//         binary[i] == 1 ? counter++ : null
+//     }
+//     return counter
+// };
+// //Test cases:
+// console.log(countBits(10))
