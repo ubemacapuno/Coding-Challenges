@@ -6827,19 +6827,40 @@ getFetch()
 // //Test case:
 // console.log(noBoringZeros(0))
 
-// // 8 kyu Quarter of the year (TypeScript)
-// // Given a month as an integer from 1 to 12, return to which quarter of the year it belongs as an integer number.
-// // For example: month 2 (February), is part of the first quarter; month 6 (June), is part of the second quarter; and month 11 (November), is part of the fourth quarter.
-// //P: Integer 1-12
-// //R: return the quarter that the month(as integer) is in.
-// //E: 3 -> 1, 11 -> 4
-// //pseudocode:
-// //Let's math this out! Take the month integer, divide it by 12, and then multiply by 4. Round it up, and this should be the proper quarter. Use Math.ceil() to round up.
-// //My solution (TypeScript): 
-// export function quarterOf(month: number): number {
-//     return Math.ceil((month / 12) * 4)
-//   }
-// //Arrow syntax:
-// export const quarterOf = (month: number): number => Math.ceil((month / 12) * 4)
-// //Simplyfy the maths:
-// export const quarterOf = (month: number): number => Math.ceil(month / 3)
+// // 7 kyu How many are smaller than me?
+// // Write a function that given, an array arr, returns an array containing at each index i the amount of numbers that are smaller than arr[i] to the right.
+// // For example:
+// // * Input [5, 4, 3, 2, 1] => Output [4, 3, 2, 1, 0]
+// // * Input [1, 2, 0] => Output [1, 1, 0]
+// //P: Given an array of integers
+// //R: returns an array containing at each index i the amount of numbers that are smaller than arr[i] to the right.
+// //E: See above
+// //Pseudocode:
+//     //
+//     //We need to loop through the array.
+//     //Set an array for the return (returnArr)
+//     //Set a variable (counter) that will COUNT the indexes to the right of arr[i]
+//     //Set a variable (base) that will track which index we're looking at to compare indexes to the right of
+//         //make another loop that is checking the indexes to the right of the base
+//         //push elements to an array that are LESS than the base
+//     //Return the returnArr
+
+// //My solution:
+// function smaller(nums) {
+//     //Return array:
+//     let returnArr = []
+//     //Counter:
+//     let counter = 0
+//     //Base:
+//     let base = 0
+
+//     for (let i = 0; i < nums.length; i++) {
+//         base = nums[i];
+//         counter = 0;
+//         for (let j = i + 1; j < nums.length; j++) {
+//           if (nums[j] < base) counter++;
+//         }
+//         returnArr.push(counter);
+//       }
+//     return returnArr
+// }
