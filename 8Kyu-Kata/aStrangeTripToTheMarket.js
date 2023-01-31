@@ -7,7 +7,7 @@
 //three fifty
 //E: "Your girlscout cookies are ready to ship. Your total comes to tree fiddy" returns true
 //Psuedocode:
-//place strings inside of an array, and use some and includes methods to check if the string has those substrings in the array
+//place strings inside of an array, and use some() and includes() methods to check if the string has those substrings in the array
 // solution:
 function isLockNessMonster(s) {
   const tree = ["tree fiddy", "3.50", "three fifty"];
@@ -15,3 +15,6 @@ function isLockNessMonster(s) {
 }
 //Test case:
 console.log(isLockNessMonster("tree fiddy"));
+
+// some(): tests whether at least one element in the array passes the test implemented by the provided function. It returns true if, in the array, it finds an element for which the provided function returns true; otherwise it returns false. It doesn't modify the array.
+// includes(): determines whether an array includes a certain value among its entries, returning true or false as appropriate.
