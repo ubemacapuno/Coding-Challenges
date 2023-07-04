@@ -3,14 +3,17 @@
 // If any of characters is not a letter, return -1
 // If both characters are the same case, return 1
 // If both characters are letters and not the same case, return 0
-function sameCase(a, b){
-    if (!(a.match(/[a-z]/i) && b.match(/[a-z]/i))){
-      return -1
-    }
-    else if(a == a.toUpperCase() && b == b.toUpperCase() || a == a.toLowerCase() && b == b.toLowerCase()){
-      return 1
-    }
-    else {
-      return 0
-    }
-  }
+
+//P
+
+// function sameCase(a, b){
+//     if (!(a.match(/[a-z]/i) && b.match(/[a-z]/i))){
+//       return -1
+//     }
+//     else if(a == a.toUpperCase() && b == b.toUpperCase() || a == a.toLowerCase() && b == b.toLowerCase()){
+//       return 1
+//     }
+//     else {
+//       return 0
+//     }
+//   }
