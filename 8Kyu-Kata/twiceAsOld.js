@@ -10,6 +10,11 @@
  */
 
 //My solution:
-function twiceAsOld(dadYearsOld, sonYearsOld) {
-  return Math.abs(dadYearsOld - 2 * sonYearsOld);
-}
+// function twiceAsOld(dadYearsOld, sonYearsOld) {
+//   return Math.abs(dadYearsOld - 2 * sonYearsOld);
+// }
+
+// Arrow Function
+
+const twiceAsOld = (dadYearsOld, sonYearsOld) =>
+  Math.abs(dadYearsOld - 2 * sonYearsOld);
