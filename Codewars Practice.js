@@ -27,5 +27,3 @@ function getFetch() {
 
 //getFetch Function call:
 getFetch();
-
-console.log("HELLO");
