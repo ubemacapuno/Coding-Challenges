@@ -26,3 +26,11 @@ If the string is smaller or equal than the maximum string length, then simply re
 
 
 */
+
+// More concise solution:
+
+function trim(str, size) {
+  if (size <= 3 && str.length > size) return str.slice(0, size) + "...";
+  if (str.length <= size) return str;
+  return str.slice(0, size - 3) + "...";
+}
