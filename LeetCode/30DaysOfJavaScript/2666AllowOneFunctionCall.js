@@ -60,3 +60,17 @@ var once = function (fn) {
     return undefined;
   };
 };
+
+// Better solution - no need to store result in a variable
+var once = function (fn) {
+  let called = false; // bool 'called' to keep track of whether function has been called
+
+  return function (...args) {
+    if (called) {
+      return undefined;
+    }
+
+    called = true;
+    return fn(...args);
+  };
+};
