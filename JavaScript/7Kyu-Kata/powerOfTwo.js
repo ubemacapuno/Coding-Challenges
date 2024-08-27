@@ -3,6 +3,8 @@
  * R boolean after determining if argument is a power of two
  * E (see below)
  * Pseudocode:
+ * 1. Use the Math.log2() method to determine if the argument is a power of two
+ * 2. Return the result of the Math.log2() method modulo 1 (meaning the result is a whole number).
  * 
  * 
  * Complete the function power_of_two/powerOfTwo (or equivalent, depending on your language) that determines if a given non-negative integer is a power of two. From the corresponding Wikipedia entry:
@@ -21,14 +23,9 @@ Beware of certain edge cases - for example, 1 is a power of 2 since 2^0 = 1 and 
 
 
  */
-function isPowerOfTwo(n){
-  //edge case:
-  if(n===1){
-    return false
-  }
-  //iteratively
-  for
-  
-  
-  
+function isPowerOfTwo(n) {
+  return Math.log2(n) % 1 === 0;
 }
+
+// arrow/lamda function:
+const isPowerOfTwo = (n) => Math.log2(n) % 1 === 0;
