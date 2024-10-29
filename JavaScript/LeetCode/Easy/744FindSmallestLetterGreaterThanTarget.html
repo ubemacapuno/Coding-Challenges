@@ -1,0 +1,25 @@
+<script>
+  /**
+   * Params: array of chars (letters), and a char (target)
+   * Return: smallest char lexicographically greater than target if exists, otherwise the first char in letters
+   * Example:
+   *    Input: letters = ["c","f","j"], target = "a"
+   *    Output: "c"
+   * Pseudocode:
+   * - Iterate through letters array
+   * - If current letter is greater than target, return it
+   * - If no greater letter is found, wrap around to first letter
+   */
+  var nextGreatestLetter = function (letters, target) {
+    // Iterate through letters array
+    for (let i = 0; i < letters.length; i++) {
+      // If current letter is greater than target, return it
+      if (letters[i] > target) {
+        return letters[i];
+      }
+    }
+
+    // If no greater letter is found, wrap around to first letter
+    return letters[0];
+  };
+</script>
