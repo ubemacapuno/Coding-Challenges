@@ -1,0 +1,44 @@
+<script>
+  class Solution {
+    /**
+     * @param {string} s
+     * @param {string} t
+     * @return {boolean}
+     * Pseudocode:
+     * JS methods way:
+     * split, sort, join
+     * if t === s, return true, else false
+     *
+     * Hashmap usage way:
+     * make a hashmap of both s and t
+     * iterate through the maps and compare; return false if keys don't match, otherwise return true
+     */
+    isAnagram(s, t) {
+      if (s.length !== t.length) {
+        return false;
+      }
+
+      return s.split("").sort().join("") === t.split("").sort().join("");
+
+      // Hashmap solution:
+      // let countS = {};
+      // let countT = {};
+
+      // // Count frequency of characters in both strings
+      // for (let i = 0; i < s.length; i++) {
+      //   countS[s[i]] = (countS[s[i]] || 0) + 1;
+      //   countT[t[i]] = (countT[t[i]] || 0) + 1;
+      // }
+
+      // // Compare character frequencies
+      // for (let char in countS) {
+      //   // iterate through key values (c being the key)
+      //   if (countS[char] !== (countT[char] || 0)) {
+      //     return false;
+      //   }
+      // }
+
+      // return true;
+    }
+  }
+</script>
