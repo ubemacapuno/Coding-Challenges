@@ -1,0 +1,89 @@
+<script>
+  /**
+   * 
+    49. Group Anagrams
+    Given an array of strings strs, group the 
+    anagrams together. You can return the answer in any order.
+
+    Example 1:
+
+    Input: strs = ["eat","tea","tan","ate","nat","bat"]
+
+    Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+
+    Explanation:
+    There is no string in strs that can be rearranged to form "bat".
+    The strings "nat" and "tan" are anagrams as they can be rearranged to form each other.
+    The strings "ate", "eat", and "tea" are anagrams as they can be rearranged to form each other.
+    Example 2:
+
+    Input: strs = [""]
+
+    Output: [[""]]
+
+    Example 3:
+
+    Input: strs = ["a"]
+
+    Output: [["a"]]
+
+    Constraints:
+
+    1 <= strs.length <= 104
+    0 <= strs[i].length <= 100
+    strs[i] consists of lowercase English letters.
+   * */
+
+  class Solution {
+    /**
+     * @param {string[]} strs
+     * @return {string[][]}
+     *
+     * Iterate through the array of words
+     * sort the current element
+     */
+    groupAnagrams(strs) {
+      // Approach 1 - using char count array as key:
+      // let map = {};
+
+      // for (let str of strs) {
+      //   // create count array for 26 lowercase letters
+      //   let count = new Array(26).fill(0);
+
+      //   // count frequency of each character
+      //   for (let char of str) {
+      //     count[char.charCodeAt(0) - "a".charCodeAt(0)]++; // get the unicode of the char
+      //   }
+
+      //   // Use count array as key
+      //   let key = count.join("#"); // convert count array to string, use a separator
+
+      //   if (key in map) {
+      //     map[key].push(str);
+      //   } else {
+      //     map[key] = [str];
+      //   }
+      // }
+
+      // return Object.values(map);
+
+      // Approach 2 - using sorted strings as keys:
+      let map = new Map(); // use Map so we have .has and .set methods
+
+      for (let str of strs) {
+        // Sort the characters of the string to create a key
+        let sortedStr = str.split("").sort().join("");
+
+        // If key exists, push to existing array, else create new array
+        if (map.has(sortedStr)) {
+          map.get(sortedStr).push(str);
+        } else {
+          map.set(sortedStr, [str]);
+        }
+      }
+
+      // Convert map values to array and return
+      return Array.from(map.values());
+    }
+  }
+</script>
