@@ -1,0 +1,80 @@
+<script>
+  /**
+   * Top K Elements in List
+   * Given an integer array nums and an integer k, return the k most frequent elements within the array.
+
+      The test cases are generated such that the answer is always unique.
+
+      You may return the output in any order.
+
+      Example 1:
+
+      Input: nums = [1,2,2,3,3,3], k = 2
+
+      Output: [2,3]
+      Example 2:
+
+      Input: nums = [7,7], k = 1
+
+      Output: [7]
+      Constraints:
+
+      1 <= nums.length <= 10^4.
+      -1000 <= nums[i] <= 1000
+      1 <= k <= number of distinct elements in nums.
+ 
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number[]}
+ */
+  var topKFrequent = function (nums, k) {
+    // Use hashmap for the count:
+    let count = {};
+
+    // Count frequency of each number:
+    for (let num of nums) {
+      // If this number doesn't exist in our map yet
+      if (count[num] === undefined) {
+        // Add it with a count of 1
+        count[num] = 1;
+      } else {
+        // If it does exist, increment its count
+        count[num] = count[num] + 1;
+      }
+
+      // if statement can be simplified with this:
+      // count[num] = (count[num] || 0) + 1;
+    }
+
+    // Create a bucket array where index represents frequency
+    let freq = Array(nums.length + 1)
+      .fill()
+      .map(() => []);
+    /**
+        * Ex shape:
+        *  freq = [
+            [],  // index 0 (no number appears 0 times)
+            [],  // index 1 (numbers that appear 1 time)
+            [],  // index 2 (numbers that appear 2 times)
+        ]
+        */
+
+    // Put nums in buckets based on their frequency - this will help us return 'k' frequent elements:
+    for (let [num, frequency] of Object.entries(count)) {
+      freq[frequency].push(parseInt(num));
+    }
+
+    // collect 'k' most frequent elements
+    let result = [];
+
+    // Start from highest frequency and work backwards
+    for (let i = freq.length - 1; i >= 0 && result.length < k; i--) {
+      if (freq[i].length > 0) {
+        result.push(...freq[i]); // push the highest frequencies into result array
+      }
+    }
+
+    // Return only k elements
+    return result.slice(0, k);
+  };
+</script>
