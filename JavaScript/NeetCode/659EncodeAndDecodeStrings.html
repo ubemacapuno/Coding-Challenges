@@ -1,0 +1,80 @@
+<script>
+  class Solution {
+    /**
+     * String Encode and Decode
+     * Design an algorithm to encode a list of strings to a single string. The encoded string is then decoded back to the original list of strings.
+        Please implement encode and decode
+
+        Example 1:
+
+        Input: ["neet","code","love","you"]
+
+        Output:["neet","code","love","you"]
+        Example 2:
+
+        Input: ["we","say",":","yes"]
+
+        Output: ["we","say",":","yes"]
+        Constraints:
+
+        0 <= strs.length < 100
+        0 <= strs[i].length < 200
+        strs[i] contains only UTF-8 characters.
+     * 
+     * @param {string[]} strs
+     * @returns {string}
+     */
+    encode(strs) {
+      // encode list into a single string:
+      //  - declare a string
+      //  - iterate through the array - add each element to the string with a symbol (delimiter) ex: "#" and the length of the string
+      //      - we do this so in the case the delimiter is actually in the string, we can ignore it since we just look at the count and delimiter first.
+      //  - return the string
+      let res = "";
+
+      for (let s of strs) {
+        res += s.length + "#" + s; // s.length tells us the length of the string, "#" is the delimiter to separate the string from the next string.
+      }
+
+      return res;
+    }
+
+    /**
+     * @param {string} str
+     * @returns {string[]}
+     */
+    decode(str) {
+      let res = []; // array to store our decoded strings
+      let i = 0; // main pointer that traverses through the encoded string
+
+      // iterate until we've processed the entire encoded string
+      while (i < str.length) {
+        let j = i; // j will help us find the length of the next string
+
+        // move j until we find the '#' delimiter
+        // this loop processes the digits that represent the length
+        while (str[j] !== "#") {
+          j++;
+        }
+
+        // extract and convert the length digits to a number
+        // substring(i,j) gets characters from position i up to (but not including) j
+        let length = parseInt(str.substring(i, j));
+
+        // move i to skip over the '#' delimiter
+        i = j + 1;
+
+        // calculate where this string ends using the length we found
+        j = i + length;
+
+        // extract the actual string using the length we found
+        // and add it to our result array
+        res.push(str.substring(i, j));
+
+        // move pointer i to the start of the next length indicator
+        i = j;
+      }
+      return res;
+    }
+  }
+</script>
