@@ -23,13 +23,16 @@
      * 
      * @param {string[]} strs
      * @returns {string}
+     encode list into a single string:
+      - declare a string
+      - iterate through the array - add each element to the string with a symbol (delimiter) ex: "#" and the length of the string
+          - we do this so in the case the delimiter is actually in the string, we can ignore it since we just look at the count and delimiter first.
+      - return the string
+
+      Then decode the string
+     * 
      */
     encode(strs) {
-      // encode list into a single string:
-      //  - declare a string
-      //  - iterate through the array - add each element to the string with a symbol (delimiter) ex: "#" and the length of the string
-      //      - we do this so in the case the delimiter is actually in the string, we can ignore it since we just look at the count and delimiter first.
-      //  - return the string
       let res = "";
 
       for (let s of strs) {
