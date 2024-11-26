@@ -1,0 +1,34 @@
+<script>
+  /**
+  Sum of Ages
+  reduce method
+  Description: Given an array of person objects with name and age properties,
+  calculate the average age of all people over 20.
+  Example:
+  averageAdultAge([
+    {name: "Sam", age: 15},
+    {name: "Alex", age: 25},
+    {name: "Rita", age: 35}
+  ])
+  Should return 30 (average of 25 and 35)
+*/
+  function averageAdultAge(people) {
+    // parameters: array of people with name and age
+    // return: average number of adults over 20
+
+    // filter for people over 20
+    const adults = people.filter((person) => person.age > 20);
+
+    // use reduce to sum up the ages of adults, then divide by the # of people over 20
+    return adults.reduce((acc, person) => acc + person.age, 0) / adults.length;
+  }
+
+  console.log(
+    "Average Adult Age:",
+    averageAdultAge([
+      { name: "Sam", age: 15 },
+      { name: "Alex", age: 25 },
+      { name: "Rita", age: 35 },
+    ])
+  );
+</script>
