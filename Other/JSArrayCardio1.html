@@ -1,0 +1,131 @@
+<script>
+  // Array method problems made from Claude for practice
+
+  /**
+  Filter Out the Geese!
+  filter method
+  Description:
+  Write a function that takes an array of bird names and returns an array containing only birds that aren't geese. The geese you need to filter out are: "African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher".
+  Example:
+
+  filterBirds(["Mallard", "African", "Pigeon", "Toulouse", "Penguin"])
+  Should return ["Mallard", "Pigeon", "Penguin"]
+
+  filterBirds(["Steinbacher", "Duck", "African", "Chicken"])
+  Should return ["Duck", "Chicken"]
+ */
+
+  function filterBirds(birds) {
+    /**
+     * Parameter: array of bird names
+     * Return: array of bird names that aren't geese
+     * Filter out "African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"
+     * - make an array of geese
+     * - iterate through the array
+     *    - Filter each element that is NOT included in the geese array
+     */
+    let geese = [
+      "African",
+      "Roman Tufted",
+      "Toulouse",
+      "Pilgrim",
+      "Steinbacher",
+    ];
+    return birds.filter((bird) => !geese.includes(bird));
+  }
+
+  console.log(
+    "Filter Birds:",
+    filterBirds(["Mallard", "African", "Pigeon", "Toulouse", "Penguin"]) // Should return ["Mallard", "Pigeon", "Penguin"]
+  );
+
+  /**
+  Double the Numbers
+  map method
+  Description: Write a function that takes an array of numbers and strings. 
+  It should double any numbers but leave strings unchanged.
+  Example:
+  doubleNumbers([1, "apple", 3, "banana", 2]) 
+  Should return [2, "apple", 6, "banana", 4]
+  Parameters: array of numbers and strings
+  Return: same array but with the numbers doubled
+  Pseudocode: map through the array and check if the element is a number - if so double it. Return the array.
+*/
+
+  function doubleNumbers(arr) {
+    return arr.map((e) => {
+      return typeof e === "number" ? e * 2 : e;
+    });
+  }
+
+  console.log("Double Numbers:", doubleNumbers([1, "apple", 3, "banana", 2])); // Should return [2, "apple", 6, "banana", 4]
+
+  /**
+  Cart Total
+  reduce method
+  Description: Calculate the total cost of items in a shopping cart,
+  applying a discount for items over $100.
+  Items over $100 get a 10% discount.
+  Example:
+  cartTotal([{item: "book", price: 30}, {item: "phone", price: 120}])
+  Should return 138 (30 + (120 - 12))
+
+  use reduce method - iterate through the array and look at element.price. 
+  if it's over 100, multiply it by 0.9 first before summing it
+
+*/
+  function cartTotal(items) {
+    return items.reduce((total, current) => {
+      let itemPrice = current.price;
+      if (itemPrice > 100) {
+        itemPrice *= 0.9; // apply 10% discount
+      }
+      return total + itemPrice;
+    }, 0); // start total at 0
+  }
+
+  console.log(
+    "Cart Total:",
+    cartTotal([
+      { item: "book", price: 30 },
+      { item: "phone", price: 120 },
+    ])
+  ); // Should return 138
+
+  /**
+  Find VIP Customer
+  find method
+  Description: In a list of customer objects, find the first VIP customer 
+  who has spent over a certain amount. If none found, return "No VIPs found"
+  Example:
+  findVIP([
+    {name: "John", spent: 300, vip: true},
+    {name: "Mary", spent: 400, vip: false},
+    {name: "Peter", spent: 500, vip: true}
+  ], 400)
+  Should return {name: "Peter", spent: 500, vip: true}
+
+  */
+  function findVIP(customers, minSpent) {
+    // Parameter: array of customer objects and minimum spent amount
+    // Return: first customer object that meets criteria or "No VIPs found"
+    // iterate through the customers - return customers[i] of the element that is vip and is equal to or greater than minSpent
+    // otherwise return "No VIPs found"
+    return (
+      customers.find(
+        (customer) => customer.vip && customer.spent >= minSpent
+      ) || "No VIPs found"
+    );
+  }
+
+  console.log(
+    findVIP(
+      [
+        { name: "John", spent: 300, vip: true },
+        { name: "Mary", spent: 400, vip: false },
+        { name: "Peter", spent: 500, vip: true },
+      ],
+      400
+    )
+  ); // Should return {name: "Peter", spent: 500, vip: true}
+</script>
