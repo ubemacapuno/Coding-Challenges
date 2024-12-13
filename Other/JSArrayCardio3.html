@@ -1,0 +1,41 @@
+<script>
+  /**
+    Combine Pet Names
+    some & join methods
+    Description: Write a function that takes an array of pet objects and returns a 
+    formatted string of their names if at least one pet is available for adoption.
+    If no pets are available, return "No pets available".
+    Each pet object has a name and an isAvailable property.
+    
+    Example:
+    formatPetNames([
+      {name: "Max", isAvailable: true},
+      {name: "Luna", isAvailable: false},
+      {name: "Buddy", isAvailable: true}
+    ])
+    Should return "Available pets: Max, Buddy"
+    
+    formatPetNames([
+      {name: "Rex", isAvailable: false},
+      {name: "Bella", isAvailable: false}
+    ])
+    Should return "No pets available"
+  */
+
+  function formatPetNames(pets) {
+    // Check if at least one pet is available using some()
+    const hasAvailable = pets.some(pets.isAvailable);
+
+    if (!hasAvailable) {
+      return "No pets available";
+    }
+
+    // filter available pets, map to their names, and join with commas
+    const avaiableNames = pets
+      .filter((pet) => pet.isAvailable)
+      .map((pet) => pet.name)
+      .join(", ");
+
+    return `Available pets: ${availableNames}`;
+  }
+</script>

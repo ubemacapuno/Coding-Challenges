@@ -31,4 +31,29 @@
       { name: "Rita", age: 35 },
     ])
   );
+
+  /**
+  Word Length Filter
+  some method
+  Description: Check if any word in an array of strings contains
+  exactly the number of letters specified.
+  Example:
+  hasWordOfLength(["cat", "dog", "bird", "elephant"], 4)
+  Should return false
+  
+  hasWordOfLength(["cat", "dog", "fish", "elephant"], 4)
+  Should return true (because "fish" has 4 letters)
+*/
+
+  function hasWordOfLength(words, length) {
+    const exactLetters = (word) => word.length === length;
+    return words.some(exactLetters);
+
+    // inline solution:  return words.some(word => word.length === length);
+  }
+
+  console.log(
+    "Has Word Of Length:",
+    hasWordOfLength(["cat", "dog", "fish", "elephant"], 4)
+  );
 </script>
