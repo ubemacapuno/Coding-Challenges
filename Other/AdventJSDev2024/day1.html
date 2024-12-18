@@ -1,0 +1,39 @@
+<script>
+  /**
+   * @param {number[]} gifts - The array of gifts to prepare
+   * @returns {number[]} An array with the prepared gifts
+   */
+  function prepareGifts(gifts) {
+    /**
+   * Write a function that receives a list of integers (may have duplicates) and returns a new list without duplicates, in asending order.
+   * 
+   * P: Array of nums
+   * R: Array of nums sorted, without duplicates
+   * Examples:
+      const gifts1 = [3, 1, 2, 3, 4, 2, 5]
+      const preparedGifts1 = prepareGifts(gifts1)
+      console.log(preparedGifts1) // [1, 2, 3, 4, 5]
+
+      const gifts2 = [6, 5, 5, 5, 5]
+      const preparedGifts2 = prepareGifts(gifts2)
+      console.log(preparedGifts2) // [5, 6]
+
+      const gifts3 = []
+      const preparedGifts3 = prepareGifts(gifts3)
+      console.log(preparedGifts3) // []
+   * Pseudo: 
+   *  1) sort the array.
+   *  2) use filter with indexOf to find and filter the repeated elements
+   */
+
+    let sortedGiftsNoDupe = [];
+
+    sortedGiftsNoDupe = gifts
+      .sort((a, b) => a - b) // ensure proper numeric ordering, not just string comparison
+      .filter((item, index) => gifts.indexOf(item) === index);
+
+    return sortedGiftsNoDupe;
+  }
+
+  console.log(prepareGifts([6, 5, 5, 5, 5]));
+</script>
