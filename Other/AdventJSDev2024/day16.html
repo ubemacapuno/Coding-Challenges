@@ -1,0 +1,39 @@
+<script>
+  /**
+   * @param {string} s
+   * @returns {string}
+   * 
+    The elves are working hard to clear paths filled with magical snow ❄️. This snow has a special property: if two identical and adjacent snow piles are found, they disappear automatically.
+
+    Your task is to write a function to help the elves simulate this process. The path is represented by a string and each snow pile by a character.
+
+    You need to remove all adjacent snow piles that are the same until no more moves are possible.
+
+    The result should be the final path after removing all duplicate piles:
+
+    removeSnow('zxxzoz') // -> "oz"
+    // 1. Remove "xx", resulting in "zzoz"
+    // 2. Remove "zz", resulting in "oz"
+
+    removeSnow('abcdd') // -> "abc"
+    // 1. Remove "dd", resulting in "abc"
+
+    removeSnow('zzz') // -> "z"
+    // 1. Remove "zz", resulting in "z"
+
+    removeSnow('a') // -> "a"
+    // No duplicate piles
+   */
+  function removeSnow(s) {
+    let chars = s.split(""); // convert to array for methods
+
+    for (let i = 0; i < chars.length - 1; i++) {
+      if (chars[i] === chars[i + 1]) {
+        chars.splice(i, 2);
+        return removeSnow(chars.join("")); // recursive call
+      }
+    }
+
+    return chars.join("");
+  }
+</script>
